@@ -18,10 +18,18 @@ ReactJS@latest
 Supervisord
 
 
-Installation:
---------------
+Installation using docker-composer:
+------------------------------------
 
 docker-compose up -d
+
+Alternatively, you can use the makefile by invoking the following commands:
+
+``` make install ``` to install the application
+
+``` make clean ``` to uninstall the application
+
+``` make clean-docker ``` to clean the whole docker service but it will remove any other containers running in your docker environment, please use it only when you know what you are doing.
 
 
 
