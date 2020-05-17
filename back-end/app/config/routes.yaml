@@ -1,0 +1,3 @@
+test_domain:
+    path: /TestDomain
+    controller: App\TestDomain\Controller\TestDomainController::index

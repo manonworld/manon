@@ -1,0 +1,133 @@
+version: '3'
+
+services:
+
+  # Redis Master Node for Caching
+  redis-master:
+    container_name: onetool_redis_master
+    image: 'bitnami/redis:latest'
+    ports:
+      - '6379:6379'
+    env_file:
+      - env/redis/redis.master.env
+    volumes:
+      - '/redis'
+
+
+  # Redis Replica Node for Caching
+  redis-replica:
+    container_name: onetool_redis_replica
+    image: 'bitnami/redis:latest'
+    ports:
+      - '6380:6380'
+    env_file:
+      - env/redis/redis.replica.env
+    depends_on:
+      - redis-master
+      
+
+  # Grafana Node for Metrics Display
+  grafana:
+    container_name: onetool_grafana
+    image: "grafana/grafana:5.4.1"
+    ports:
+      - "4000:3000"
+    user: "472"
+    volumes:
+      - "grafana-data:/var/lib/grafana"
+
+
+  # Maria DB as the Main DB engine
+  mariadb:
+    container_name: onetool_maria_db
+    image: mariadb
+    ports:
+      - "3306:3306"
+    env_file:
+      - env/mariadb.env
+    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+    restart: always
+    volumes:
+      - db-data:/var/lib/mysql
+
+
+  # Rabbit Statistics Messaging
+  rabbit-stats:
+    container_name: onetool_rabbit_stats_disc
+    image: bitnami/rabbitmq
+    env_file:
+      - env/rabbitmq/rabbit.stats.env
+    ports:
+      - '15672:15672'
+    volumes:
+      - 'rabbitmqstats_data:/bitnami'
+      
+
+  # Rabbit Disc Messaging
+  queue-disc:
+    container_name: onetool_rabbit_queue_disc
+    image: bitnami/rabbitmq
+    env_file:
+      - env/rabbitmq/rabbit.disc.env
+    volumes:
+      - 'rabbitmqdisc1_data:/bitnami'
+      
+
+  # Rabbit RAM for Messaging
+  queue-ram:
+    container_name: onetool_rabbit_ram_disc
+    image: bitnami/rabbitmq
+    env_file:
+      - env/rabbitmq/rabbit.ram.env
+    volumes:
+      - 'rabbitmqram1_data:/bitnami'
+
+
+  # PHP Backend App
+  php:
+    container_name: onetool_php
+    build: ./back-end/.docker/php
+    image: php:7.4-fpm
+    volumes:
+      - ./back-end/app:/var/www/html
+    env_file:
+      - env/php/php.redis.env
+      - env/php/php.mariadb.env
+      - env/php/php.stream.env
+      - env/php/php.frontend.env
+    ports:
+      - "8000:8000"
+      - "9000:9000"
+      - "8888:8888"
+    depends_on:
+      - grafana
+      - redis-master
+      - redis-replica
+      - mariadb
+      - rabbit-stats
+
+
+  # Front end Node
+  front-end:
+    container_name: onetool-frontend
+    image: node:13.12.0-alpine
+    build:
+      context: ./front-end/app
+      dockerfile: 'Dockerfile'
+    volumes:
+      - './front-end:/app'
+      - './front-end/app/node_modules:/app/node_modules'
+    ports:
+      - 3000:3000
+    env_file:
+      - env/front-end.env
+
+
+volumes:
+  grafana-data:
+  redis-master:
+  redis-replica:
+  db-data:
+  rabbitmqstats_data:
+  rabbitmqdisc1_data:
+  rabbitmqram1_data:

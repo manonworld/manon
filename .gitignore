@@ -1,0 +1,4 @@
+back-end/app/vendor
+front-end/app/node_modules
+front-end/node_modules
+nbproject
