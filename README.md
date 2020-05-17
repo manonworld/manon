@@ -1,5 +1,11 @@
 # DDD Boilerplate in Symfony 5
 
+Build Status:
+--------------
+[![Build Status](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate.svg?branch=master)](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate)
+
+
+
 Yet another domain driven design boiler plate for Symfony5 applications
 
 Please make sure that docker and docker-compose are installed
