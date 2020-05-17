@@ -11,12 +11,11 @@ Redis 5.0
 
 Symfony 5.0
 
-PHP 7.4
+PHP 7.4 Alpine Docker
 
 ReactJS@latest
 
-Docker
-
+Supervisord
 
 
 Installation:
