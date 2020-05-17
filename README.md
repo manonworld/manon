@@ -17,6 +17,12 @@ ReactJS@latest
 
 Supervisord
 
+Grafana
+
+MariaDB
+
+RabbitMQ
+
 
 Installation using docker-composer:
 ------------------------------------
