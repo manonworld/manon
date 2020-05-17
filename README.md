@@ -54,7 +54,7 @@ Alternatively, you can use the makefile by invoking the following commands:
 For the backend:
 -----------------
 
-Just point your browser to https://testdomain.wip:8000/
+Just point your browser to https://testdomain.wip:8000/TestDomain
 
 
 
