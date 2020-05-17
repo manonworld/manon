@@ -24,7 +24,7 @@ MariaDB
 RabbitMQ
 
 
-Installation using docker-composer:
+Installation using docker-compose:
 ------------------------------------
 
 docker-compose up -d
