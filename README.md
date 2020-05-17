@@ -40,9 +40,9 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make install ``` to install the application
 
-``` make run ``` to run the application server
+``` make run ``` to run the application server (Backend)
 
-``` make stop ``` to stop the application server
+``` make stop ``` to stop the application server (Backend)
 
 ``` make clean ``` to uninstall the application
 
