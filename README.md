@@ -40,6 +40,10 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make install ``` to install the application
 
+``` make run ``` to run the application server
+
+``` make stop ``` to stop the application server
+
 ``` make clean ``` to uninstall the application
 
 ``` make docker-clean ``` to clean the whole docker service but it will remove any other containers running in your docker environment, please use it only when you know what you are doing.
