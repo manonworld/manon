@@ -31,7 +31,7 @@ class TestDomainController extends BaseController {
     public function index()
     {
         return $this->json(
-                $this->serializer->serializer(['testkey' => 'testval'])
+                $this->serializer->serialize(['testkey' => 'testval'])
             );
     }
     

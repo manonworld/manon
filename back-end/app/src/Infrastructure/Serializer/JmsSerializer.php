@@ -44,7 +44,7 @@ class JmsSerializer {
      * @return mixed
      * @throws SerializerException
      */
-    public function serializer($source, string $type = 'json')
+    public function serialize($source, string $type = 'json')
     {
         try {
             
