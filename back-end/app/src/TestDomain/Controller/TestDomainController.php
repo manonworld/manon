@@ -10,6 +10,8 @@ namespace App\TestDomain\Controller;
 
 use App\Infrastructure\Controller\BaseController;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Shared\ExceptionToArray;
+use App\Infrastructure\Serializer\SerializerException;
 
 /**
  * 
@@ -30,9 +32,21 @@ class TestDomainController extends BaseController {
      */
     public function index()
     {
-        return $this->json(
-                $this->serializer->serialize(['testkey' => 'testval'])
-            );
+        try {
+            
+            return $this->json(
+                    $this->serializer->serialize([
+                        'testkey' => 'testval'
+                    ])
+                );
+            
+        } catch (SerializerException $e) {
+            
+            return $this->json(
+                    ExceptionToArray::exec($e), $e->getCode()
+                );
+            
+        }
     }
     
 }
