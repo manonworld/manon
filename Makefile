@@ -10,7 +10,7 @@ start:
 
 test:
 	echo "\nRunning Tests\n";
-	docker exec -it onetool_php bin/phpunit;
+	docker exec -it onetool_php bin/phpunit --coverage-text;
 
 stop:
 	echo "\nStopping the Application\n";
