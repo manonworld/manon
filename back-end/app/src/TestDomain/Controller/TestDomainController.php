@@ -40,7 +40,7 @@ class TestDomainController extends BaseController {
                     ])
                 );
             
-        } catch (SerializerException $e) {
+        } catch ( SerializerException $e ) {
             
             return $this->json(
                     ExceptionToArray::exec($e), $e->getCode()
