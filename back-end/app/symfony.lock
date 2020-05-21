@@ -11,11 +11,71 @@
             "config/routes/annotations.yaml"
         ]
     },
+    "doctrine/cache": {
+        "version": "1.10.0"
+    },
+    "doctrine/collections": {
+        "version": "1.6.4"
+    },
+    "doctrine/common": {
+        "version": "2.13.0"
+    },
+    "doctrine/data-fixtures": {
+        "version": "1.4.2"
+    },
+    "doctrine/dbal": {
+        "version": "2.10.2"
+    },
+    "doctrine/doctrine-bundle": {
+        "version": "2.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "2.0",
+            "ref": "a9f2463b9f73efe74482f831f03a204a41328555"
+        },
+        "files": [
+            "config/packages/doctrine.yaml",
+            "config/packages/prod/doctrine.yaml",
+            "src/Entity/.gitignore",
+            "src/Repository/.gitignore"
+        ]
+    },
+    "doctrine/doctrine-fixtures-bundle": {
+        "version": "3.0",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "fc52d86631a6dfd9fdf3381d0b7e3df2069e51b3"
+        },
+        "files": [
+            "src/DataFixtures/AppFixtures.php"
+        ]
+    },
+    "doctrine/event-manager": {
+        "version": "1.1.0"
+    },
+    "doctrine/inflector": {
+        "version": "1.4.1"
+    },
     "doctrine/instantiator": {
         "version": "1.3.0"
     },
     "doctrine/lexer": {
         "version": "1.2.0"
+    },
+    "doctrine/orm": {
+        "version": "v2.7.2"
+    },
+    "doctrine/persistence": {
+        "version": "1.3.7"
+    },
+    "doctrine/reflection": {
+        "version": "1.2.1"
+    },
+    "fzaninotto/faker": {
+        "version": "v1.9.1"
     },
     "hoa/compiler": {
         "version": "3.17.08.08"
@@ -56,11 +116,17 @@
     "hoa/zformat": {
         "version": "1.17.01.10"
     },
+    "jdorn/sql-formatter": {
+        "version": "v1.2.17"
+    },
     "jms/metadata": {
         "version": "2.1.0"
     },
     "jms/serializer": {
         "version": "3.6.0"
+    },
+    "ocramius/package-versions": {
+        "version": "1.8.0"
     },
     "php": {
         "version": "7.4"
@@ -118,6 +184,9 @@
         "version": "v5.0.8"
     },
     "symfony/dependency-injection": {
+        "version": "v5.0.8"
+    },
+    "symfony/doctrine-bridge": {
         "version": "v5.0.8"
     },
     "symfony/dom-crawler": {
