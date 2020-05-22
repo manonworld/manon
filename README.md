@@ -40,6 +40,8 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make install ``` to install the application
 
+``` make app-install ``` to install the application dependencies using composer (Backend)
+
 ``` make test ``` to test the application
 
 ``` make run ``` to run the application server (Backend)
