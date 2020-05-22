@@ -64,7 +64,14 @@ edit your /etc/hosts file using any editor and add the following entry to the en
 
 ``` 127.0.0.1   testdomain.wip ```
 
-Just point your browser to https://testdomain.wip:8000/TestDomain or https://testdomain.wip:8000 for the main page of Symfony 5
+Just point your browser to 
 
+https://testdomain.wip:8000/TestDomain 
+
+or 
+
+https://testdomain.wip:8000 
+
+for the main page of Symfony 5
 
 Thanks
