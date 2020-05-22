@@ -58,8 +58,13 @@ Alternatively, you can use the makefile by invoking the following commands:
 For the backend:
 -----------------
 
-Just point your browser to https://testdomain.wip:8000/TestDomain
+A step before browsing the backend is:
 
+edit your /etc/hosts file using any editor and add the following entry to the end of the file:
+
+``` 127.0.0.1   testdomain.wip ```
+
+Just point your browser to https://testdomain.wip:8000/TestDomain or https://testdomain.wip:8000 for the main page of Symfony 5
 
 
 Thanks
