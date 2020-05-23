@@ -6,7 +6,7 @@ install:
 
 app-install:
 	@echo "Installing App Dependencies..."
-	docker exec-it onetool_php composer install;
+	docker exec -it onetool_php composer install;
 
 start:
 	@echo "Running the Application"
