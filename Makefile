@@ -1,32 +1,39 @@
 .DEFAULT_GOAL := default
 
 install:
-	echo "\nBuilding Docker Containers...\n";
+	@echo "Building Docker Containers..."
 	docker-compose up -d --build;
 
 app-install:
-	echo "\nInstalling App Dependencies...\n";
+	@echo "Installing App Dependencies..."
 	docker exec-it onetool_php composer install;
 
 start:
-	echo "\nRunning the Application\n";
+	@echo "Running the Application"
 	docker exec -it onetool_php symfony server:start -d;
 
 test:
-	echo "\nRunning Tests\n";
+	@echo "Running Tests"
 	docker exec -it onetool_php bin/phpunit --coverage-text;
 
 stop:
-	echo "\nStopping the Application\n";
+	@echo "Stopping the Application"
 	docker exec -it onetool_php symfony server:stop;
 
 clean:
-	echo "\nCleaning Docker Containers...\n";
+	@echo "Cleaning Docker Containers..."
 	docker-compose down;
 
 docker-clean:
-	echo "\nCleaning Docker Process...\n";
+	@echo "Cleaning Docker Process..."
 	docker system prune --all -f -a;
 
 default:
-	echo "\nThese options are available: \n\n 1. make install (installs the web application containers)\n 2. make app-install (installs app dependencies) \n 3. make test (starts the testing) \n 4. make start (starts the application and must run after make install) \n 5. make stop (stops the application that you run it using make start) \n 6. make clean (stops the application containers that you installed using make install) \n 7. make docker-clean (cleans the whole docker process from the system but please use with caution)\n";
+	@echo "These options are available:"
+	@echo "1. make install (installs the web application containers)"
+	@echo "2. make app-install (installs app dependencies)"
+	@echo "3. make test (starts the testing)"
+	@echo "4. make start (starts the application and must run after make install)"
+	@echo "5. make stop (stops the application that you run it using make start)"
+	@echo "6. make clean (stops the application containers that you installed using make install)"
+	@echo "7. make docker-clean (cleans the whole docker process from the system but please use with caution)"
