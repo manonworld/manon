@@ -29,11 +29,19 @@ docker-clean:
 	docker system prune --all -f -a;
 
 default:
+	@echo ""
+	@echo ""
 	@echo "These options are available:"
+	@echo ""
+	@echo ""
 	@echo "1. make install (installs the web application containers)"
 	@echo "2. make app-install (installs app dependencies)"
 	@echo "3. make test (starts the testing)"
-	@echo "4. make start (starts the application and must run after make install)"
+	@echo "4. make start (starts the application and must run after make install and make app-install)"
 	@echo "5. make stop (stops the application that you run it using make start)"
 	@echo "6. make clean (stops the application containers that you installed using make install)"
 	@echo "7. make docker-clean (cleans the whole docker process from the system but please use with caution)"
+
+	@echo ""
+	@echo "To run the application successfully, run step 1, 2 and 3 respectively"
+	@echo ""
