@@ -52,6 +52,7 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make docker-clean ``` to clean the whole docker service but it will remove any other containers running in your docker environment, please use it only when you know what you are doing.
 
+``` make ``` to display make command help
 
 
 
