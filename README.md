@@ -44,7 +44,7 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make test ``` to test the application
 
-``` make run ``` to run the application server (Backend)
+``` make start ``` to run the application server (Backend)
 
 ``` make stop ``` to stop the application server (Backend)
 
