@@ -25,8 +25,10 @@ class CreateDDDConsts extends Enum
     private const DEF_DIR       = '%s../../../%s/';
     private const DEF_BUS_DIR   = '%s../../../%s/Bus/';
     private const DEF_ENT_DIR   = '%s../../../%s/Entity';
-    private const BUS_QUEST     = 'Do you want to create a bus for the new domain? ';
-    private const ENT_QUEST     = 'Do you want to create an entity for the new domain? ';
+    private const DEF_CON_DIR   = '%s../../../%s/Controller';
+    private const BUS_QUEST     = 'Do you want to create bus directory for the new domain? ';
+    private const ENT_QUEST     = 'Do you want to create entities directory for the new domain? ';
+    private const CON_QUEST     = 'Do you want to create controllers directory for the new domain? ';
     private const DEF_BUS_DIRS  = [
         'Command',
         'Envelope',
@@ -106,6 +108,15 @@ class CreateDDDConsts extends Enum
     /**
      * @return string
      */
+    public static function DEF_CON_DIR(): string
+    {
+        return (new CreateDDDConsts(self::DEF_CON_DIR))
+            ->getValue();
+    }
+    
+    /**
+     * @return string
+     */
     public static function BUS_QUEST(): string
     {
         return (new CreateDDDConsts(self::BUS_QUEST))
@@ -127,6 +138,15 @@ class CreateDDDConsts extends Enum
     public static function DEF_BUS_DIRS(): array
     {
         return (new CreateDDDConsts(self::DEF_BUS_DIRS))
+            ->getValue();
+    }
+
+    /**
+     * @return string
+     */
+    public static function CON_QUEST(): string
+    {
+        return (new CreateDDDConsts(self::CON_QUEST))
             ->getValue();
     }
     

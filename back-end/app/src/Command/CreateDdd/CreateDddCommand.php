@@ -14,6 +14,8 @@ use App\Command\CreateDdd\Bus\Question\AskForBusQuest;
 use App\Command\CreateDdd\Bus\Service\CreateBus;
 use App\Command\CreateDdd\Entity\Question\AskForEntQuest;
 use App\Command\CreateDdd\Entity\Service\CreateEntity;
+use App\Command\CreateDdd\Controller\Service\CreateController;
+use App\Command\CreateDdd\Controller\Question\AskForConQuest;
 use App\Command\CreateDdd\CreateDDDConsts;
 use App\Command\AbstractCommand;
 
@@ -24,6 +26,7 @@ use App\Command\AbstractCommand;
  * @property string $defaultName
  * @property CreateBus $createBus
  * @property CreateEntity $createEntity
+ * @property CreateController $createController
  * 
  * @method void configure()
  * @method int execute( InputInterface $input, OutputInterface $output )
@@ -50,20 +53,28 @@ class CreateDddCommand extends AbstractCommand
     private CreateEntity $createEntity;
 
     /**
+     * @property CreateController $createController
+     */
+    private CreateController $createController;
+
+    /**
      * 
      * New Instance
      * 
      * @param CreateBus $createBus
      * @param CreateEntity $createEntity
+     * @param CreateController $createController
      * 
      */
     public function __construct( 
         CreateBus $createBus,
-        CreateEntity $createEntity
+        CreateEntity $createEntity,
+        CreateController $createController
     ) {
         parent::__construct();
-        $this->createBus    = $createBus;
-        $this->createEntity = $createEntity;
+        $this->createBus        = $createBus;
+        $this->createEntity     = $createEntity;
+        $this->createController = $createController;
     }
 
     /**
@@ -141,6 +152,7 @@ class CreateDddCommand extends AbstractCommand
         return [
             ['question' => AskForBusQuest::ask( $input, $output ), 'handler' => $this->createBus], 
             ['question' => AskForEntQuest::ask( $input, $output ), 'handler' => $this->createEntity],
+            ['question' => AskForConQuest::ask( $input, $output ), 'handler' => $this->createController],
         ];
     }
 
