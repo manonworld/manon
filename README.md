@@ -58,6 +58,7 @@ Alternatively, you can use the makefile by invoking the following commands:
 Front-End: (WIP)
 -----------------
 
+Still working on the scaffolder of the DDD structure for the front end
 
 
 Backend Usage:
@@ -67,7 +68,7 @@ Backend Usage:
 
 Do not forget to replace ``` <ManonBusinessTestDomain> ``` with your desired domain name
 
-More command are (WIP)
+More commands are (WIP)
 
 
 For the backend:
