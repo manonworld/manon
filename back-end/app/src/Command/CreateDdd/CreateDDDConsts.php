@@ -26,9 +26,13 @@ class CreateDDDConsts extends Enum
     private const DEF_BUS_DIR   = '%s../../../%s/Bus/';
     private const DEF_ENT_DIR   = '%s../../../%s/Entity';
     private const DEF_CON_DIR   = '%s../../../%s/Controller';
+    private const DEF_SVC_DIR   = '%s../../../%s/Service';
+    private const DEF_REPO_DIR  = '%s../../../%s/Repository';
     private const BUS_QUEST     = 'Do you want to create bus directory for the new domain? ';
     private const ENT_QUEST     = 'Do you want to create entities directory for the new domain? ';
     private const CON_QUEST     = 'Do you want to create controllers directory for the new domain? ';
+    private const SVC_QUEST     = 'Do you want to create services directory for the new domain? ';
+    private const REPO_QUEST    = 'Do you want to create repositories directory for the new domain? ';
     private const DEF_BUS_DIRS  = [
         'Command',
         'Envelope',
@@ -99,6 +103,24 @@ class CreateDDDConsts extends Enum
     /**
      * @return string
      */
+    public static function DEF_REPO_DIR(): string
+    {
+        return (new CreateDDDConsts(self::DEF_REPO_DIR))
+            ->getValue();
+    }
+    
+    /**
+     * @return string
+     */
+    public static function DEF_SVC_DIR(): string
+    {
+        return (new CreateDDDConsts(self::DEF_SVC_DIR))
+            ->getValue();
+    }
+    
+    /**
+     * @return string
+     */
     public static function DEF_ENT_DIR(): string
     {
         return (new CreateDDDConsts(self::DEF_ENT_DIR))
@@ -126,6 +148,24 @@ class CreateDDDConsts extends Enum
     /**
      * @return string
      */
+    public static function REPO_QUEST(): string
+    {
+        return (new CreateDDDConsts(self::REPO_QUEST))
+            ->getValue();
+    }
+    
+    /**
+     * @return string
+     */
+    public static function SVC_QUEST(): string
+    {
+        return (new CreateDDDConsts(self::SVC_QUEST))
+            ->getValue();
+    }
+    
+    /**
+     * @return string
+     */
     public static function ENT_QUEST(): string
     {
         return (new CreateDDDConsts(self::ENT_QUEST))
@@ -138,6 +178,15 @@ class CreateDDDConsts extends Enum
     public static function DEF_BUS_DIRS(): array
     {
         return (new CreateDDDConsts(self::DEF_BUS_DIRS))
+            ->getValue();
+    }
+    
+    /**
+     * @return array
+     */
+    public static function DEF_REPO_DIRS(): array
+    {
+        return (new CreateDDDConsts(self::DEF_REPO_DIRS))
             ->getValue();
     }
 

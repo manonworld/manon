@@ -10,12 +10,16 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Console\Helper\QuestionHelper;
-use App\Command\CreateDdd\Bus\Question\AskForBusQuest;
 use App\Command\CreateDdd\Bus\Service\CreateBus;
+use App\Command\CreateDdd\Bus\Question\AskForBusQuest;
 use App\Command\CreateDdd\Entity\Question\AskForEntQuest;
 use App\Command\CreateDdd\Entity\Service\CreateEntity;
 use App\Command\CreateDdd\Controller\Service\CreateController;
 use App\Command\CreateDdd\Controller\Question\AskForConQuest;
+use App\Command\CreateDdd\Service\Question\AskForSvcQuest;
+use App\Command\CreateDdd\Service\Service\CreateService;
+use App\Command\CreateDdd\Repo\Service\CreateRepo;
+use App\Command\CreateDdd\Repo\Question\AskForRepoQuest;
 use App\Command\CreateDdd\CreateDDDConsts;
 use App\Command\AbstractCommand;
 
@@ -27,6 +31,8 @@ use App\Command\AbstractCommand;
  * @property CreateBus $createBus
  * @property CreateEntity $createEntity
  * @property CreateController $createController
+ * @property CreateService $createService
+ * @property CreateRepo $createRepo
  * 
  * @method void configure()
  * @method int execute( InputInterface $input, OutputInterface $output )
@@ -58,23 +64,39 @@ class CreateDddCommand extends AbstractCommand
     private CreateController $createController;
 
     /**
+     * @property CreateService $createService
+     */
+    private CreateService $createService;
+
+    /**
+     * @property CreateRepo $createRepo
+     */
+    private CreateRepo $createRepo;
+
+    /**
      * 
      * New Instance
      * 
      * @param CreateBus $createBus
      * @param CreateEntity $createEntity
      * @param CreateController $createController
+     * @param CreateService $createService
+     * @param CreateRepo $createRepo
      * 
      */
     public function __construct( 
         CreateBus $createBus,
         CreateEntity $createEntity,
-        CreateController $createController
+        CreateController $createController,
+        CreateService $createService,
+        CreateRepo $createRepo
     ) {
         parent::__construct();
         $this->createBus        = $createBus;
         $this->createEntity     = $createEntity;
         $this->createController = $createController;
+        $this->createService    = $createService;
+        $this->createRepo       = $createRepo;
     }
 
     /**
@@ -122,6 +144,7 @@ class CreateDddCommand extends AbstractCommand
      * 
      * @param InputInterface $input
      * @param OutputInterface $output
+     * @param string $name
      * 
      * @return void
      */
@@ -143,6 +166,9 @@ class CreateDddCommand extends AbstractCommand
     /**
      * Gets the gestions with its approperiate handlers
      * 
+     * @param InputInterface $input
+     * @param OutputInterface $output
+     * 
      * @return array
      */
     private function getQuestsWithHandlers(
@@ -150,9 +176,11 @@ class CreateDddCommand extends AbstractCommand
         OutputInterface $output 
     ): array {
         return [
-            ['question' => AskForBusQuest::ask( $input, $output ), 'handler' => $this->createBus], 
-            ['question' => AskForEntQuest::ask( $input, $output ), 'handler' => $this->createEntity],
-            ['question' => AskForConQuest::ask( $input, $output ), 'handler' => $this->createController],
+            ['question' => AskForBusQuest::ask( $input, $output ) , 'handler' => $this->createBus], 
+            ['question' => AskForEntQuest::ask( $input, $output ) , 'handler' => $this->createEntity],
+            ['question' => AskForConQuest::ask( $input, $output ) , 'handler' => $this->createController],
+            ['question' => AskForSvcQuest::ask( $input, $output ) , 'handler' => $this->createService],
+            ['question' => AskForRepoQuest::ask( $input, $output ), 'handler' => $this->createRepo],
         ];
     }
 
