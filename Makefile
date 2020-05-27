@@ -1,5 +1,7 @@
 .DEFAULT_GOAL := default
 
+.PHONY: install app-install app-create-domain start test stop clean docker-clean default
+
 install:
 	@echo "Building Docker Containers..."
 	docker-compose up -d --build;
@@ -7,6 +9,10 @@ install:
 app-install:
 	@echo "Installing App Dependencies..."
 	docker exec -it onetool_php composer install;
+
+app-create-domain:
+	@echo "Creating a new Domain"
+	docker exec -it onetool_php bin/console app:create:ddd $(name)
 
 start:
 	@echo "Running the Application"

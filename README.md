@@ -6,7 +6,7 @@ Build Status:
 
 
 
-Yet another domain driven design boiler plate for Symfony5 applications
+Yet another domain driven design boiler plate for Symfony 5 applications
 
 Please make sure that docker and docker-compose are installed
 
@@ -41,6 +41,8 @@ Alternatively, you can use the makefile by invoking the following commands:
 ``` make install ``` to install the application
 
 ``` make app-install ``` to install the application dependencies using composer (Backend)
+
+``` make app-create-domain name=<ManonBusinessTestDomain> ``` to create a new domain
 
 ``` make test ``` to test the application
 
