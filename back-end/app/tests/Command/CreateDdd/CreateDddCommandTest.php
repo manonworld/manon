@@ -20,7 +20,7 @@ class CreateDddCommandTest extends AbstractKernelTestCase
 
         $commandTester = new CommandTester( $command );
         $commandTester->execute(['name' => 'ManonDomain']);
-        $commandTester->setInputs(['yes', 'yes']);
+        $commandTester->setInputs(['yes', 'yes', 'yes', 'yes', 'yes']);
 
         $output = $commandTester->getDisplay();
         $expected = '[OK] You have a new domain ManonDomain';
