@@ -42,8 +42,6 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make app-install ``` to install the application dependencies using composer (Backend)
 
-``` make app-create-domain name=<ManonBusinessTestDomain> ``` to create a new domain
-
 ``` make test ``` to test the application
 
 ``` make start ``` to run the application server (Backend)
@@ -56,6 +54,20 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make ``` to display make command help
 
+
+Front-End: (WIP)
+-----------------
+
+
+
+Backend Usage:
+---------------
+
+``` make app-create-domain name=<ManonBusinessTestDomain> ``` to create a new domain (Backend)
+
+Do not forget to replace ``` <ManonBusinessTestDomain> ``` with your desired domain name
+
+More command are (WIP)
 
 
 For the backend:
