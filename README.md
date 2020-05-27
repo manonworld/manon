@@ -18,9 +18,9 @@ Redis 5.0
 
 Symfony 5.0
 
-PHP 7.4 Alpine Docker
+PHP 7.4 Alpine Docker Image
 
-ReactJS@latest
+ReactJS@latest Alpine Docker Image
 
 Supervisord
 
@@ -38,17 +38,17 @@ docker-compose up -d
 
 Alternatively, you can use the makefile by invoking the following commands:
 
-``` make install ``` to install the application
+``` make install ``` to install the application (Backend & Frontend)
 
 ``` make app-install ``` to install the application dependencies using composer (Backend)
 
-``` make test ``` to test the application
+``` make test ``` to test the application (Backend)
 
 ``` make start ``` to run the application server (Backend)
 
 ``` make stop ``` to stop the application server (Backend)
 
-``` make clean ``` to uninstall the application
+``` make clean ``` to uninstall the application (Backend and Frontend)
 
 ``` make docker-clean ``` to clean the whole docker service but it will remove any other containers running in your docker environment, please use it only when you know what you are doing.
 
@@ -61,14 +61,18 @@ Front-End: (WIP)
 Still working on the scaffolder of the DDD structure for the front end
 
 
-Backend Usage:
----------------
+Backend Usage: (WIP)
+---------------------
 
-``` make app-create-domain name=<ManonBusinessTestDomain> ``` to create a new domain (Backend)
+``` make app-create-domain name=<ManonBusinessTestDomain> ``` to create a new DDD structure (Backend)
 
 Do not forget to replace ``` <ManonBusinessTestDomain> ``` with your desired domain name
 
-More commands are (WIP)
+More commands are on the way (WIP)
+
+``` make app-delete-domain name=<ManonBusinessTestDomain> ``` to delete a DDD directory structure
+
+And more...
 
 
 For the backend:
