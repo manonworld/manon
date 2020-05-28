@@ -31,10 +31,10 @@ class ExceptionToArray {
         }
         
         return [
-            'status'        => 'error', 
-            'type'          => get_class($e), 
-            'message'       => $e->getMessage(), 
-            'file'          => $e->getFile(), 
+            'status'        => 'error',
+            'type'          => get_class($e),
+            'message'       => $e->getMessage(),
+            'file'          => $e->getFile(),
             'line'          => $e->getLine(),
             'previous'      => [
                     'file'      => $previous ? $e->getPrevious()->getFile() : null,

@@ -6,10 +6,9 @@ namespace App\Command\CreateDdd;
 
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Symfony\Component\Console\Helper\QuestionHelper;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 use App\Command\CreateDdd\Bus\Service\CreateBus;
 use App\Command\CreateDdd\Bus\Question\AskForBusQuest;
 use App\Command\CreateDdd\Entity\Question\AskForEntQuest;
@@ -21,6 +20,7 @@ use App\Command\CreateDdd\Service\Service\CreateService;
 use App\Command\CreateDdd\Repo\Service\CreateRepo;
 use App\Command\CreateDdd\Repo\Question\AskForRepoQuest;
 use App\Command\CreateDdd\CreateDDDConsts;
+use App\Command\CreateDdd\ValueObject\DirName;
 use App\Command\AbstractCommand;
 
 /**
@@ -72,6 +72,17 @@ class CreateDddCommand extends AbstractCommand
      * @property CreateRepo $createRepo
      */
     private CreateRepo $createRepo;
+    
+    /**
+     * @property ValidatorInterface
+     */
+    private ValidatorInterface $validator;
+    
+    /**
+     *
+     * @property DirName $nameEntity
+     */
+    private DirName $nameEntity;
 
     /**
      * 
@@ -89,7 +100,9 @@ class CreateDddCommand extends AbstractCommand
         CreateEntity $createEntity,
         CreateController $createController,
         CreateService $createService,
-        CreateRepo $createRepo
+        CreateRepo $createRepo,
+        ValidatorInterface $validator,
+        DirName $dirName
     ) {
         parent::__construct();
         $this->createBus        = $createBus;
@@ -97,6 +110,8 @@ class CreateDddCommand extends AbstractCommand
         $this->createController = $createController;
         $this->createService    = $createService;
         $this->createRepo       = $createRepo;
+        $this->validator        = $validator;
+        $this->dirName          = $dirName;
     }
 
     /**
@@ -124,18 +139,43 @@ class CreateDddCommand extends AbstractCommand
     protected function execute( InputInterface $input, OutputInterface $output ): int
     {
         $io = new SymfonyStyle( $input, $output );
-
         $name = $input->getArgument( 'name' );
-
-        if ( $name ) {
+        if ( !$this->validate($name) ) {
+            $io->error(CreateDDDConsts::NAME_ERR());
+            return 1;
+        } else {
             $io->note( sprintf( CreateDDDConsts::INFO() , $name ) );
+            try {
+                $this->createDomain( $input , $output, $name );
+            } catch (\Exception $e) {
+                $io->error($e->getMessage());
+                return 1;
+            }
+            $io->success( sprintf( CreateDDDConsts::SUCC() , $name ) );
+            return 0;
         }
-
-        $this->createDomain( $input , $output, $name );
-
-        $io->success( sprintf( CreateDDDConsts::SUCC() , $name ) );
-
-        return 0;
+    }
+    
+    /**
+     * 
+     * Validates the name of the DDD directory name
+     * entered by the user
+     * 
+     * @param string $name
+     * @return bool
+     */
+    private function validate( string $name ): bool
+    {
+        $errors = $this->validator
+            ->validate(
+                    $this->dirName->setName($name)
+                );
+        
+        if(count($errors)){
+            return false;
+        }
+        
+        return true;
     }
 
 

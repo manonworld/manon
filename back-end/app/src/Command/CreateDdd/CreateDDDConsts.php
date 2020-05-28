@@ -17,7 +17,6 @@ use MyCLabs\Enum\Enum;
  */
 class CreateDDDConsts extends Enum
 {
-    
     private const DESC          = 'Generates a new DDD directory structure';
     private const NAME_DESC     = 'Name of the New Domain *';
     private const INFO          = 'Creating Directory Structure For The Domain: %s';
@@ -33,6 +32,18 @@ class CreateDDDConsts extends Enum
     private const CON_QUEST     = 'Do you want to create controllers directory for the new domain? ';
     private const SVC_QUEST     = 'Do you want to create services directory for the new domain? ';
     private const REPO_QUEST    = 'Do you want to create repositories directory for the new domain? ';
+    private const NAME_ERR      = 'Invalid Domain Name';
+    
+    /**
+     * 
+     * Directory structure for the Symfony messenger bus.
+     * 
+     * You can go to the max depth of 256 as the standard
+     * recursion max depth for PHP, or you can simply
+     * adjust max recursion depth from php.ini file.
+     * 
+     * @var array Directory structure for the Symfony messenger bus
+     */
     private const DEF_BUS_DIRS  = [
         'Command',
         'Envelope',
@@ -52,6 +63,15 @@ class CreateDDDConsts extends Enum
     public static function DESC(): string
     {
         return (new CreateDDDConsts(self::DESC))
+            ->getValue();
+    }
+    
+    /**
+     * @return string
+     */
+    public static function NAME_ERR(): string
+    {
+        return (new CreateDDDConsts(self::NAME_ERR))
             ->getValue();
     }
     

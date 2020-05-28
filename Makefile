@@ -1,6 +1,7 @@
 .DEFAULT_GOAL := default
 
-.PHONY: install app-install app-create-domain start test stop clean docker-clean default
+.PHONY:
+	install app-install app-create-domain start test stop clean docker-clean default
 
 install:
 	@echo "Building Docker Containers..."
