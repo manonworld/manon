@@ -34,7 +34,7 @@ RabbitMQ
 Installation using docker-compose:
 ------------------------------------
 
-docker-compose up -d
+``` docker-compose up -d ```
 
 Alternatively, you can use the makefile by invoking the following commands:
 
