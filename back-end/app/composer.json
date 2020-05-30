@@ -22,12 +22,14 @@
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.3",
         "fzaninotto/faker": "^1.9",
+        "nelmio/api-doc-bundle": "^3.6",
         "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "5.0.*",
         "symfony/css-selector": "5.0.*",
         "symfony/maker-bundle": "^1.18",
         "symfony/phpunit-bridge": "^5.0",
-        "symfony/test-pack": "^1.0"
+        "symfony/test-pack": "^1.0",
+        "willdurand/hateoas": "^3.6"
     },
     "config": {
         "preferred-install": {
