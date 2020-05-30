@@ -64,17 +64,13 @@ Still working on the scaffolder of the DDD structure for the front end
 Backend Usage: (WIP)
 ---------------------
 
-``` make app-create-domain name=<ManonBusinessTestDomain> ``` to create a new DDD structure (Backend)
+``` make app-create-domain name=ManonBusinessTestDomain ``` to create a new DDD structure (Backend)
 
-``` make app-delete-domain name=<ManonBusinessTestDomain> ``` to delete a DDD created structure (Backend)
+``` make app-delete-domain name=ManonBusinessTestDomain ``` to delete a DDD created structure (Backend)
 
-Do not forget to replace ``` <ManonBusinessTestDomain> ``` with your desired business domain name
+Do not forget to replace ``` ManonBusinessTestDomain ``` with your desired business domain name
 
-More commands are on the way (WIP)
-
-``` make app-delete-domain name=<ManonBusinessTestDomain> ``` to delete a DDD directory structure
-
-And more...
+More commands are on the way
 
 
 For the backend:
