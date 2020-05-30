@@ -9,7 +9,7 @@ use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 /**
  * 
- * Drectory Creator
+ * Directory Creator
  * 
  * Creates directories according to
  * the path passed to it
@@ -19,7 +19,7 @@ use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
  * @method void create( string $path )
  * 
  */
-class DirectoryCreator {
+class DirectoryManager {
 
     /**
      * @property Filesystem $fileSys

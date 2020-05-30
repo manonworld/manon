@@ -158,7 +158,7 @@ class CreateDddCommand extends AbstractCommand
     
     /**
      * 
-     * Validates the name of the DDD directory name
+     * Validates the name of the DDD directory
      * entered by the user
      * 
      * @param string $name
@@ -204,7 +204,7 @@ class CreateDddCommand extends AbstractCommand
 
 
     /**
-     * Gets the gestions with its approperiate handlers
+     * Gets the questions with its appropriate handlers
      * 
      * @param InputInterface $input
      * @param OutputInterface $output
@@ -227,7 +227,7 @@ class CreateDddCommand extends AbstractCommand
 
 
     /**
-     * Creates a bus if user accepts
+     * Asks for confirmation from the user regarding the creation process
      * 
      * @param InputInterface $input
      * @param OutputInterface $output

@@ -2,7 +2,7 @@
 
 namespace App\Command\Ddd\CreateDdd;
 
-use App\Infrastructure\Command\DirectoryCreator;
+use App\Infrastructure\Command\DirectoryManager;
 use App\Command\Ddd\CreateDdd\DDDCreatorInterface;
 
 /**
@@ -17,17 +17,17 @@ use App\Command\Ddd\CreateDdd\DDDCreatorInterface;
 abstract class DDDCreator implements DDDCreatorInterface {
 
     /**
-     * @property DirectoryCreator | null $creator
+     * @property DirectoryManager | null $creator
      */
-    protected ?DirectoryCreator $creator = null;
+    protected ?DirectoryManager $creator = null;
 
     /**
      * 
      * New Instance
      * 
-     * @param DirectoryCreator $creator
+     * @param DirectoryManager $creator
      */
-    public function __construct(DirectoryCreator $creator)
+    public function __construct(DirectoryManager $creator)
     {
         $this->creator = $creator;
     }

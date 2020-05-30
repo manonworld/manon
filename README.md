@@ -66,7 +66,9 @@ Backend Usage: (WIP)
 
 ``` make app-create-domain name=<ManonBusinessTestDomain> ``` to create a new DDD structure (Backend)
 
-Do not forget to replace ``` <ManonBusinessTestDomain> ``` with your desired domain name
+``` make app-delete-domain name=<ManonBusinessTestDomain> ``` to delete a DDD created structure (Backend)
+
+Do not forget to replace ``` <ManonBusinessTestDomain> ``` with your desired business domain name
 
 More commands are on the way (WIP)
 

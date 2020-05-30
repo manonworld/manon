@@ -15,6 +15,10 @@ app-create-domain:
 	@echo "Creating a new Domain"
 	docker exec -it onetool_php bin/console app:create:ddd $(name)
 
+app-delete-domain:
+	@echo "Deleting a Domain"
+	docker exec -it onetool_php bin/console app:delete:ddd $(name)
+
 start:
 	@echo "Running the Application"
 	docker exec -it onetool_php symfony server:start -d;
