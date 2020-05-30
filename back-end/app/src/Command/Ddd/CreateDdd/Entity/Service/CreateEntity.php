@@ -4,7 +4,8 @@ namespace App\Command\Ddd\CreateDdd\Entity\Service;
 
 use App\Command\Ddd\CreateDdd\Entity\EntityCreator;
 
-class CreateEntity {
+class CreateEntity
+{
 
     private EntityCreator $entityCreator;
 
@@ -13,11 +14,10 @@ class CreateEntity {
         $this->entityCreator = $entityCreator;
     }
 
-    public function execute( string $dir, string $name )
+    public function execute(string $dir, string $name)
     {
-        $defEntPath = $this->entityCreator->getEntDir( $dir, $name );
+        $defEntPath = $this->entityCreator->getEntDir($dir, $name);
 
-        $this->entityCreator->create( [] , $defEntPath );
+        $this->entityCreator->create([], $defEntPath);
     }
-
 }

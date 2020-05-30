@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := default
 
 .PHONY:
-	install app-install app-create-domain start test stop clean docker-clean default
+	install app-install app-create-domain app-delete-domain app-code-fix start test stop clean docker-clean default
 
 install:
 	@echo "Building Docker Containers..."
@@ -10,6 +10,10 @@ install:
 app-install:
 	@echo "Installing App Dependencies..."
 	docker exec -it onetool_php composer install;
+
+app-code-fix:
+	@echo "Fixing Code to PSR2 standard"
+	docker exec -it onetool_php php phpcbf.phar --standard=PSR2 src
 
 app-create-domain:
 	@echo "Creating a new Domain"

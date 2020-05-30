@@ -8,18 +8,19 @@ use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Filesystem\Exception\IOExceptionInterface;
 
 /**
- * 
+ *
  * Directory Creator
- * 
+ *
  * Creates directories according to
  * the path passed to it
- * 
+ *
  * @property Filesystem | null $fileSys
- * 
+ *
  * @method void create( string $path )
- * 
+ *
  */
-class DirectoryManager {
+class DirectoryManager
+{
 
     /**
      * @property Filesystem $fileSys
@@ -28,44 +29,43 @@ class DirectoryManager {
 
     /**
      * New Instance
-     * 
+     *
      * @param Filesystem
      */
-    public function __construct( Filesystem $fileSys )
+    public function __construct(Filesystem $fileSys)
     {
         $this->fileSys = $fileSys;
     }
 
     /**
      * Creates the directory in the given path
-     * 
+     *
      * @param string $path
      * @throws IOExceptionInterface
      * @return void
      */
-    public function create( string $path ): void
+    public function create(string $path): void
     {
         try {
-            $this->fileSys->mkdir( $path );
-        } catch ( IOExceptionInterface $ioe ) {
+            $this->fileSys->mkdir($path);
+        } catch (IOExceptionInterface $ioe) {
             throw $ioe;
         }
     }
 
     /**
      * Removes the (directory | file | symlink) from the given path
-     * 
+     *
      * @param string $path
      * @throws IOExceptionInterface
      * @return void
      */
-    public function remove( string $path ): void
+    public function remove(string $path): void
     {
         try {
-            $this->fileSys->remove( $path );
-        } catch ( IOExceptionInterface $ioe ) {
+            $this->fileSys->remove($path);
+        } catch (IOExceptionInterface $ioe) {
             throw $ioe;
         }
     }
-
 }

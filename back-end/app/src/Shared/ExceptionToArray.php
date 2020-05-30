@@ -13,12 +13,13 @@ namespace App\Shared;
  *
  * @author Mostafa A. Hamid <info@manonworld.de>
  */
-class ExceptionToArray {
+class ExceptionToArray
+{
     
     /**
-     * 
+     *
      * Converts the exception to array
-     * 
+     *
      * @param \Exception $e
      * @return array
      */
@@ -26,7 +27,7 @@ class ExceptionToArray {
     {
         $previous = false;
         
-        if( $e->getPrevious() ) {
+        if ($e->getPrevious()) {
             $previous = true;
         }
         
@@ -43,5 +44,4 @@ class ExceptionToArray {
                 ],
         ];
     }
-    
 }

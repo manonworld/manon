@@ -17,13 +17,14 @@ use App\Infrastructure\Serializer\SerializerException;
  *
  * @author Mostafa A. Hamid <info@manonworld.de>
  */
-class JmsSerializer {
+class JmsSerializer
+{
     
     /**
      *
      * @var Serializer $serializer
      */
-    private Serializer $serializer; 
+    private Serializer $serializer;
     
     /**
      * New Instance
@@ -36,9 +37,9 @@ class JmsSerializer {
     
     
     /**
-     * 
+     *
      * Serializes an object
-     * 
+     *
      * @param mixed $source
      * @param string $type
      * @return mixed
@@ -47,17 +48,14 @@ class JmsSerializer {
     public function serialize($source, string $type = 'json')
     {
         try {
-            
             return $this->serializer
                 ->serialize($source, $type);
-            
-        } catch ( \Exception $e ) {
-            
+        } catch (\Exception $e) {
             throw new SerializerException(
-                $e->getMessage(), 500, $e
+                $e->getMessage(),
+                500,
+                $e
             );
-            
         }
     }
-    
 }

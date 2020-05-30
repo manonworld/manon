@@ -5,11 +5,12 @@ namespace App\Command\Ddd\CreateDdd\Repo\Question;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use App\Command\Ddd\CreateDdd\CreateDDDConsts;
 
-class AskForRepoQuest {
+class AskForRepoQuest
+{
 
-    public static function ask(): ConfirmationQuestion {
+    public static function ask(): ConfirmationQuestion
+    {
 
-        return new ConfirmationQuestion( CreateDDDConsts::REPO_QUEST(), false );
+        return new ConfirmationQuestion(CreateDDDConsts::REPO_QUEST(), false);
     }
-
 }

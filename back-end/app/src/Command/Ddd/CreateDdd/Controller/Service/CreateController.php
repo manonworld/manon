@@ -4,7 +4,8 @@ namespace App\Command\Ddd\CreateDdd\Controller\Service;
 
 use App\Command\Ddd\CreateDdd\Controller\ControllerCreator;
 
-class CreateController {
+class CreateController
+{
 
     private ControllerCreator $controllerCreator;
 
@@ -13,11 +14,10 @@ class CreateController {
         $this->controllerCreator = $controllerCreator;
     }
 
-    public function execute( string $dir, string $name )
+    public function execute(string $dir, string $name)
     {
-        $defConPath = $this->controllerCreator->getConDir( $dir, $name );
+        $defConPath = $this->controllerCreator->getConDir($dir, $name);
 
-        $this->controllerCreator->create( [] , $defConPath );
+        $this->controllerCreator->create([], $defConPath);
     }
-
 }

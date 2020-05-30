@@ -4,7 +4,8 @@ namespace App\Command\Ddd\CreateDdd\Service\Service;
 
 use App\Command\Ddd\CreateDdd\Service\ServiceCreator;
 
-class CreateService {
+class CreateService
+{
 
     private ServiceCreator $serviceCreator;
 
@@ -13,11 +14,10 @@ class CreateService {
         $this->serviceCreator = $serviceCreator;
     }
 
-    public function execute( string $dir, string $name )
+    public function execute(string $dir, string $name)
     {
-        $defSvcPath = $this->serviceCreator->getSvcDir( $dir, $name );
+        $defSvcPath = $this->serviceCreator->getSvcDir($dir, $name);
 
-        $this->serviceCreator->create( [] , $defSvcPath );
+        $this->serviceCreator->create([], $defSvcPath);
     }
-
 }

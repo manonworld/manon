@@ -12,21 +12,22 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Description of DirName
- * 
+ *
  * @property string $name Domain Directory Name
- * 
+ *
  * @method self setName(string $name) Setter for the $name
  * @see \App\Command\Ddd\ValueObject\DirName::$name Domain Directory Name
- * 
- * @method string getName() Getter for the $name 
+ *
+ * @method string getName() Getter for the $name
  * @see \App\Command\Ddd\ValueObject\DirName::$name Domain Directory Name
  *
  * @author mosta <info@manonworld.de>
  */
-class DirName {
+class DirName
+{
     
     /**
-     * 
+     *
      * Holds the directory name
      *
      * @var string $name Directory name
@@ -39,9 +40,9 @@ class DirName {
     private string $name;
     
     /**
-     * 
+     *
      * Getter for the name
-     * 
+     *
      * @return string
      */
     public function getName(): string
@@ -50,9 +51,9 @@ class DirName {
     }
 
     /**
-     * 
+     *
      * Setter for the name
-     * 
+     *
      * @param string $name
      * @return $this
      */
@@ -61,5 +62,4 @@ class DirName {
         $this->name = $name;
         return $this;
     }
-    
 }

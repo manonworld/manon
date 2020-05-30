@@ -47,12 +47,15 @@ RUN docker-php-ext-install \
     intl pcntl xsl \
     soap pdo pdo_mysql
 
+# Dev PHP Extensions (Remove in Prod)
+
 RUN pecl install xdebug
+RUN pear install PHP_CodeSniffer
+
 
 RUN apk upgrade --update && apk add \
     libmcrypt-dev git \
-    && docker-php-ext-configure intl \
-    && docker-php-ext-enable xdebug
+    && docker-php-ext-configure intl
 
 
 # Add Redis support

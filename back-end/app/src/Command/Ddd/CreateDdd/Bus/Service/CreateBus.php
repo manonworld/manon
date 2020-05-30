@@ -7,14 +7,15 @@ use App\Command\Ddd\CreateDdd\CreateDDDConsts;
 
 /**
  * CreateBus
- * 
+ *
  * Creates a new bus directory structure for a specific business domain
- * 
+ *
  * @property BusCreator $busCreator
- * 
+ *
  * @method void execute( string $dir, string $name )
  */
-class CreateBus {
+class CreateBus
+{
 
     /**
      * @property BusCreator $busCreator
@@ -23,7 +24,7 @@ class CreateBus {
 
     /**
      * New Instance
-     * 
+     *
      * @param BusCreator $busCreator
      */
     public function __construct(BusCreator $busCreator)
@@ -33,16 +34,15 @@ class CreateBus {
 
     /**
      * Creates a new Bus
-     * 
-     * 
+     *
+     *
      */
-    public function execute( string $dir, string $name ): void
+    public function execute(string $dir, string $name): void
     {
-        $defBusPath = $this->busCreator->getDefBusDir( $dir, $name );
+        $defBusPath = $this->busCreator->getDefBusDir($dir, $name);
 
         $defBusDirs = CreateDDDConsts::DEF_BUS_DIRS();
 
-        $this->busCreator->create( $defBusDirs , $defBusPath );
+        $this->busCreator->create($defBusDirs, $defBusPath);
     }
-
 }

@@ -24,22 +24,22 @@ use App\Command\Ddd\ValueObject\DirName;
 use App\Command\AbstractCommand;
 
 /**
- * 
+ *
  * Creates the whole DDD directory structure
- * 
+ *
  * @property string $defaultName
  * @property CreateBus $createBus
  * @property CreateEntity $createEntity
  * @property CreateController $createController
  * @property CreateService $createService
  * @property CreateRepo $createRepo
- * 
+ *
  * @method void configure()
  * @method int execute( InputInterface $input, OutputInterface $output )
  * @method void createDomain( InputeInterface $input, OutputInterface $output )
  * @method array getQuestsWithHandlers( InputInterface $input, OutputInterface $output )
  * @method bool ask( InputInterface $input, OutputInterface $output, $question, $helper )
- * 
+ *
  */
 class CreateDddCommand extends AbstractCommand
 {
@@ -85,17 +85,17 @@ class CreateDddCommand extends AbstractCommand
     private DirName $dirName;
 
     /**
-     * 
+     *
      * New Instance
-     * 
+     *
      * @param CreateBus $createBus
      * @param CreateEntity $createEntity
      * @param CreateController $createController
      * @param CreateService $createService
      * @param CreateRepo $createRepo
-     * 
+     *
      */
-    public function __construct( 
+    public function __construct(
         CreateBus $createBus,
         CreateEntity $createEntity,
         CreateController $createController,
@@ -116,62 +116,62 @@ class CreateDddCommand extends AbstractCommand
 
     /**
      * Command Configuration options
-     * 
+     *
      * @return void
      */
     protected function configure()
     {
-        $this->setDescription( CreateDDDConsts::DESC() )
+        $this->setDescription(CreateDDDConsts::DESC())
             ->addArgument(
-                'name', 
-                InputArgument::REQUIRED, 
+                'name',
+                InputArgument::REQUIRED,
                 CreateDDDConsts::NAME_DESC()
             );
     }
 
     /**
      * Creates a new DDD Directory structure
-     * 
+     *
      * @param InputInterface $input
      * @param OutputInterface $output
      * @return int
      */
-    protected function execute( InputInterface $input, OutputInterface $output ): int
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $io = new SymfonyStyle( $input, $output );
-        $name = $input->getArgument( 'name' );
-        if ( !$this->validate($name) ) {
+        $io = new SymfonyStyle($input, $output);
+        $name = $input->getArgument('name');
+        if (!$this->validate($name)) {
             $io->error(CreateDDDConsts::NAME_ERR());
             return 1;
         } else {
-            $io->note( sprintf( CreateDDDConsts::INFO() , $name ) );
+            $io->note(sprintf(CreateDDDConsts::INFO(), $name));
             try {
-                $this->createDomain( $input , $output, $name );
+                $this->createDomain($input, $output, $name);
             } catch (\Exception $e) {
                 $io->error($e->getMessage());
                 return 1;
             }
-            $io->success( sprintf( CreateDDDConsts::SUCC() , $name ) );
+            $io->success(sprintf(CreateDDDConsts::SUCC(), $name));
             return 0;
         }
     }
     
     /**
-     * 
+     *
      * Validates the name of the DDD directory
      * entered by the user
-     * 
+     *
      * @param string $name
      * @return bool
      */
-    private function validate( string $name ): bool
+    private function validate(string $name): bool
     {
         $errors = $this->validator
             ->validate(
-                    $this->dirName->setName($name)
-                );
+                $this->dirName->setName($name)
+            );
         
-        if(count($errors)){
+        if (count($errors)) {
             return false;
         }
         
@@ -181,11 +181,11 @@ class CreateDddCommand extends AbstractCommand
 
     /**
      * Performs the domain creation process
-     * 
+     *
      * @param InputInterface $input
      * @param OutputInterface $output
      * @param string $name
-     * 
+     *
      * @return void
      */
     private function createDomain(
@@ -194,10 +194,10 @@ class CreateDddCommand extends AbstractCommand
         string $name
     ): void {
         $helper = $this->getHelper('question');
-        $quests = $this->getQuestsWithHandlers( $input, $output );
-        foreach ( $quests as $quest ) {
-            if ( $this->ask( $input, $output, $quest['question'], $helper ) ) {
-                $quest['handler']->execute( __DIR__ , $name );
+        $quests = $this->getQuestsWithHandlers($input, $output);
+        foreach ($quests as $quest) {
+            if ($this->ask($input, $output, $quest['question'], $helper)) {
+                $quest['handler']->execute(__DIR__, $name);
             }
         }
     }
@@ -205,22 +205,22 @@ class CreateDddCommand extends AbstractCommand
 
     /**
      * Gets the questions with its appropriate handlers
-     * 
+     *
      * @param InputInterface $input
      * @param OutputInterface $output
-     * 
+     *
      * @return array
      */
     private function getQuestsWithHandlers(
-        InputInterface $input, 
-        OutputInterface $output 
+        InputInterface $input,
+        OutputInterface $output
     ): array {
         return [
-            ['question' => AskForBusQuest::ask( $input, $output ) , 'handler' => $this->createBus], 
-            ['question' => AskForEntQuest::ask( $input, $output ) , 'handler' => $this->createEntity],
-            ['question' => AskForConQuest::ask( $input, $output ) , 'handler' => $this->createController],
-            ['question' => AskForSvcQuest::ask( $input, $output ) , 'handler' => $this->createService],
-            ['question' => AskForRepoQuest::ask( $input, $output ), 'handler' => $this->createRepo],
+            ['question' => AskForBusQuest::ask($input, $output) , 'handler' => $this->createBus],
+            ['question' => AskForEntQuest::ask($input, $output) , 'handler' => $this->createEntity],
+            ['question' => AskForConQuest::ask($input, $output) , 'handler' => $this->createController],
+            ['question' => AskForSvcQuest::ask($input, $output) , 'handler' => $this->createService],
+            ['question' => AskForRepoQuest::ask($input, $output), 'handler' => $this->createRepo],
         ];
     }
 
@@ -228,16 +228,16 @@ class CreateDddCommand extends AbstractCommand
 
     /**
      * Asks for confirmation from the user regarding the creation process
-     * 
+     *
      * @param InputInterface $input
      * @param OutputInterface $output
      * @param mixed $question
      * @param mixed $helper
-     * 
+     *
      * @return bool
      */
-    private function ask( InputInterface $input, OutputInterface $output, $question, $helper ): bool
+    private function ask(InputInterface $input, OutputInterface $output, $question, $helper): bool
     {
-        return $helper->ask( $input, $output, $question );
+        return $helper->ask($input, $output, $question);
     }
 }

@@ -13,10 +13,11 @@ namespace App\Infrastructure\Serializer;
  *
  * @author Mostafa A. Hamid <info@manonworld.de>
  */
-class SerializerException extends \Exception {
+class SerializerException extends \Exception
+{
     
-    public function __construct(string $message = "", int $code = 500, \Throwable $previous = NULL) {
+    public function __construct(string $message = "", int $code = 500, \Throwable $previous = null)
+    {
         parent::__construct($message, $code, $previous);
     }
-    
 }

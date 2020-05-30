@@ -4,7 +4,8 @@ namespace App\Command\Ddd\DeleteDdd\Service;
 
 use App\Command\Ddd\DeleteDdd\DomainDeleter;
 
-class DeleteDomain {
+class DeleteDomain
+{
 
     private DomainDeleter $domainDeleter;
 
@@ -13,9 +14,8 @@ class DeleteDomain {
         $this->domainDeleter = $domainDeleter;
     }
 
-    public function execute( string $name )
+    public function execute(string $name)
     {
-        $this->domainDeleter->delete( $name );
+        $this->domainDeleter->delete($name);
     }
-
 }

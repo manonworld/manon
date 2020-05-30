@@ -5,11 +5,12 @@ namespace App\Command\Ddd\CreateDdd\Entity\Question;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
 use App\Command\Ddd\CreateDdd\CreateDDDConsts;
 
-class AskForEntQuest {
+class AskForEntQuest
+{
 
-    public static function ask(): ConfirmationQuestion {
+    public static function ask(): ConfirmationQuestion
+    {
 
-        return new ConfirmationQuestion( CreateDDDConsts::ENT_QUEST(), false );
+        return new ConfirmationQuestion(CreateDDDConsts::ENT_QUEST(), false);
     }
-
 }

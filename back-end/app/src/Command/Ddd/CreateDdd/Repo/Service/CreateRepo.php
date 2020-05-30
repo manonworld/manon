@@ -4,7 +4,8 @@ namespace App\Command\Ddd\CreateDdd\Repo\Service;
 
 use App\Command\Ddd\CreateDdd\Repo\RepoCreator;
 
-class CreateRepo {
+class CreateRepo
+{
 
     private RepoCreator $repoCreator;
 
@@ -13,11 +14,10 @@ class CreateRepo {
         $this->repoCreator = $repoCreator;
     }
 
-    public function execute( string $dir, string $name )
+    public function execute(string $dir, string $name)
     {
-        $defRepoPath = $this->repoCreator->getRepoDir( $dir, $name );
+        $defRepoPath = $this->repoCreator->getRepoDir($dir, $name);
 
-        $this->repoCreator->create( [] , $defRepoPath );
+        $this->repoCreator->create([], $defRepoPath);
     }
-
 }

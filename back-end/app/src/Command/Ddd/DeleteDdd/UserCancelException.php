@@ -13,10 +13,11 @@ namespace App\Command\Ddd\DeleteDdd;
  *
  * @author mosta <info@manonworld.de>
  */
-class UserCancelException extends \Exception {
+class UserCancelException extends \Exception
+{
     
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct("User Canceled Deletion", 500);
     }
-    
 }

@@ -13,18 +13,19 @@ use App\Command\Ddd\CreateDdd\CreateDDDConsts;
 
 /**
  * Delete DDD constants
- * 
+ *
  * @property string $DEF_DIR Default parent directory for the domains created
- * 
+ *
  * @method string DEF_DIR() Mutator for the DEF_DIR
  * @see App\Command\DeleteDdd::$DEF_DIR
- * 
+ *
  * @method string DEL_QUEST() Mutator for the DEL_QUEST
  * @see App\Command\DeleteDdd::$DEL_QUEST
  *
  * @author mosta <info@manonworld.de>
  */
-class DeleteDDDConsts extends Enum {
+class DeleteDDDConsts extends Enum
+{
     
     /**
      * @property string $DEF_DIR Default parent directory for the domains created
@@ -109,5 +110,4 @@ class DeleteDDDConsts extends Enum {
         return (new DeleteDDDConsts(self::SUCC))
             ->getValue();
     }
-    
 }

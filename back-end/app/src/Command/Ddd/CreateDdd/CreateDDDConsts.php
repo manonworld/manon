@@ -34,13 +34,13 @@ class CreateDDDConsts extends Enum
     private const NAME_ERR      = 'Invalid Domain Name';
     
     /**
-     * 
+     *
      * Directory structure for the Symfony messenger bus.
-     * 
+     *
      * You can go to the max depth of 256 as the standard
      * recursion max depth for PHP, or you can simply
      * adjust max recursion depth from php.ini file.
-     * 
+     *
      * @var array Directory structure for the Symfony messenger bus
      */
     private const DEF_BUS_DIRS  = [
@@ -208,5 +208,4 @@ class CreateDDDConsts extends Enum
         return (new CreateDDDConsts(self::CON_QUEST))
             ->getValue();
     }
-    
 }
