@@ -94,5 +94,13 @@ https://testdomain.wip:8000
 
 for the main page of Symfony 5
 
+To run the application successfully, just follow the steps:
+
+``` make install ```
+
+``` make app-install ```
+
+``` make start ```
+
 
 Thanks
