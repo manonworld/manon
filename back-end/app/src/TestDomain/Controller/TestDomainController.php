@@ -39,7 +39,8 @@ class TestDomainController extends BaseController
             );
         } catch (SerializerException $e) {
             return $this->json(
-                ExceptionToArray::exec($e), $e->getCode()
+                ExceptionToArray::exec($e),
+                $e->getCode()
             );
         }
     }

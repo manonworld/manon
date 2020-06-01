@@ -70,6 +70,8 @@ Backend Usage: (WIP)
 
 Do not forget to replace ``` ManonBusinessTestDomain ``` with your desired business domain name
 
+``` make app-code-fix name=ManonBusinessTestDomain ``` to delete a DDD created structure (Backend)
+
 More commands are on the way
 
 
