@@ -40,13 +40,7 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make install ``` to install the application (Backend & Frontend)
 
-``` make app-install ``` to install the application dependencies using composer (Backend)
-
 ``` make test ``` to test the application (Backend)
-
-``` make start ``` to run the application server (Backend)
-
-``` make stop ``` to stop the application server (Backend)
 
 ``` make clean ``` to uninstall the application (Backend and Frontend)
 
@@ -63,6 +57,12 @@ Still working on the scaffolder of the DDD structure for the front end
 
 Backend Usage: (WIP)
 ---------------------
+
+``` make app-install ``` to install the application dependencies using composer (Backend)
+
+``` make start ``` to run the application server (Backend)
+
+``` make stop ``` to stop the application server (Backend)
 
 ``` make app-create-domain name=ManonBusinessTestDomain ``` to create a new DDD structure (Backend)
 
