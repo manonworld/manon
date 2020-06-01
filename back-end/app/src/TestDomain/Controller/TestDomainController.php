@@ -35,14 +35,11 @@ class TestDomainController extends BaseController
     {
         try {
             return $this->json(
-                $this->serializer->serialize([
-                        'testkey' => 'testval'
-                    ])
+                $this->serializer->serialize(['testkey' => 'testval'])
             );
         } catch (SerializerException $e) {
             return $this->json(
-                ExceptionToArray::exec($e),
-                $e->getCode()
+                ExceptionToArray::exec($e), $e->getCode()
             );
         }
     }

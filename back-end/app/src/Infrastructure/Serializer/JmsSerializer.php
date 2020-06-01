@@ -41,21 +41,16 @@ class JmsSerializer
      * Serializes an object
      *
      * @param mixed $source
-     * @param string $type
+     * @param string $format
      * @return mixed
      * @throws SerializerException
      */
-    public function serialize($source, string $type = 'json')
+    public function serialize($source, string $format = 'json')
     {
         try {
-            return $this->serializer
-                ->serialize($source, $type);
+            return $this->serializer->serialize($source, $format);
         } catch (\Exception $e) {
-            throw new SerializerException(
-                $e->getMessage(),
-                500,
-                $e
-            );
+            throw new SerializerException($e->getMessage(), 500, $e);
         }
     }
 }

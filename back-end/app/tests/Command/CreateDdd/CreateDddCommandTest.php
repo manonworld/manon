@@ -6,13 +6,13 @@ use Symfony\Component\Console\Tester\CommandTester;
 use App\Tests\AbstractKernelTestCase;
 
 /**
- * @covers \App\Command\CreateDdd\CreateDddCommand
+ * @covers App\Command\Ddd\CreateDdd\CreateDddCommand
  */
 class CreateDddCommandTest extends AbstractKernelTestCase
 {
     
     /**
-     * @covers \App\Command\CreateDdd\CreateDddCommand::execute
+     * @covers App\Command\Ddd\CreateDdd\CreateDddCommand::execute
      */
     public function testExecute()
     {
