@@ -70,7 +70,7 @@ Backend Usage: (WIP)
 
 Do not forget to replace ``` ManonBusinessTestDomain ``` with your desired business domain name
 
-``` make app-code-fix name=ManonBusinessTestDomain ``` to delete a DDD created structure (Backend)
+``` make app-code-fix name=ManonBusinessTestDomain ``` to Adjust the code to the PSR2 standard (Backend)
 
 More commands are on the way
 
