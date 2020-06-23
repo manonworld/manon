@@ -88,7 +88,7 @@ For the backend:
 
 A step before browsing the backend is:
 
-edit your /etc/hosts file using any editor and add the following entry to the end of the file:
+edit your /etc/hosts or Windows or MacOS hosts file using any editor and add the following entry to the end of the file:
 
 ``` 127.0.0.1   testdomain.wip ```
 
