@@ -62,6 +62,8 @@ Backend Usage: (WIP)
 
 ``` make start ``` to run the application server (Backend)
 
+``` make log ``` to start log tailing (Backend)
+
 ``` make stop ``` to stop the application server (Backend)
 
 ``` make app-create-domain name=ManonBusinessTestDomain ``` to create a new DDD structure (Backend)

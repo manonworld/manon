@@ -27,6 +27,10 @@ start:
 	@echo "Running the Application"
 	docker exec -it onetool_php symfony server:start -d;
 
+log:
+	@echo "Tailing the Log...s"
+	docker exec -it onetool_php symfony server:log;
+
 test:
 	@echo "Running Tests"
 	docker exec -it onetool_php bin/phpunit --coverage-text;

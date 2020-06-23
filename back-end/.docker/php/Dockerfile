@@ -20,7 +20,7 @@ ENV HOME /root
 
 # Update and Install Python
 
-RUN apk add --update python python-dev py-pip build-base
+RUN apk add --update python3 python3-dev py-pip build-base
 
 
 # ICU Dev
