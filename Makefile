@@ -13,39 +13,43 @@ app-install:
 
 app-code-fix:
 	@echo "Fixing Code to PSR2 standard"
-	docker exec -it onetool_php php phpcbf.phar --standard=PSR2 src
+	@docker exec -it onetool_php php phpcbf.phar --standard=PSR2 src
 
 app-create-domain:
 	@echo "Creating a new Domain"
-	docker exec -it onetool_php bin/console app:create:ddd $(name)
+	@docker exec -it onetool_php bin/console app:create:ddd $(name)
 
 app-delete-domain:
 	@echo "Deleting a Domain"
-	docker exec -it onetool_php bin/console app:delete:ddd $(name)
+	@docker exec -it onetool_php bin/console app:delete:ddd $(name)
 
 start:
 	@echo "Running the Application"
-	docker exec -it onetool_php symfony server:start -d;
+	@docker exec -it onetool_php symfony server:start -d;
 
 log:
 	@echo "Tailing the Log...s"
-	docker exec -it onetool_php symfony server:log;
+	@docker exec -it onetool_php symfony server:log;
 
 test:
 	@echo "Running Tests"
-	docker exec -it onetool_php bin/phpunit --coverage-text;
+	@docker exec -it onetool_php bin/phpunit --coverage-text;
 
 stop:
 	@echo "Stopping the Application"
-	docker exec -it onetool_php symfony server:stop;
+	@docker exec -it onetool_php symfony server:stop;
 
 clean:
 	@echo "Cleaning Docker Containers..."
-	docker-compose down;
+	@docker-compose down;
 
 docker-clean:
 	@echo "Cleaning Docker Process..."
-	docker system prune --all -f -a;
+	@docker system prune --all -f -a;
+
+release:
+	@echo "Making a New Release...";
+	@./rmt.phar release;
 
 default:
 	@echo ""
