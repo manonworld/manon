@@ -52,7 +52,7 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make ``` to display make command help
 
-``` make release ``` to create a release. (Make sure that 
+``` make release ``` to create a release. (Make sure that https://github.com/liip/RMT is installed)
 
 
 Front-End: (WIP)
