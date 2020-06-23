@@ -3,7 +3,10 @@
 Build Status:
 --------------
 [![Build Status](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate.svg?branch=master)](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate)
-
+<a href="https://scan.coverity.com/projects/mostafaahamidmanon-symfony5dddboilerplate">
+  <img alt="Coverity Scan Build Status"
+       src="https://scan.coverity.com/projects/21378/badge.svg"/>
+</a>
 
 
 Yet another domain driven design boiler plate for Symfony 5 applications

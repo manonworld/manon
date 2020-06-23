@@ -12,14 +12,24 @@ addons:
   apt:
     packages:
       - docker-ce
+  coverity_scan:
+    project:
+      name: "mostafaahamidmanon/symfony5dddboilerplate"
+      description: "A boilerplate for Symfony 5 in DDD and CQRS"
+    notification_email: info@manonworld.de
+    build_command_prepend: "make install"
+    build_command: "make app-install"
+    branch_pattern: coverity_scan
 
 env:
-  DOCKER_COMPOSE_VERSION: 1.24.1
+  - secure: "kQ94Q9sSN+t9L1CRIGNbR1nvwxfAXuSR+ekeIt0Kpd6+u8moOQLUwGVw1zpK+d+IOlVI6FANm6LO5EgoZT4lbOof9So4w2S7uw6UqI+KJLG6fEc7oxPyz3u3qGqM6D5XkwWOJvXX45pWK1nzsZep/rhQil8uxzDnTAiGk+5EJJar55uCR16QnhkmfxkpA86foEmKchyVBpV1J5bJ6N8dGwhPRDDTG/pzw3SnhvZSXEpwCxYPGRHB2pel3/WqWA9mzr852gil4sdOR8GE5BrF4+qoyjLvsaxKErqF/w5lHe2RGFzkyGtn5W63FHiuJrwOjf88EqU/LcTDVXq/r9nlVtA5DqAOsbwomw/tLn5FIFIo0oLriBU+8l/8SqWGtaIbboEcsW2oHBgxGaNVoEibU9OFxfgPXXcfRr7UlGpBJKHzoC7Rz5eaDv59BIeZb+fBr28rZILN57tYGRy2G1yY08yts0m6rwMkq0oadf5L45xwq2Anz9HcgT7LRgOrvXV35A4orvaW8qnHKkqq7ykWGDbPFHdYZJ/FSkqWZOMaKpwc92tW4RzibHicOOlraZGccQeufqV2zbaVgiHmPAcEKS+BD4SplcpZ/aZT2wye42xLVpX3srpAKUt9Gws3PJSZtxuWbVy/4hxravRt6NKNt/csMZdmk68dLv72gy3u5sA="
+  - DOCKER_COMPOSE_VERSION: 1.24.1
 
 before_install:
   - curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-`uname -s`-`uname -m` > docker-compose
   - chmod +x docker-compose
   - sudo mv docker-compose /usr/local/bin
+  - echo -n | openssl s_client -connect https://scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
 
 install:
   - true
