@@ -1,5 +1,11 @@
 # DDD Boilerplate in Symfony 5
 
+
+Yet another domain driven design boiler plate for Symfony 5 applications
+
+Please make sure that docker and docker-compose are installed
+________________________________________________________________________________
+
 Build Status:
 --------------
 [![Build Status](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate.svg?branch=master)](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate)
@@ -7,11 +13,6 @@ Build Status:
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/21378/badge.svg"/>
 </a>
-
-
-Yet another domain driven design boiler plate for Symfony 5 applications
-
-Please make sure that docker and docker-compose are installed
 
 
 Tech stack:
@@ -51,6 +52,8 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make ``` to display make command help
 
+``` make release ``` to create a release. (Make sure that 
+
 
 Front-End: (WIP)
 -----------------
@@ -69,13 +72,13 @@ Backend Usage: (WIP)
 
 ``` make stop ``` to stop the application server (Backend)
 
-``` make app-create-domain name=ManonBusinessTestDomain ``` to create a new DDD structure (Backend)
+``` make domain name=ManonBusinessTestDomain ``` to create a new DDD structure (Backend)
 
-``` make app-delete-domain name=ManonBusinessTestDomain ``` to delete a DDD created structure (Backend)
+``` make delete-domain name=ManonBusinessTestDomain ``` to delete a DDD created structure (Backend)
 
 Do not forget to replace ``` ManonBusinessTestDomain ``` with your desired business domain name
 
-``` make app-code-fix ``` to Adjust the code to the PSR2 standard (Backend)
+``` make code-fix ``` to Adjust the code to the PSR2 standard (Backend)
 
 More commands are on the way
 
