@@ -13,6 +13,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 use App\Infrastructure\Serializer\JmsSerializer;
+use App\Infrastructure\Serializer\HateoasSerializer;
 
 /**
  *
@@ -20,8 +21,9 @@ use App\Infrastructure\Serializer\JmsSerializer;
  *
  * @property LoggerInterface $logger Symfony built in Logger Interface
  * @property RequestStack $request Symfony builtin HTTP request
- *
- * @method void __construct(LoggerInterface $logger, Request $request, Response $response) Constructor
+ * @property ValidatorInterface $validator Symfony builtin Validator Interface
+ * @property JmsSerializer $serializer JMS Serializer for Messaging
+ * @property HateoasSerializer $hateoas Serializer for REST responses
  *
  * @author Mostafa A. Hamid <info@manonworld.de>
  */
@@ -54,6 +56,12 @@ class BaseController extends AbstractController
     
     /**
      *
+     * @var HateoasSerializer $hateoas
+     */
+    protected HateoasSerializer $hateoas;
+    
+    /**
+     *
      * New Instance
      *
      * @param LoggerInterface $logger
@@ -65,11 +73,13 @@ class BaseController extends AbstractController
         LoggerInterface $logger,
         RequestStack $request,
         ValidatorInterface $validator,
-        JmsSerializer $serializer
+        JmsSerializer $serializer,
+        HateoasSerializer $hateoas
     ) {
         $this->logger       = $logger;
         $this->request      = $request;
         $this->validator    = $validator;
         $this->serializer   = $serializer;
+        $this->hateoas      = $hateoas;
     }
 }

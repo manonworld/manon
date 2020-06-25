@@ -8,34 +8,35 @@
 
 namespace App\Tests\Infrastructure;
 
-use App\Infrastructure\Serializer\JmsSerializer;
+use App\Infrastructure\Serializer\HateoasSerializer;
 use App\Tests\AbstractKernelTestCase;
 
 /**
- * Tests the serializer methods
+ * Tests the Hateoas serializer methods
  *
- * @covers App\Infrastructure\Serializer\JmsSerializer
+ * @covers App\Infrastructure\Serializer\HateoasSerializer
  * @author mosta <info@manonworld.de>
  */
-class SerializerTest extends AbstractKernelTestCase {
+class HateoasSerializerTest extends AbstractKernelTestCase {
     
     /**
      *
-     * @var JmsSerializer
+     * @var HateoasSerializer
      */
-    private JmsSerializer $serializer;
+    private HateoasSerializer $serializer;
     
     /**
      * 
-     * @return JmsSerializer
+     * @return HateoasSerializer
      */
-    public function setUp(): void {
-        $this->serializer = new JmsSerializer;
+    public function setUp(): void
+    {
+        $this->serializer = new HateoasSerializer;
         parent::setUp();
     }
     
     /**
-     * @covers App\Infrastructure\Serializer\JmsSerializer::serialize
+     * @covers App\Infrastructure\Serializer\HateoasSerializer::serialize
      */
     public function testSerialize()
     {
@@ -45,7 +46,7 @@ class SerializerTest extends AbstractKernelTestCase {
     }
     
     /**
-     * @covers App\Infrastructure\Serializer\JmsSerializer::serialize
+     * @covers App\Infrastructure\Serializer\HateoasSerializer::serialize
      */
     public function testSerializeThrowsSerializerException()
     {

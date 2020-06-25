@@ -8,34 +8,30 @@
 
 namespace App\Infrastructure\Serializer;
 
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
-use App\Infrastructure\Serializer\SerializerException;
+use Hateoas\HateoasBuilder;
+use Hateoas\Hateoas;
 use App\Infrastructure\Serializer\SerializerInterface;
+use App\Infrastructure\Serializer\SerializerException;
 
 /**
- * Description of JmsSerializer
+ * Serializes an object for REST response
  *
- * @author Mostafa A. Hamid <info@manonworld.de>
+ * @author mosta <info@manonworld.de>
  */
-class JmsSerializer implements SerializerInterface
+class HateoasSerializer implements SerializerInterface
 {
     
     /**
      *
-     * @var Serializer $serializer
+     * @var Hateoas $hateoas
      */
-    private Serializer $serializer;
+    private Hateoas $hateoas;
     
-    /**
-     * New Instance
-     */
+    
     public function __construct()
     {
-        $this->serializer = SerializerBuilder::create()
-                ->build();
+        $this->hateoas = HateoasBuilder::create()->build();
     }
-    
     
     /**
      *
@@ -46,10 +42,10 @@ class JmsSerializer implements SerializerInterface
      * @return mixed
      * @throws SerializerException
      */
-    public function serialize($source, string $format = 'json')
+    public function serialize($object, string $type = 'json')
     {
         try {
-            return $this->serializer->serialize($source, $format);
+            return $this->hateoas->serialize($object, $type);
         } catch (\Exception $e) {
             throw new SerializerException($e->getMessage(), 500, $e);
         }

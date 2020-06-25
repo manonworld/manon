@@ -50,6 +50,7 @@ class CreateDDDConsts extends Enum
         'Handler',
         'Message',
         'Query',
+        'Infrastructure',
         'Transport' => [
             'Sender',
             'Receiver',

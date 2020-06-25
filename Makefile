@@ -51,6 +51,10 @@ release:
 	@echo "Making a New Release...";
 	@./rmt.phar release;
 
+meinphp:
+	@echo "Entering PHP Container...";
+	@docker exec -it onetool_php sh;
+
 default:
 	@echo ""
 	@echo ""
