@@ -38,12 +38,6 @@ class Client implements ConnectionInterface {
     ];
     
     /**
-     *
-     * @var CommandInterface $command 
-     */
-    private CommandInterface $command;
-    
-    /**
      * 
      * TODO: switch to docker encrypted env variables
      *
