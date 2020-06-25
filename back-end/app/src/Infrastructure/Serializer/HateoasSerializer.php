@@ -10,8 +10,7 @@ namespace App\Infrastructure\Serializer;
 
 use Hateoas\HateoasBuilder;
 use Hateoas\Hateoas;
-use App\Infrastructure\Serializer\SerializerInterface;
-use App\Infrastructure\Serializer\SerializerException;
+use App\Infrastructure\Serializer\{ SerializerInterface, SerializerException };
 
 /**
  * Serializes an object for REST response

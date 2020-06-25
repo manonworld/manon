@@ -8,13 +8,11 @@
 
 namespace App\Infrastructure\Serializer;
 
-use JMS\Serializer\Serializer;
-use JMS\Serializer\SerializerBuilder;
-use App\Infrastructure\Serializer\SerializerException;
-use App\Infrastructure\Serializer\SerializerInterface;
+use JMS\Serializer\{ Serializer, SerializerBuilder };
+use App\Infrastructure\Serializer\{ SerializerInterface, SerializerException };
 
 /**
- * Description of JmsSerializer
+ * Serializes Messages To JMS
  *
  * @author Mostafa A. Hamid <info@manonworld.de>
  */
