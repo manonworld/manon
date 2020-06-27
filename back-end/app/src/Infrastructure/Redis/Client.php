@@ -8,7 +8,7 @@
 
 namespace App\Infrastructure\Redis;
 
-use Predis\{ Connection\ConnectionInterface, Command\CommandInterface, Client };
+use Predis\{ Connection\ConnectionInterface, Command\CommandInterface, Client as RedisClient };
 use App\Infrastructure\Exception\UnimplementedException;
 
 /**
@@ -24,7 +24,7 @@ class Client implements ConnectionInterface {
      *
      * @var Client $client
      */
-    private Client $client;
+    private RedisClient $client;
     
     /**
      * 
@@ -49,7 +49,7 @@ class Client implements ConnectionInterface {
      * 
      * @param Client $client
      */
-    public function __construct(Client $client)
+    public function __construct(RedisClient $client)
     {
         $this->client = $client;
     }

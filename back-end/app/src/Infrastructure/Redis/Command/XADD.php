@@ -6,16 +6,16 @@
  * and open the template in the editor.
  */
 
-namespace App\Redis\Command;
+namespace App\Infrastructure\Redis\Command;
 
-use Predis\Command\{ Command, CommandInterface };
+use Predis\Command\Command;
 
 /**
- * Description of XADD
+ * XADD Command (Creates a stream)
  *
  * @author mosta <info@manonworld.de>
  */
-class XADD extends Command implements CommandInterface {
+class XADD extends Command {
     
     /**
      * 
