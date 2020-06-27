@@ -5,8 +5,7 @@ Yet another domain driven design boiler plate for Symfony 5 applications
 
 
 
-________________________________________________________________________________
-Build Status:
+
 ________________________________________________________________________________
 [![Build Status](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate.svg?branch=master)](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate)
 <a href="https://scan.coverity.com/projects/mostafaahamidmanon-symfony5dddboilerplate">
@@ -15,8 +14,9 @@ ________________________________________________________________________________
 </a>
 
 
+________________________________________________________________________________
 Tech stack:
-------------
+________________________________________________________________________________
 
 Redis 5.0
 
