@@ -15,15 +15,17 @@ use Predis\Command\Command;
  *
  * @author mosta <info@manonworld.de>
  */
-class XADD extends Command {
+class XADD extends Command
+{
     
     /**
-     * 
+     *
+     * The command ID
+     *
      * @return string
      */
     public function getId(): string
     {
         return 'XADD';
     }
-    
 }

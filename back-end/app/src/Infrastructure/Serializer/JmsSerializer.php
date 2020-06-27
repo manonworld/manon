@@ -8,8 +8,10 @@
 
 namespace App\Infrastructure\Serializer;
 
-use JMS\Serializer\{ Serializer, SerializerBuilder };
-use App\Infrastructure\Serializer\{ SerializerInterface, SerializerException };
+use JMS\Serializer\Serializer;
+use JMS\Serializer\SerializerBuilder;
+use App\Infrastructure\Serializer\SerializerInterface;
+use App\Infrastructure\Serializer\SerializerException;
 
 /**
  * Serializes Messages To JMS

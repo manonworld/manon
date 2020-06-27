@@ -48,7 +48,7 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 ``` make clean ``` to uninstall the application (Backend and Frontend)
 
-``` make docker-clean ``` to clean the whole docker service but it will remove any other containers running in your docker environment, please use it only when you know what you are doing.
+``` make dockerclean ``` to clean the whole docker service but it will remove any other containers running in your docker environment, please use it only when you know what you are doing.
 
 ``` make ``` to display make command help
 
@@ -66,7 +66,7 @@ ________________________________________________________________________________
 ## Backend Usage: (WIP)
 ________________________________________________________________________________
 
-``` make app-install ``` to install the application dependencies using composer (Backend)
+``` make appinstall ``` to install the application dependencies using composer (Backend)
 
 ``` make start ``` to run the application server (Backend)
 
@@ -76,11 +76,11 @@ ________________________________________________________________________________
 
 ``` make domain name=ManonBusinessTestDomain ``` to create a new DDD structure (Backend)
 
-``` make delete-domain name=ManonBusinessTestDomain ``` to delete a DDD created structure (Backend)
+``` make deldomain name=ManonBusinessTestDomain ``` to delete a DDD created structure (Backend)
 
 Do not forget to replace ``` ManonBusinessTestDomain ``` with your desired business domain name
 
-``` make code-fix ``` to Adjust the code to the PSR2 standard (Backend)
+``` make fix ``` to Adjust the code to the PSR2 standard (Backend)
 
 More commands are on the way
 
@@ -109,7 +109,7 @@ To run the application successfully, just follow the steps:
 
 ``` make install ```
 
-``` make app-install ```
+``` make appinstall ```
 
 ``` make start ```
 

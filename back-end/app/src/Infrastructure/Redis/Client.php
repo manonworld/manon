@@ -8,17 +8,20 @@
 
 namespace App\Infrastructure\Redis;
 
-use Predis\{ Connection\ConnectionInterface, Command\CommandInterface, Client as RedisClient };
+use Predis\Connection\ConnectionInterface;
+use Predis\Command\CommandInterface;
+use Predis\Client as RedisClient;
 use App\Infrastructure\Exception\UnimplementedException;
 
 /**
  * Client for Redis Implementation
- * 
+ *
  * TODO: Perform Unit Tests
  *
  * @author mosta <info@manonworld.de>
  */
-class Client implements ConnectionInterface {
+class Client implements ConnectionInterface
+{
     
     /**
      *
@@ -27,18 +30,18 @@ class Client implements ConnectionInterface {
     private RedisClient $client;
     
     /**
-     * 
+     *
      * TODO: switch to docker encrypted env variables
      *
      * @var array $parameters Parameters of the connection
      */
     private array $parameters = [
-        'tcp://redis-master:6379?alias=master', 
+        'tcp://redis-master:6379?alias=master',
         'tcp://redis-replica:6380'
     ];
     
     /**
-     * 
+     *
      * TODO: switch to docker encrypted env variables
      *
      * @var array $options Options of the connection
@@ -46,7 +49,7 @@ class Client implements ConnectionInterface {
     private array $options = ['replication' => true];
     
     /**
-     * 
+     *
      * @param Client $client
      */
     public function __construct(RedisClient $client)
@@ -57,28 +60,28 @@ class Client implements ConnectionInterface {
     /**
      * TODO: Switch connection string to docker encrypted env variables
      */
-    public function connect() 
+    public function connect()
     {
         $this->client->connect($this->parameters, $this->options);
     }
 
     /**
      * Disconnects the client
-     * 
+     *
      * @return void
      */
-    public function disconnect() 
+    public function disconnect()
     {
         $this->client->disconnect();
     }
 
     /**
-     * 
+     *
      * Executes a given command
-     * 
+     *
      * @param CommandInterface $command
      */
-    public function executeCommand(CommandInterface $command) 
+    public function executeCommand(CommandInterface $command)
     {
         $id = $command->getId();
         $args = $command->getArguments();
@@ -90,35 +93,35 @@ class Client implements ConnectionInterface {
 
 
     /**
-     * 
+     *
      * Checks if the client is currently connected
-     * 
+     *
      * @return bool
      */
-    public function isConnected(): bool {
+    public function isConnected(): bool
+    {
         return $this->client->isConnected();
     }
 
     /**
-     * 
+     *
      * Reads a response from a given command
-     * 
+     *
      * @param CommandInterface $command
      */
-    public function readResponse(CommandInterface $command) 
+    public function readResponse(CommandInterface $command)
     {
         throw new UnimplementedException('Please use executeCommand() as a shortcut instead');
     }
 
     /**
-     * 
+     *
      * Writes a request to a given command
-     * 
+     *
      * @param CommandInterface $command
      */
-    public function writeRequest(CommandInterface $command) 
+    public function writeRequest(CommandInterface $command)
     {
         throw new UnimplementedException('Please use executeCommand() as a shortcut instead');
     }
-    
 }

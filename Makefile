@@ -1,49 +1,56 @@
-.DEFAULT_GOAL := default
+.DEFAULT_GOAL := default;
 
 .PHONY:
-	install app-install app-create-domain app-delete-domain app-code-fix start test stop clean docker-clean default
+	install app-install app-create-domain app-delete-domain app-code-fix start test stop restart clean docker-clean default;
 
 install:
-	@echo "Building Docker Containers..."
-	docker-compose up -d --build;
+	@echo "Building Docker Containers...";
+	@docker-compose up -d --build;
 
-app-install:
-	@echo "Installing App Dependencies..."
-	docker exec -it onetool_php composer install;
+appinstall:
+	@echo "Installing App Dependencies...";
+	@docker exec -it onetool_php composer install;
 
-app-code-fix:
-	@echo "Fixing Code to PSR2 standard"
-	@docker exec -it onetool_php php phpcbf.phar --standard=PSR2 src
+fix:
+	@echo "Fixing Code to PSR2 standard...";
+	@docker exec -it onetool_php php phpcbf.phar --standard=PSR2 src;
 
-app-create-domain:
-	@echo "Creating a new Domain"
-	@docker exec -it onetool_php bin/console app:create:ddd $(name)
+domain:
+	@echo "Creating a new Domain...";
+	@docker exec -it onetool_php bin/console app:create:ddd $(name);
 
-app-delete-domain:
-	@echo "Deleting a Domain"
-	@docker exec -it onetool_php bin/console app:delete:ddd $(name)
+deldomain:
+	@echo "Deleting a Domain...";
+	@docker exec -it onetool_php bin/console app:delete:ddd $(name);
+
+restart:
+	@echo "Installing App Dependencies...";
+	@docker exec -it onetool_php symfony server:stop;
+	@docker exec -it onetool_php bin/console cache:clear --env=prod;
+	@docker exec -it onetool_php bin/console cache:clear --env=dev;
+	@docker exec -it onetool_php symfony server:start -d;
 
 start:
-	@echo "Running the Application"
+	@echo "Running the Application...";
 	@docker exec -it onetool_php symfony server:start -d;
 
 log:
-	@echo "Tailing the Log...s"
+	@echo "Tailing the Log...";
 	@docker exec -it onetool_php symfony server:log;
 
 test:
-	@echo "Running Tests"
+	@echo "Running Tests...";
 	@docker exec -it onetool_php bin/phpunit --coverage-text;
 
 stop:
-	@echo "Stopping the Application"
+	@echo "Stopping the Application...";
 	@docker exec -it onetool_php symfony server:stop;
 
 clean:
 	@echo "Cleaning Docker Containers..."
 	@docker-compose down;
 
-docker-clean:
+dockerclean:
 	@echo "Cleaning Docker Process..."
 	@docker system prune --all -f -a;
 
@@ -66,18 +73,21 @@ default:
 	@echo "1. make install (installs the web application containers)"
 	@echo "2. make test (starts the testing)"
 	@echo "3. make clean (stops the application containers that you installed using make install)"
-	@echo "4. make docker-clean (cleans the whole docker process from the system but please use with caution)"
+	@echo "4. make dockerclean (cleans the whole docker process from the system but please use with caution)"
+	@echo "5. make meinphp (logs you in the php container)"
 	@echo ""
 	@echo ""
 	@echo "Application Tier"
 	@echo "------------------"
 	@echo ""
-	@echo "1. make app-install (installs app dependencies)"
+	@echo "1. make appinstall (installs app dependencies)"
 	@echo "2. make start (starts the application and must run after make install and make app-install)"
 	@echo "3. make stop (stops the application that you run it using make start)"
-	@echo "4. make app-create-domain name=YourBusinessDomain (creates a new DDD directory structure)"
-	@echo "5. make app-delete-domain name=YourBusinessDomain (deletes a DDD directory structure)"
-	@echo "6. make app-code-fix (applies coding standards to the application)"
+	@echo "4. make restart (restarts the application)"
+	@echo "5. make test (starts the application testing)"
+	@echo "6. make domain name=YourBusinessDomain (creates a new DDD directory structure)"
+	@echo "7. make deldomain name=YourBusinessDomain (deletes a DDD directory structure)"
+	@echo "8. make app-code-fix (applies coding standards to the application)"
 	@echo ""
 	@echo ""
 	@echo "More command are currently in development"

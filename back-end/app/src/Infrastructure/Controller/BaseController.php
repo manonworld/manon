@@ -12,7 +12,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
-use App\Infrastructure\Serializer\{ JmsSerializer, HateoasSerializer };
+use App\Infrastructure\Serializer\JmsSerializer;
+use App\Infrastructure\Serializer\HateoasSerializer;
 
 /**
  *
