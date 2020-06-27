@@ -1,4 +1,4 @@
-DDD Boilerplate in Symfony 5
+# DDD Boilerplate in Symfony 5
 ________________________________________________________________________________
 
 Yet another domain driven design boiler plate for Symfony 5 applications
@@ -15,7 +15,7 @@ ________________________________________________________________________________
 
 
 ________________________________________________________________________________
-Tech stack:
+## Tech stack:
 ________________________________________________________________________________
 
 Redis 5.0
@@ -35,7 +35,7 @@ MariaDB
 RabbitMQ
 
 ________________________________________________________________________________
-Installation using docker-compose:
+## Installation using docker-compose:
 ________________________________________________________________________________
 
 ``` docker-compose up -d ```
@@ -56,14 +56,14 @@ Alternatively, you can use the makefile by invoking the following commands:
 
 
 ________________________________________________________________________________
-Front-End: (WIP)
+## Front-End: (WIP)
 ________________________________________________________________________________
 
 Still working on the scaffolder of the DDD structure for the front end
 
 
 ________________________________________________________________________________
-Backend Usage: (WIP)
+## Backend Usage: (WIP)
 ________________________________________________________________________________
 
 ``` make app-install ``` to install the application dependencies using composer (Backend)
@@ -86,7 +86,7 @@ More commands are on the way
 
 
 ________________________________________________________________________________
-For the backend:
+## For the backend:
 ________________________________________________________________________________
 
 A step before browsing the backend is:
