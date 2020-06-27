@@ -18,7 +18,7 @@ addons:
       description: "A boilerplate for Symfony 5 in DDD and CQRS"
     notification_email: info@manonworld.de
     build_command_prepend: "make install"
-    build_command: "make app-install"
+    build_command: "make appinstall"
     branch_pattern: coverity_scan
 
 env:
@@ -35,3 +35,6 @@ install:
 
 script:
   - make install
+  - make appinstall
+  - make start
+  - make test
