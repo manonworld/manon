@@ -4,10 +4,10 @@ ________________________________________________________________________________
 Yet another domain driven design boiler plate for Symfony 5 applications
 
 
-________________________________________________________________________________
 
+________________________________________________________________________________
 Build Status:
---------------
+________________________________________________________________________________
 [![Build Status](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate.svg?branch=master)](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate)
 <a href="https://scan.coverity.com/projects/mostafaahamidmanon-symfony5dddboilerplate">
   <img alt="Coverity Scan Build Status"
@@ -34,9 +34,9 @@ MariaDB
 
 RabbitMQ
 
-
+________________________________________________________________________________
 Installation using docker-compose:
-------------------------------------
+________________________________________________________________________________
 
 ``` docker-compose up -d ```
 
@@ -55,14 +55,16 @@ Alternatively, you can use the makefile by invoking the following commands:
 ``` make release ``` to create a release. (Make sure that https://github.com/liip/RMT is installed)
 
 
+________________________________________________________________________________
 Front-End: (WIP)
------------------
+________________________________________________________________________________
 
 Still working on the scaffolder of the DDD structure for the front end
 
 
+________________________________________________________________________________
 Backend Usage: (WIP)
----------------------
+________________________________________________________________________________
 
 ``` make app-install ``` to install the application dependencies using composer (Backend)
 
@@ -83,8 +85,9 @@ Do not forget to replace ``` ManonBusinessTestDomain ``` with your desired busin
 More commands are on the way
 
 
+________________________________________________________________________________
 For the backend:
------------------
+________________________________________________________________________________
 
 A step before browsing the backend is:
 
