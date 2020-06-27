@@ -1,9 +1,9 @@
-# DDD Boilerplate in Symfony 5
+DDD Boilerplate in Symfony 5
 ________________________________________________________________________________
 
 Yet another domain driven design boiler plate for Symfony 5 applications
 
-Please make sure that docker and docker-compose are installed
+
 ________________________________________________________________________________
 
 Build Status:
