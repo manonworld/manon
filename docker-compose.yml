@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
 
-  # Redis Master Node for Caching
+  # Redis Master Node for Caching & Streaming
   redis-master:
     container_name: onetool_redis_master
     build:
@@ -37,38 +37,6 @@ services:
     restart: always
     volumes:
       - db-data:/var/lib/mysql
-
-
-  # Rabbit Statistics Messaging
-  rabbit-stats:
-    container_name: onetool_rabbit_stats_disc
-    image: bitnami/rabbitmq
-    env_file:
-      - env/rabbitmq/rabbit.stats.env
-    ports:
-      - '15672:15672'
-    volumes:
-      - 'rabbitmqstats_data:/bitnami'
-      
-
-  # Rabbit Disc Messaging
-  queue-disc:
-    container_name: onetool_rabbit_queue_disc
-    image: bitnami/rabbitmq
-    env_file:
-      - env/rabbitmq/rabbit.disc.env
-    volumes:
-      - 'rabbitmqdisc1_data:/bitnami'
-      
-
-  # Rabbit RAM for Messaging
-  queue-ram:
-    container_name: onetool_rabbit_ram_disc
-    image: bitnami/rabbitmq
-    env_file:
-      - env/rabbitmq/rabbit.ram.env
-    volumes:
-      - 'rabbitmqram1_data:/bitnami'
 
 
   # PHP Backend App
@@ -114,6 +82,3 @@ volumes:
   grafana-data:
   redis-master:
   db-data:
-  rabbitmqstats_data:
-  rabbitmqdisc1_data:
-  rabbitmqram1_data:

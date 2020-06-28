@@ -35,7 +35,7 @@ class Client implements ConnectionInterface
     
     /**
      *
-     * @todo switch to docker encrypted env variables
+     * TODO: switch to docker encrypted env variables
      *
      * @var array $parameters Parameters of the connection
      */
@@ -45,7 +45,7 @@ class Client implements ConnectionInterface
     
     /**
      *
-     * @todo switch to docker encrypted env variables
+     * TODO: switch to docker encrypted env variables
      *
      * @var array $options Options of the connection
      */
@@ -75,15 +75,15 @@ class Client implements ConnectionInterface
     /**
      * Authenticates with Redis server
      * 
-     * @todo Convert password from static plain text to encrypted docker env variable
-     * @todo Write a try catch block after converting to docker encrypted env variable
-     * @todo throw auth exception
+     * TODO: Convert password from static plain text to encrypted docker env variable
+     * TODO: Write a try catch block after converting to docker encrypted env variable
+     * TODO: throw auth exception
      * @return void
      */
     public function auth(): void
     {
         $auth = new AUTH;
-        $auth->setArguments(['manononetool']); /** @todo password to convert **/
+        $auth->setArguments(['manononetool']); /** TODO: password to convert **/
         
         $this->executeCommand($auth);
     }
