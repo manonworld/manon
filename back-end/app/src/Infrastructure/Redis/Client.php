@@ -53,7 +53,7 @@ class Client implements ConnectionInterface
     
     /**
      *
-     * @tood Switch connection string to docker encrypted env variables
+     * TODO: Switch connection string to docker encrypted env variables
      * @param Client $client
      */
     public function __construct()
