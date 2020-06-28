@@ -59,7 +59,6 @@ services:
       - grafana
       - redis-master
       - mariadb
-      - rabbit-stats
 
 
   # Front end Node
