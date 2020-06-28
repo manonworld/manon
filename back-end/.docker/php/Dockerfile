@@ -37,7 +37,7 @@ RUN apk add composer
 
 # XSLT Dev GCC and g++
 
-RUN apk add --update --no-cache g++ gcc libxslt-dev autoconf
+RUN apk add --update --no-cache g++ gcc libxslt-dev autoconf make
 
 
 
@@ -60,7 +60,7 @@ RUN apk upgrade --update && apk add \
 
 # Add Redis support
 
-ARG PHPREDIS_VERSION=5.0.0
+ARG PHPREDIS_VERSION=5.2.2
 ARG REDIS_URL=https://github.com/phpredis/phpredis/archive/${PHPREDIS_VERSION}.tar.gz
 RUN mkdir -p /usr/src/php/ext/redis \
     && curl -L ${REDIS_URL} | tar xvz -C /usr/src/php/ext/redis --strip 1 \

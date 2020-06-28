@@ -11,21 +11,21 @@ namespace App\Infrastructure\Redis\Command;
 use Predis\Command\Command;
 
 /**
- * Creates a Stream
+ * Authenticates with Redis cluster
  *
  * @author mosta <info@manonworld.de>
  */
-class XADD extends Command {
+class AUTH extends Command {
     
     /**
      * 
-     * Creates a stream
+     * Authenticates with Redis
      * 
      * @return string
      */
     public function getId(): string
     {
-        return 'XADD';
+        return 'AUTH';
     }
     
 }

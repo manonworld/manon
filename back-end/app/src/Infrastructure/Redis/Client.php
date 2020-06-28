@@ -8,15 +8,19 @@
 
 namespace App\Infrastructure\Redis;
 
-use Predis\Connection\ConnectionInterface;
-use Predis\Command\CommandInterface;
-use Predis\Client as RedisClient;
-use App\Infrastructure\Exception\UnimplementedException;
+use Predis\ {
+    Connection\ConnectionInterface,
+    Command\CommandInterface,
+    Client as RedisClient
+};
+
+use App\Infrastructure\ { 
+    Exception\UnimplementedException, 
+    Redis\Command\AUTH 
+};
 
 /**
  * Client for Redis Implementation
- *
- * TODO: Perform Unit Tests
  *
  * @author mosta <info@manonworld.de>
  */
@@ -31,18 +35,17 @@ class Client implements ConnectionInterface
     
     /**
      *
-     * TODO: switch to docker encrypted env variables
+     * @todo switch to docker encrypted env variables
      *
      * @var array $parameters Parameters of the connection
      */
     private array $parameters = [
-        'tcp://redis-master:6379?alias=master',
-        'tcp://redis-replica:6380'
+        'tcp://redis-master:6379?alias=master'
     ];
     
     /**
      *
-     * TODO: switch to docker encrypted env variables
+     * @todo switch to docker encrypted env variables
      *
      * @var array $options Options of the connection
      */
@@ -50,19 +53,39 @@ class Client implements ConnectionInterface
     
     /**
      *
+     * @tood Switch connection string to docker encrypted env variables
      * @param Client $client
      */
-    public function __construct(RedisClient $client)
+    public function __construct()
     {
-        $this->client = $client;
+        $this->client = new RedisClient($this->parameters, $this->options);
     }
     
     /**
-     * TODO: Switch connection string to docker encrypted env variables
+     * 
+     * Connects to the Redis instance
+     * 
+     * @return void
      */
     public function connect()
     {
-        $this->client->connect($this->parameters, $this->options);
+        $this->client->connect();
+    }
+    
+    /**
+     * Authenticates with Redis server
+     * 
+     * @todo Convert password from static plain text to encrypted docker env variable
+     * @todo Write a try catch block after converting to docker encrypted env variable
+     * @todo throw auth exception
+     * @return void
+     */
+    public function auth(): void
+    {
+        $auth = new AUTH;
+        $auth->setArguments(['manononetool']); /** @todo password to convert **/
+        
+        $this->executeCommand($auth);
     }
 
     /**
@@ -86,9 +109,26 @@ class Client implements ConnectionInterface
         $id = $command->getId();
         $args = $command->getArguments();
         
-        $this->client->getProfile()->createCommand($id, $args);
+        $redisCmd = $this->client->getProfile()->createCommand($id, $args);
         
-        return $this->client->$id();
+        return $this->client->executeCommand($redisCmd);
+    }
+    
+    /**
+     * 
+     * Defines a custom Redis command
+     * 
+     * @param CommandInterface $command
+     * @return mixed
+     */
+    public function defineAndExecute(CommandInterface $command)
+    {
+        $id = $command->getId();
+        $args = $command->getArguments();
+        
+        $this->client->getProfile()->defineCommand($id, get_class($command));
+        
+        return $this->client->$id(...$args);
     }
 
 
