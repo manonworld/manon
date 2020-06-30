@@ -20,27 +20,12 @@ use App\Tests\AbstractKernelTestCase;
 class JmsSerializerTest extends AbstractKernelTestCase {
     
     /**
-     *
-     * @var JmsSerializer
-     */
-    private JmsSerializer $serializer;
-    
-    /**
-     * 
-     * @return JmsSerializer
-     */
-    public function setUp(): void {
-        $this->serializer = new JmsSerializer;
-        parent::setUp();
-    }
-    
-    /**
      * @covers App\Infrastructure\Serializer\JmsSerializer::serialize
      */
     public function testSerialize()
     {
         $originalData = ['testkey' => 'testval'];
-        $serializedData = $this->serializer->serialize($originalData);
+        $serializedData = $this->jms->serialize($originalData);
         $this->assertEquals('{"testkey":"testval"}', $serializedData);
     }
     
@@ -53,7 +38,7 @@ class JmsSerializerTest extends AbstractKernelTestCase {
         $this->expectExceptionCode(500);
         $this->expectExceptionMessage('The format "array" is not supported for serialization.');
         $originalData = ['testkey' => 'testval'];
-        $this->serializer->serialize($originalData, 'array');
+        $this->jms->serialize($originalData, 'array');
     }
     
 }

@@ -4,13 +4,16 @@ namespace App\Tests;
 
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Bundle\FrameworkBundle\Console\Application;
-use App\Infrastructure\Redis\Client;
+use App\Infrastructure\Redis\Client as RedisClient;
+use Psr\Container\ContainerInterface;
+use App\Infrastructure\Serializer\HateoasSerializer;
+use App\Infrastructure\Serializer\JmsSerializer;
 
 /**
  * @covers \App\Command\CreateDdd\CreateDddCommand
  */
 class AbstractKernelTestCase extends KernelTestCase {
-
+    
     /**
      * @property mixed $kernel
      */
@@ -23,18 +26,40 @@ class AbstractKernelTestCase extends KernelTestCase {
     
     /**
      *
-     * @var Client $client
+     * @var RedisClient|null $redis
      */
-    protected Client $redis;
+    protected ?RedisClient $redis = null;
+    
+    /**
+     *
+     * @var ContainerInterface $abstractContainer 
+     */
+    protected static ContainerInterface $abstractContainer;
+    
+    /**
+     *
+     * @var HateoasSerializer $hateoas
+     */
+    protected HateoasSerializer $hateoas;
+    
+    /**
+     *
+     * @var JmsSerializer $jms
+     */
+    protected JmsSerializer $jms;
 
     /**
      * Sets up the tests and prepares the basic helpers
      */
     protected function setUp(): void
     {
-        self::$kernel       = static::createKernel();
-        $this->application  = new Application(self::$kernel);
-        $this->redis        = new Client;
+        self::$kernel               = static::createKernel();
+        self::bootKernel();
+        $this->application          = new Application(self::$kernel);
+        self::$abstractContainer    = self::$kernel->getContainer();
+        $this->redis                = self::$abstractContainer->get('@redis.client');
+        $this->hateoas              = self::$abstractContainer->get('@hateoas.serializer');
+        $this->jms                  = self::$abstractContainer->get('@jms.serializer');
     }
 
     /**
@@ -44,6 +69,7 @@ class AbstractKernelTestCase extends KernelTestCase {
     {
         self::$kernel = null;
         unset($this->application);
+        unset($this->redis);
     }
 
 }

@@ -21,6 +21,8 @@ use App\Infrastructure\Serializer\SerializerException;
 class HateoasSerializer implements SerializerInterface
 {
     
+    public HateoasBuilder $builder;
+    
     /**
      *
      * @var Hateoas $hateoas
@@ -28,9 +30,9 @@ class HateoasSerializer implements SerializerInterface
     private Hateoas $hateoas;
     
     
-    public function __construct()
+    public function __construct(HateoasBuilder $builder)
     {
-        $this->hateoas = HateoasBuilder::create()->build();
+        $this->hateoas = $builder->create()->build();
     }
     
     /**

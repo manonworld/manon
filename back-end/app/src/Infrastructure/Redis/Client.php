@@ -24,41 +24,25 @@ use App\Infrastructure\ {
  *
  * @author mosta <info@manonworld.de>
  */
-class Client implements ConnectionInterface
+class Client extends RedisClient implements ConnectionInterface
 {
     
     /**
-     *
-     * @var Client $client
-     */
-    private RedisClient $client;
-    
-    /**
-     *
-     * TODO: switch to docker encrypted env variables
-     *
-     * @var array $parameters Parameters of the connection
-     */
-    private array $parameters = [
-        'tcp://redis-master:6379?alias=master'
-    ];
-    
-    /**
-     *
-     * TODO: switch to docker encrypted env variables
-     *
-     * @var array $options Options of the connection
-     */
-    private array $options = ['replication' => true];
-    
-    /**
-     *
+     * 
      * TODO: Switch connection string to docker encrypted env variables
-     * @param Client $client
+     * 
+     * @param mixed $options
+     * @param mixed $parameters
      */
-    public function __construct()
+    public function __construct($parameters, $options)
     {
-        $this->client = new RedisClient($this->parameters, $this->options);
+        $dsn = getenv('REDIS_DSN');
+        
+        if( $dsn ){
+            $parameters = $dsn;
+        }
+        
+        parent::__construct($parameters, $options);
     }
     
     /**
@@ -69,7 +53,7 @@ class Client implements ConnectionInterface
      */
     public function connect()
     {
-        $this->client->connect();
+        parent::connect();
     }
     
     /**
@@ -95,7 +79,7 @@ class Client implements ConnectionInterface
      */
     public function disconnect()
     {
-        $this->client->disconnect();
+        parent::disconnect();
     }
 
     /**
@@ -109,9 +93,9 @@ class Client implements ConnectionInterface
         $id = $command->getId();
         $args = $command->getArguments();
         
-        $redisCmd = $this->client->getProfile()->createCommand($id, $args);
+        $redisCmd = parent::getProfile()->createCommand($id, $args);
         
-        return $this->client->executeCommand($redisCmd);
+        return parent::executeCommand($redisCmd);
     }
     
     /**
@@ -126,9 +110,9 @@ class Client implements ConnectionInterface
         $id = $command->getId();
         $args = $command->getArguments();
         
-        $this->client->getProfile()->defineCommand($id, get_class($command));
+        parent::getProfile()->defineCommand($id, get_class($command));
         
-        return $this->client->$id(...$args);
+        return parent::$id(...$args);
     }
 
 
@@ -140,7 +124,7 @@ class Client implements ConnectionInterface
      */
     public function isConnected(): bool
     {
-        return $this->client->isConnected();
+        return parent::isConnected();
     }
 
     /**

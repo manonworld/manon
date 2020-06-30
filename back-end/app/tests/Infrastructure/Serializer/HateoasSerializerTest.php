@@ -8,7 +8,6 @@
 
 namespace App\Tests\Infrastructure;
 
-use App\Infrastructure\Serializer\HateoasSerializer;
 use App\Tests\AbstractKernelTestCase;
 
 /**
@@ -20,28 +19,12 @@ use App\Tests\AbstractKernelTestCase;
 class HateoasSerializerTest extends AbstractKernelTestCase {
     
     /**
-     *
-     * @var HateoasSerializer
-     */
-    private HateoasSerializer $serializer;
-    
-    /**
-     * 
-     * @return HateoasSerializer
-     */
-    public function setUp(): void
-    {
-        $this->serializer = new HateoasSerializer;
-        parent::setUp();
-    }
-    
-    /**
      * @covers App\Infrastructure\Serializer\HateoasSerializer::serialize
      */
     public function testSerialize()
     {
         $originalData = ['testkey' => 'testval'];
-        $serializedData = $this->serializer->serialize($originalData);
+        $serializedData = $this->hateoas->serialize($originalData);
         $this->assertEquals('{"testkey":"testval"}', $serializedData);
     }
     
@@ -54,7 +37,7 @@ class HateoasSerializerTest extends AbstractKernelTestCase {
         $this->expectExceptionCode(500);
         $this->expectExceptionMessage('The format "array" is not supported for serialization.');
         $originalData = ['testkey' => 'testval'];
-        $this->serializer->serialize($originalData, 'array');
+        $this->hateoas->serialize($originalData, 'array');
     }
     
 }

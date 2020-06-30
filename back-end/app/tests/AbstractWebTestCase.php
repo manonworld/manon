@@ -20,9 +20,9 @@ class AbstractWebTestCase extends WebTestCase {
     
     /**
      *
-     * @var KernelBrowser $client
+     * @var KernelBrowser|null $client
      */
-    protected KernelBrowser $client;
+    protected ?KernelBrowser $client = null;
     
     /**
      * 

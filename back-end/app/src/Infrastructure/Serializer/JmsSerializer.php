@@ -30,10 +30,9 @@ class JmsSerializer implements SerializerInterface
     /**
      * New Instance
      */
-    public function __construct()
+    public function __construct(SerializerBuilder $builder)
     {
-        $this->serializer = SerializerBuilder::create()
-                ->build();
+        $this->serializer = $builder->create()->build();
     }
     
     

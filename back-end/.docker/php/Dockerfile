@@ -34,18 +34,23 @@ RUN apk add --no-cache icu-dev
 RUN apk add composer
 
 
-
 # XSLT Dev GCC and g++
 
-RUN apk add --update --no-cache g++ gcc libxslt-dev autoconf make
+RUN apk add --update --no-cache g++ gcc libxslt-dev autoconf make automake libtool linux-headers
 
+
+# Install Protobuf
+
+RUN pecl install protobuf-3.12.2
+RUN pecl install grpc
+RUN docker-php-ext-enable grpc
 
 
 # Adding basic application libraries and enabling it into PHP engine
 
 RUN docker-php-ext-install \
     intl pcntl xsl \
-    soap pdo pdo_mysql
+    soap pdo pdo_mysql 
 
 # Dev PHP Extensions (Remove in Prod)
 
