@@ -1,4 +1,4 @@
-.DEFAULT_GOAL := default;
+.DEFAULT_GOAL := default
 
 .PHONY:
 	install app-install app-create-domain app-delete-domain app-code-fix start test stop restart clean docker-clean default;
