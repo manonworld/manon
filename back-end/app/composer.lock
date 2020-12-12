@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d18ad75bc23bc4a6c33dd2d944b029fd",
+    "content-hash": "07a08cec1fa6b394b26097bd3b18a001",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -4479,16 +4479,16 @@
         },
         {
             "name": "fzaninotto/faker",
-            "version": "v1.9.1",
+            "version": "v1.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fzaninotto/Faker.git",
-                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f"
+                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/fc10d778e4b84d5bd315dad194661e091d307c6f",
-                "reference": "fc10d778e4b84d5bd315dad194661e091d307c6f",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
+                "reference": "848d8125239d7dbf8ab25cb7f054f1a630e68c2e",
                 "shasum": ""
             },
             "require": {
@@ -4526,25 +4526,25 @@
                 "fixtures"
             ],
             "abandoned": true,
-            "time": "2019-12-12T13:22:17+00:00"
+            "time": "2020-12-11T09:56:16+00:00"
         },
         {
             "name": "nelmio/api-doc-bundle",
-            "version": "v3.7.4",
+            "version": "v3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nelmio/NelmioApiDocBundle.git",
-                "reference": "290df23dc0060c4daaed95a7f37845f16a287ebd"
+                "reference": "0a3785fd2610037f4784c928f437a66aef9a1e4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/290df23dc0060c4daaed95a7f37845f16a287ebd",
-                "reference": "290df23dc0060c4daaed95a7f37845f16a287ebd",
+                "url": "https://api.github.com/repos/nelmio/NelmioApiDocBundle/zipball/0a3785fd2610037f4784c928f437a66aef9a1e4e",
+                "reference": "0a3785fd2610037f4784c928f437a66aef9a1e4e",
                 "shasum": ""
             },
             "require": {
                 "exsyst/swagger": "^0.4.1",
-                "php": "^7.1",
+                "php": ">=7.1.3",
                 "phpdocumentor/reflection-docblock": "^3.1|^4.0|^5.0",
                 "symfony/framework-bundle": "^3.4|^4.0|^5.0",
                 "symfony/options-resolver": "^3.4.4|^4.0|^5.0",
@@ -4558,7 +4558,7 @@
                 "api-platform/core": "^2.1.2",
                 "doctrine/annotations": "^1.2",
                 "doctrine/common": "^2.4",
-                "friendsofsymfony/rest-bundle": "^2.0|^3.0@beta",
+                "friendsofsymfony/rest-bundle": "^2.0|^3.0@dev",
                 "jms/serializer": "^1.14|^3.0",
                 "jms/serializer-bundle": "^2.3|^3.0",
                 "sensio/framework-extra-bundle": "^3.0.13|^4.0|^5.0",
@@ -4568,6 +4568,7 @@
                 "symfony/config": "^3.4|^4.0|^5.0",
                 "symfony/console": "^3.4|^4.0|^5.0",
                 "symfony/dom-crawler": "^3.4|^4.0|^5.0",
+                "symfony/expression-language": "^3.4|^4.0|^5.0",
                 "symfony/form": "^3.4|^4.0|^5.0",
                 "symfony/phpunit-bridge": "^3.4.24|^4.0|^5.0",
                 "symfony/property-access": "^3.4|^4.0|^5.0",
@@ -4617,7 +4618,7 @@
                 "documentation",
                 "rest"
             ],
-            "time": "2020-09-29T10:30:21+00:00"
+            "time": "2020-12-10T21:30:50+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -5814,6 +5815,8 @@
         "ext-ctype": "*",
         "ext-iconv": "*"
     },
-    "platform-dev": [],
+    "platform-dev": {
+        "composer-runtime-api": "*"
+    },
     "plugin-api-version": "1.1.0"
 }
