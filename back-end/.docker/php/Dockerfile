@@ -1,11 +1,6 @@
 # Main Image
 
-FROM php:7.4-fpm-alpine
-
-
-# Maintainer
-
-MAINTAINER Mostafa A. Hamid <info@manonworld.de>
+FROM php:7.4-zts-alpine
 
 
 # Author(s) Please add your name if you modified anything in this file
@@ -125,7 +120,7 @@ EXPOSE 7080
 
 # Starting the Supervisor
 
-CMD ["supervisord", "-c" ,"/etc/supervisord.conf"]
+RUN ["supervisord", "-c" ,"/etc/supervisord.conf"]
 
 
 # Installing bash
@@ -166,8 +161,3 @@ RUN /usr/local/bin/symfony proxy:domain:attach testdomain
 # You may consider Apache or Nginx for Production
 
 CMD /usr/local/bin/symfony server:start -d
-
-
-# Keep on logging
-
-CMD /usr/local/bin/symfony server:log
