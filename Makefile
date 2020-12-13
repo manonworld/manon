@@ -4,26 +4,32 @@
 	install app-install app-create-domain app-delete-domain app-code-fix start test stop restart clean docker-clean default;
 
 install:
+	@clear
 	@echo "Building Docker Containers...";
 	@docker-compose up -d --build;
 
 appinstall:
+	@clear
 	@echo "Installing App Dependencies...";
 	@docker exec -it onetool_php composer install;
 
 fix:
+	@clear
 	@echo "Fixing Code to PSR2 standard...";
 	@docker exec -it onetool_php php phpcbf.phar --standard=PSR2 src;
 
 domain:
+	@clear
 	@echo "Creating a new Domain...";
 	@docker exec -it onetool_php bin/console app:create:ddd $(name);
 
 deldomain:
+	@clear
 	@echo "Deleting a Domain...";
 	@docker exec -it onetool_php bin/console app:delete:ddd $(name);
 
 restart:
+	@clear
 	@echo "Installing App Dependencies...";
 	@docker exec -it onetool_php symfony server:stop;
 	@docker exec -it onetool_php bin/console cache:clear --env=prod;
@@ -31,38 +37,47 @@ restart:
 	@docker exec -it onetool_php symfony server:start -d;
 
 start:
+	@clear
 	@echo "Running the Application...";
 	@docker exec -it onetool_php symfony server:start -d;
 
 log:
+	@clear
 	@echo "Tailing the Log...";
 	@docker exec -it onetool_php symfony server:log;
 
 test:
+	@clear
 	@echo "Running Tests...";
 	@docker exec -it onetool_php bin/phpunit --coverage-text;
 
 stop:
+	@clear
 	@echo "Stopping the Application...";
 	@docker exec -it onetool_php symfony server:stop;
 
 clean:
+	@clear
 	@echo "Cleaning Docker Containers..."
 	@docker-compose down;
 
 dockerclean:
+	@clear
 	@echo "Cleaning Docker Process..."
 	@docker system prune --all -f -a;
 
 release:
+	@clear
 	@echo "Making a New Release...";
 	@./rmt.phar release;
 
 meinphp:
+	@clear
 	@echo "Entering PHP Container...";
 	@docker exec -it onetool_php sh;
 
 default:
+	@clear
 	@echo ""
 	@echo ""
 	@echo "These options are available:"

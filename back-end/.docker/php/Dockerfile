@@ -130,13 +130,11 @@ RUN apk add bash
 
 # Download and install Symfony CLI
 
-RUN mkdir /root/.symfony
-
 RUN wget https://get.symfony.com/cli/installer -O - | bash; \
     mv /root/.symfony/bin/symfony /usr/local/bin/symfony;
 
 
-# Grant executable permission
+# Grant executable permission (dev only)
 
 RUN chmod 777 /usr/local/bin/symfony
 
