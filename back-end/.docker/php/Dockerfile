@@ -49,7 +49,7 @@ RUN docker-php-ext-install \
 
 # Dev PHP Extensions (Remove in Prod)
 
-RUN pecl install xdebug
+RUN pecl install xdebug parallel http
 RUN pear install PHP_CodeSniffer
 
 
@@ -130,6 +130,8 @@ RUN apk add bash
 
 # Download and install Symfony CLI
 
+RUN mkdir /root/.symfony
+
 RUN wget https://get.symfony.com/cli/installer -O - | bash; \
     mv /root/.symfony/bin/symfony /usr/local/bin/symfony;
 
@@ -160,4 +162,9 @@ RUN /usr/local/bin/symfony proxy:domain:attach testdomain
 # Development Server
 # You may consider Apache or Nginx for Production
 
-CMD /usr/local/bin/symfony server:start -d
+RUN /usr/local/bin/symfony server:start -d
+
+
+# Start the Logger
+
+CMD ["symfony", "server:log"]
