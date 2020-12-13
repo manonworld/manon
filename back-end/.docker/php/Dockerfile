@@ -123,7 +123,7 @@ EXPOSE 7080
 RUN ["supervisord", "-c" ,"/etc/supervisord.conf"]
 
 
-# Installing bash
+# Installing bash (Needed for Symfony CLI Installation)
 
 RUN apk add bash
 
