@@ -163,6 +163,11 @@ RUN /usr/local/bin/symfony proxy:domain:attach testdomain
 RUN /usr/local/bin/symfony server:start -d
 
 
+# Sets the default Work Directory
+
+WORKDIR /var/www/html
+
+
 # Start the Logger
 
 CMD ["symfony", "server:log"]
