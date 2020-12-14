@@ -4,16 +4,6 @@ ________________________________________________________________________________
 Yet another DDD & CQRS boiler plate for Symfony 5 applications
 
 
-
-
-________________________________________________________________________________
-[![Build Status](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate.svg?branch=master)](https://travis-ci.org/mostafaahamidmanon/symfony5dddboilerplate)
-<a href="https://scan.coverity.com/projects/mostafaahamidmanon-symfony5dddboilerplate">
-  <img alt="Coverity Scan Build Status"
-       src="https://scan.coverity.com/projects/21378/badge.svg"/>
-</a>
-
-
 ________________________________________________________________________________
 ## Tech stack:
 ________________________________________________________________________________
@@ -31,8 +21,6 @@ Supervisord
 Grafana
 
 MariaDB
-
-RabbitMQ
 
 ________________________________________________________________________________
 ## Installation using docker-compose:
@@ -119,3 +107,8 @@ Simply run ``` make install && make appinstall && make start ``` in one command
 
 
 Thanks
+
+
+TODO:
+ - Front End
+ - Testing
