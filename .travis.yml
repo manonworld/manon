@@ -12,7 +12,7 @@ addons:
       - docker-ce
   coverity_scan:
     project:
-      name: "mostafaahamidmanon/symfony5dddboilerplate"
+      name: "manonworld/manon"
       description: "A boilerplate for Symfony 5 in DDD and CQRS"
     notification_email: info@manonworld.de
     build_command_prepend: "make install"
