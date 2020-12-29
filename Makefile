@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := default
 
 .PHONY:
-	install app-install app-create-domain app-delete-domain app-code-fix start test stop restart clean docker-clean default;
+	install appinstall appuninstall domain deldomain fix start test stop restart clean dockerclean default;
 
 install:
 	@clear
@@ -12,6 +12,11 @@ appinstall:
 	@clear
 	@echo "Installing App Dependencies...";
 	@docker exec -it onetool_php composer install;
+
+appuninstall:
+	@clear
+	@echo "Uninstalling App Dependecies...";
+	@docker exec -it onetool_php rm -R vendor;
 
 fix:
 	@clear

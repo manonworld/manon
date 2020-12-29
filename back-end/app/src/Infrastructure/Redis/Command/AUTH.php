@@ -15,17 +15,17 @@ use Predis\Command\Command;
  *
  * @author mosta <info@manonworld.de>
  */
-class AUTH extends Command {
+class AUTH extends Command
+{
     
     /**
-     * 
+     *
      * Authenticates with Redis
-     * 
+     *
      * @return string
      */
     public function getId(): string
     {
         return 'AUTH';
     }
-    
 }

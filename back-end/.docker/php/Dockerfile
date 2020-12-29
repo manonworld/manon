@@ -36,7 +36,8 @@ RUN apk add --update --no-cache g++ gcc libxslt-dev autoconf make automake libto
 
 # Install Protobuf
 
-RUN pecl install protobuf-3.12.2
+ARG PROTOBUF_VERSION=3.12.2
+RUN pecl install protobuf-${PROTOBUF_VERSION}
 RUN pecl install grpc
 RUN docker-php-ext-enable grpc
 
@@ -116,6 +117,11 @@ EXPOSE 8000
 # Expose the proxy port
 
 EXPOSE 7080
+
+
+# Expose secure TLS
+
+EXPOSE 443
 
 
 # Starting the Supervisor
