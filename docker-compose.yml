@@ -25,14 +25,14 @@ services:
       - "grafana-data:/var/lib/grafana"
 
 
-  # Maria DB as the Main DB engine
-  mariadb:
-    container_name: onetool_maria_db
-    image: mariadb
+  # MySQL DB as the Main DB engine
+  mysql:
+    container_name: onetool_mysql_db
+    image: mysql
     ports:
       - "3306:3306"
     env_file:
-      - env/mariadb.env
+      - env/mysql.env
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
     volumes:
@@ -48,17 +48,18 @@ services:
       - ./back-end/app:/var/www/html
     env_file:
       - env/php/php.redis.env
-      - env/php/php.mariadb.env
+      - env/php/php.mysql.env
       - env/php/php.stream.env
       - env/php/php.frontend.env
     ports:
       - "8000:8000"
       - "9000:9000"
       - "8888:8888"
+      - "443:443"
     depends_on:
       - grafana
       - redis-master
-      - mariadb
+      - mysql
 
 
   # Front end Node

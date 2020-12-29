@@ -8,16 +8,12 @@
 
 namespace App\Infrastructure\Redis;
 
-use Predis\ {
-    Connection\ConnectionInterface,
-    Command\CommandInterface,
-    Client as RedisClient
-};
+use Predis\Connection\ConnectionInterface;
+use Predis\Command\CommandInterface;
+use Predis\Client as RedisClient;
 
-use App\Infrastructure\ { 
-    Exception\UnimplementedException, 
-    Redis\Command\AUTH 
-};
+use App\Infrastructure\Exception\UnimplementedException;
+use App\Infrastructure\Redis\Command\AUTH;
 
 /**
  * Client for Redis Implementation
@@ -28,9 +24,9 @@ class Client extends RedisClient implements ConnectionInterface
 {
     
     /**
-     * 
+     *
      * TODO: Switch connection string to docker encrypted env variables
-     * 
+     *
      * @param mixed $options
      * @param mixed $parameters
      */
@@ -38,7 +34,7 @@ class Client extends RedisClient implements ConnectionInterface
     {
         $dsn = getenv('REDIS_DSN');
         
-        if( $dsn ){
+        if ($dsn) {
             $parameters = $dsn;
         }
         
@@ -46,9 +42,9 @@ class Client extends RedisClient implements ConnectionInterface
     }
     
     /**
-     * 
+     *
      * Connects to the Redis instance
-     * 
+     *
      * @return void
      */
     public function connect()
@@ -58,7 +54,7 @@ class Client extends RedisClient implements ConnectionInterface
     
     /**
      * Authenticates with Redis server
-     * 
+     *
      * TODO: Convert password from static plain text to encrypted docker env variable
      * TODO: Write a try catch block after converting to docker encrypted env variable
      * TODO: throw auth exception
@@ -99,9 +95,9 @@ class Client extends RedisClient implements ConnectionInterface
     }
     
     /**
-     * 
+     *
      * Defines a custom Redis command
-     * 
+     *
      * @param CommandInterface $command
      * @return mixed
      */
