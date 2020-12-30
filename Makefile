@@ -107,7 +107,7 @@ default:
 	@echo "5. make test (starts the application testing)"
 	@echo "6. make domain name=YourBusinessDomain (creates a new DDD directory structure)"
 	@echo "7. make deldomain name=YourBusinessDomain (deletes a DDD directory structure)"
-	@echo "8. make app-code-fix (applies coding standards to the application)"
+	@echo "8. make fix (applies coding standards to the application)"
 	@echo ""
 	@echo ""
 	@echo "More command are currently in development"
