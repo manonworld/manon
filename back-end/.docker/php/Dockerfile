@@ -177,3 +177,9 @@ WORKDIR /var/www/html
 # Start the Logger
 
 CMD ["symfony", "server:log"]
+
+
+# Health Check
+
+HEALTHCHECK --interval=30s --timeout=3s \
+    CMD curl -f https://127.0.0.1:8000/TestDomain || exit 1
