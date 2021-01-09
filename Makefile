@@ -6,6 +6,7 @@
 install:
 	@clear
 	@echo "Building Docker Containers...";
+	@docker-compose down --remove-orphans;
 	@docker-compose up -d --build;
 
 appinstall:
