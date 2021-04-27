@@ -12,7 +12,7 @@ install:
 appinstall:
 	@clear
 	@echo "Installing App Dependencies...";
-	@docker exec -it onetool_php composer install;
+	@docker exec -it onetool_php php composer.phar install;
 
 appuninstall:
 	@clear
