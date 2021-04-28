@@ -4,6 +4,8 @@ ________________________________________________________________________________
 Yet another DDD & CQRS boiler plate for Symfony 5 applications
 
 
+[![Build Status](https://travis-ci.com/manonworld/manon.svg?branch=master)](https://travis-ci.com/manonworld/manon)
+
 ________________________________________________________________________________
 ## Tech stack:
 ________________________________________________________________________________
