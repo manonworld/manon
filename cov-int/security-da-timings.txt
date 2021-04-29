@@ -1,0 +1,9 @@
+timer                                      ms      calls
+--------------------------------------------------------
+cov_security_da::run                       29          1
+  cov_security_da::doJSTemplateDA           6          1
+
+activity                                   ms      calls
+--------------------------------------------------------
+cov_security_da::run                       29          1
+cov_security_da::doJSTemplateDA             6          1

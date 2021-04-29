@@ -1,0 +1,4 @@
+Native Compiler invocation: ./ --coverity_resp_file=/tmp/cov-mosta/1052b715f5f00cf4f3f92d003a619fda/fs-capture-resp-file2
+Working directory: /home/mosta/manon
+Comptype: php
+* Configuring PHP Filesystem Capture

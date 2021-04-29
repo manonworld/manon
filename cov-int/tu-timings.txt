@@ -1,0 +1,274 @@
+Translation unit:
+29 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Entity/Question/AskForEntQuest.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+26 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/DDDCreator.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+25 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/CreateDddCommand.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+24 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/CreateDDDConsts.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+23 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Controller/Service/CreateController.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+22 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Controller/Question/AskForConQuest.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+21 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Controller/ControllerCreator.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+20 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Bus/Service/CreateBus.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+19 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Bus/Question/AskForBusQuest.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+18 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Bus/BusCreator.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+17 -> /home/mosta/manon/back-end/app/src/Command/AbstractCommand.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+27 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/DDDCreatorInterface.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+28 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Entity/EntityCreator.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+30 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Entity/Service/CreateEntity.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+31 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/RecursionException.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+32 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Repo/Question/AskForRepoQuest.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+33 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Repo/RepoCreator.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+34 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Repo/Service/CreateRepo.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+35 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Service/Question/AskForSvcQuest.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+36 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Service/Service/CreateService.php (failure)
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+37 -> /home/mosta/manon/back-end/app/src/Command/Ddd/CreateDdd/Service/ServiceCreator.php
+cov-internal-emit-misc invocation time (seconds): 4
+cov-translate invocation time (seconds): 5
+cov-build invocation time (seconds): 12
+Translation unit:
+42 -> /home/mosta/manon/back-end/app/src/Command/Ddd/DeleteDdd/Service/DeleteDomain.php (failure)
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+38 -> /home/mosta/manon/back-end/app/src/Command/Ddd/DeleteDdd/DeleteDDDConsts.php (failure)
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+39 -> /home/mosta/manon/back-end/app/src/Command/Ddd/DeleteDdd/DeleteDddCommand.php (failure)
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+40 -> /home/mosta/manon/back-end/app/src/Command/Ddd/DeleteDdd/DomainDeleter.php (failure)
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+41 -> /home/mosta/manon/back-end/app/src/Command/Ddd/DeleteDdd/Question/AskForDelQuest.php
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+43 -> /home/mosta/manon/back-end/app/src/Command/Ddd/DeleteDdd/UserCancelException.php
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+44 -> /home/mosta/manon/back-end/app/src/Command/Ddd/ValueObject/DirName.php (failure)
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+45 -> /home/mosta/manon/back-end/app/src/DataFixtures/AppFixtures.php
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+46 -> /home/mosta/manon/back-end/app/src/Infrastructure/Command/DirectoryManager.php (failure)
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+47 -> /home/mosta/manon/back-end/app/src/Infrastructure/Controller/BaseController.php (failure)
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+48 -> /home/mosta/manon/back-end/app/src/Infrastructure/Exception/UnimplementedException.php
+cov-internal-emit-misc invocation time (seconds): 2
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+49 -> /home/mosta/manon/back-end/app/src/Infrastructure/Redis/Client.php
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+50 -> /home/mosta/manon/back-end/app/src/Infrastructure/Redis/Command/AUTH.php
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+51 -> /home/mosta/manon/back-end/app/src/Infrastructure/Redis/Command/XADD.php
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+52 -> /home/mosta/manon/back-end/app/src/Infrastructure/Serializer/HateoasSerializer.php (failure)
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+53 -> /home/mosta/manon/back-end/app/src/Infrastructure/Serializer/JmsSerializer.php (failure)
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+54 -> /home/mosta/manon/back-end/app/src/Infrastructure/Serializer/SerializerException.php
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+55 -> /home/mosta/manon/back-end/app/src/Infrastructure/Serializer/SerializerInterface.php
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+56 -> /home/mosta/manon/back-end/app/src/Kernel.php (failure)
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+57 -> /home/mosta/manon/back-end/app/src/Shared/ExceptionToArray.php
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+58 -> /home/mosta/manon/back-end/app/src/TestDomain/Controller/TestDomainController.php
+cov-internal-emit-misc invocation time (seconds): 1
+cov-translate invocation time (seconds): 2
+cov-build invocation time (seconds): 12
+Translation unit:
+16 -> /home/mosta/manon/back-end/app/src/TestDomain/ValueObject/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+15 -> /home/mosta/manon/back-end/app/src/TestDomain/Service/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+14 -> /home/mosta/manon/back-end/app/src/TestDomain/Repository/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+13 -> /home/mosta/manon/back-end/app/src/TestDomain/Entity/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+12 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Transport/Sender/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+11 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Transport/Receiver/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+10 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Transport/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+9 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Query/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+8 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Message/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+7 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Handler/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+6 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Event/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+5 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Envelope/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+4 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/Command/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+3 -> /home/mosta/manon/back-end/app/src/TestDomain/Bus/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+2 -> /home/mosta/manon/back-end/app/src/Shared/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12
+Translation unit:
+1 -> /home/mosta/manon/back-end/app/src/Infrastructure/Validator/.gitkeep (text data)
+cov-emit-text invocation time (seconds): 0
+cov-build invocation time (seconds): 12

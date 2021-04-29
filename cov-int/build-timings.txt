@@ -1,0 +1,21 @@
+timer                                 ms      calls
+---------------------------------------------------
+cov-build                          11319          1
+  add_string_to_table                  1         78
+  addEmitFileName                      1          1
+    addEmitFileName                    1          1
+      addEmitFileName                  1          1
+        addEmitFileName                1          1
+  Prepare capture                      2          1
+  TUInfo::getPrimarySFRow              0         58
+  TUInfo::getPrimaryFileName           0         16
+  (left over)                      11315
+
+activity                              ms      calls
+---------------------------------------------------
+cov-build                          11319          1
+add_string_to_table                    1         78
+addEmitFileName                        4          4
+Prepare capture                        2          1
+TUInfo::getPrimarySFRow                0         58
+TUInfo::getPrimaryFileName             0         16
