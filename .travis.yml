@@ -42,4 +42,4 @@ script:
   - make test
   
 after_success:
-  - travis_retry cd /var/www/html/ && ./php-coveralls.phar
+  - travis_retry docker exec -it onetool_php git inti && ./vendor/bin/php-coveralls
