@@ -4,8 +4,7 @@ ________________________________________________________________________________
 Yet another DDD & CQRS boiler plate for Symfony 5 applications
 
 
-[![Build Status](https://travis-ci.com/manonworld/manon.svg?branch=master)](https://travis-ci.com/manonworld/manon) <a href="https://scan.coverity.com/projects/manonworld-manon"><img alt="Coverity Scan Build Status" src="https://scan.coverity.com/projects/23047/badge.svg"/></a>
-
+[![Build Status](https://travis-ci.com/manonworld/manon.svg?branch=master)](https://travis-ci.com/manonworld/manon) <a href="https://scan.coverity.com/projects/manonworld-manon"><img alt="Coverity Scan Build Status" src="https://scan.coverity.com/projects/23047/badge.svg"/></a> [![Coverage Status](https://coveralls.io/repos/github/manonworld/manon/badge.svg?branch=master)](https://coveralls.io/github/manonworld/manon?branch=master)
 ________________________________________________________________________________
 ## Tech stack:
 ________________________________________________________________________________
