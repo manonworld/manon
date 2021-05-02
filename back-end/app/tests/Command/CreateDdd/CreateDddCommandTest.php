@@ -12,6 +12,12 @@ class CreateDddCommandTest extends AbstractKernelTestCase
 {
     
     /**
+     * 
+     * @var string $expected Expected Success Response from the Command
+     */
+    private string $expected = '[OK] You have a new domain ManonDomain';
+    
+    /**
      * @covers App\Command\Ddd\CreateDdd\CreateDddCommand::execute
      */
     public function testExecute()
@@ -19,11 +25,10 @@ class CreateDddCommandTest extends AbstractKernelTestCase
         $command = $this->application->find('app:create:ddd');
 
         $commandTester = new CommandTester( $command );
-        $commandTester->execute(['name' => 'ManonDomain']);
+        $commandTester->execute(['name' => 'ManonDomainTest1']);
         $commandTester->setInputs(['yes', 'yes', 'yes', 'yes', 'yes']);
 
         $output = $commandTester->getDisplay();
-        $expected = '[OK] You have a new domain ManonDomain';
-        $this->assertStringContainsString($expected, $output);
+        $this->assertStringContainsString($this->expected, $output);
     }
 }

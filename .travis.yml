@@ -40,3 +40,6 @@ script:
   - make appinstall
   - make start
   - make test
+  
+after_success:
+  - travis_retry cd /var/www/html/ && ./php-coveralls.phar

@@ -22,16 +22,17 @@
         "willdurand/hateoas": "^3.6"
     },
     "require-dev": {
+        "composer-runtime-api": "^1.0",
         "doctrine/doctrine-fixtures-bundle": "^3.3",
         "fzaninotto/faker": "^1.9",
         "nelmio/api-doc-bundle": "^3.6",
+        "php-coveralls/php-coveralls": "^2.4",
         "squizlabs/php_codesniffer": "*",
         "symfony/browser-kit": "5.0.*",
         "symfony/css-selector": "5.0.*",
         "symfony/maker-bundle": "^1.18",
         "symfony/phpunit-bridge": "^5.0",
-        "symfony/test-pack": "^1.0",
-        "composer-runtime-api": "^1.0"
+        "symfony/test-pack": "^1.0"
     },
     "config": {
         "preferred-install": {
