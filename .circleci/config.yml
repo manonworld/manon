@@ -4,9 +4,9 @@ jobs:
     machine: true
 
     steps:
-      - run:
-          name: Install Docker client
-          command: apk add docker-cli git alpine-sdk docker-compose
+      - setup_remote_docker:
+          version: 19.03.13
+          docker_layer_caching: true
 
       - run:
           name: Cloning Project
