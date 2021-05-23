@@ -3,22 +3,26 @@ jobs:
   build:
     docker:
       - image: php:7.4-zts-alpine
+
     steps:
+      - run:
+          name: Cloning Project
+          command: cd ~/project && git clone https://github.com/manonworld/manon.git .
       - run:
           name: Install Docker client
           command: apk add docker-cli
       - run:
           name: Install App Infrastructure
-          command: make install
+          command: cd ~/project && make install
       - run:
           name: Install App
-          command: make appinstall
+          command: cd ~/project && make appinstall
       - run:
           name: Start App
-          command: make start
+          command: cd ~/project && make start
       - run:
           name: Test App
-          command: make test
+          command: cd ~/project && make test
       - run:
           name: Generate Test Logs
           command: docker exec -it onetool_php ./vendor/bin/phpunit --coverage-clover coverage.xml
