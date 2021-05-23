@@ -6,11 +6,11 @@ jobs:
 
     steps:
       - run:
+          name: Install Docker client
+          command: apk add docker-cli git
+      - run:
           name: Cloning Project
           command: cd ~/project && git clone https://github.com/manonworld/manon.git .
-      - run:
-          name: Install Docker client
-          command: apk add docker-cli
       - run:
           name: Install App Infrastructure
           command: cd ~/project && make install
