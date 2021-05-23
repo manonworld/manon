@@ -1,7 +1,8 @@
 version: 2
 jobs:
   build:
-    machine: true
+    docker:
+      - image: circleci/php:zts-buster
 
     steps:
       - setup_remote_docker:
