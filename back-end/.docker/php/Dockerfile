@@ -174,6 +174,16 @@ RUN /usr/local/bin/symfony server:start -d
 WORKDIR /var/www/html
 
 
+# Copy the Application
+
+COPY ../../app .
+
+
+# Install Application Dependencies
+
+RUN composer install
+
+
 # Start the Logger
 
 CMD ["symfony", "server:log"]
