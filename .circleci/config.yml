@@ -7,7 +7,8 @@ jobs:
     steps:
       - run:
           name: Install Docker client
-          command: apk add docker-cli git alpine-sdk
+          command: apk add docker-cli git alpine-sdk docker-compose
+
       - run:
           name: Cloning Project
           command: cd ~/project && git clone https://github.com/manonworld/manon.git .
