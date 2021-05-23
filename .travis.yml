@@ -41,7 +41,7 @@ script:
   - make appinstall
   - make start
   - make test
-  - vendor/bin/phpunit --coverage-clover coverage.xml
+  - travis_retry docker exec -it onetool_php ./vendor/bin/phpunit --coverage-clover coverage.xml
   
 after_success:
   - travis_retry docker exec -it onetool_php git inti && ./vendor/bin/php-coveralls
