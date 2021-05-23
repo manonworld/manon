@@ -22,7 +22,7 @@
         "willdurand/hateoas": "^3.6"
     },
     "require-dev": {
-        "composer-runtime-api": "^1.0",
+        "composer-runtime-api": "^2.0",
         "doctrine/doctrine-fixtures-bundle": "^3.3",
         "fzaninotto/faker": "^1.9",
         "nelmio/api-doc-bundle": "^3.6",
