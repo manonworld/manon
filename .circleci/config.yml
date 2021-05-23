@@ -15,7 +15,7 @@ jobs:
           name: Start App
           command: make start
       - run:
-	  name: Test App
+          name: Test App
           command: make test
       - run:
           name: Generate Test Logs
