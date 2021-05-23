@@ -1,0 +1,12 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.4-node-browsers
+    steps:
+      - run: make install
+      - run: make appinstall
+      - run: make start
+      - run: make test
+      - run: docker exec -it onetool_php ./vendor/bin/phpunit --coverage-clover coverage.xml
+      
