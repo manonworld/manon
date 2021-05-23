@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/php:7.4.9-cli
+      - image: php:7.4-zts-alpine
     steps:
       - run:
           name: Install Docker client
