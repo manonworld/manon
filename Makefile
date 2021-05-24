@@ -18,7 +18,7 @@ appuninstall:
 
 fix:
 	@echo "Fixing Code to PSR2 standard...";
-	@docker exec -it onetool_php php phpcbf.phar --standard=PSR2 src;
+	@docker exec -it onetool_php ./vendor/bin/phpcbf;
 
 domain:
 	@echo "Creating a new Domain...";

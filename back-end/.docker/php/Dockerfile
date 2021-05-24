@@ -51,7 +51,6 @@ RUN docker-php-ext-install \
 # Dev PHP Extensions (Remove in Prod)
 
 RUN pecl install xdebug parallel http
-RUN pear install PHP_CodeSniffer
 
 
 RUN apk upgrade --update && apk add \
