@@ -78,8 +78,8 @@ RUN echo "root ALL=(ALL) ALL" > /etc/sudoers
 
 # PHP Configuration
 
-COPY php.ini /usr/local/etc/php/php.ini
-COPY php-fpm-pool.conf 	/usr/local/etc/php/pool.d/www.conf
+COPY ./back-end/.docker/php/php.ini /usr/local/etc/php/php.ini
+COPY ./back-end/.docker/php/php-fpm-pool.conf 	/usr/local/etc/php/pool.d/www.conf
 
 
 # Main User
@@ -93,7 +93,7 @@ RUN apk add --update supervisor && rm  -rf /tmp/* /var/cache/apk/*
 RUN apk add openrc --no-cache
 RUN mkdir -p /run/openrc/
 RUN touch /run/openrc/softlevel
-COPY supervisord /etc/init.d/supervisord
+COPY ./back-end/.docker/php/supervisord /etc/init.d/supervisord
 RUN mkdir /etc/supervisor
 RUN echo_supervisord_conf >  /etc/supervisor/supervisord.conf
 
@@ -175,12 +175,7 @@ WORKDIR /var/www/html
 
 # Copy the Application
 
-COPY ../../app .
-
-
-# Install Application Dependencies
-
-RUN composer install
+COPY ./back-end/app .
 
 
 # Start the Logger
