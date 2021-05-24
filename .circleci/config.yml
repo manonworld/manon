@@ -5,9 +5,10 @@ jobs:
       - image: ubuntu
 
     steps:
-      - setup_remote_docker:
-          version: 19.03.13
 
+      - run:
+          name: Install Git
+          command: apt-get install git docker docker-compose
       - run:
           name: Cloning Project
           command: cd ~/project && git clone https://github.com/manonworld/manon.git .
