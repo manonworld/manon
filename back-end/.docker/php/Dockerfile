@@ -175,7 +175,7 @@ WORKDIR /var/www/html
 
 # Copy the Application
 
-COPY ./back-end/app .
+COPY ./back-end/app /var/www/html
 
 
 # Start the Logger
