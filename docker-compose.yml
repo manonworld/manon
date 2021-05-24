@@ -42,7 +42,9 @@ services:
   # PHP Backend App
   php:
     container_name: onetool_php
-    build: ./back-end/.docker/php
+    build:
+      context: ./
+      dockerfile: ./back-end/.docker/php/Dockerfile
     image: php:7.4-fpm
     volumes:
       - ./back-end/app:/var/www/html
