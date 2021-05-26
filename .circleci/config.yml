@@ -5,26 +5,34 @@ jobs:
       - image: ubuntu
 
     steps:
+
       - setup_remote_docker:
           version: 19.03.13
+
       - run:
           name: Install Dependencies
           command: TZ=Europe/Minsk && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone && apt-get update && apt-get install -y git build-essential docker-compose
+
       - run:
           name: Cloning Project
           command: cd ~/project && git clone https://github.com/manonworld/manon.git .
+
       - run:
           name: Install App Infrastructure
           command: cd ~/project && make install
+
       - run:
           name: Install App
           command: cd ~/project && make appinstall
+
       - run:
           name: Start App
           command: cd ~/project && make start
+
       - run:
           name: Test App
           command: cd ~/project && make test
+
       - run:
           name: Generate Test Logs
           command: docker exec -it onetool_php ./vendor/bin/phpunit --coverage-clover coverage.xml
