@@ -45,7 +45,7 @@ log:
 
 test:
 	@echo "Running Tests...";
-	@docker exec -it onetool_php bin/phpunit --coverage-text;
+	@docker exec -it onetool_php vendor/bin/phpunit --coverage-text;
 
 stop:
 	@echo "Stopping the Application...";

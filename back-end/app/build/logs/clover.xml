@@ -1,701 +1,639 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1621768606">
-  <project timestamp="1621768606">
-    <package name="App\Command">
-      <file name="/var/www/html/src/Command/AbstractCommand.php">
-        <class name="App\Command\AbstractCommand" namespace="App\Command">
-          <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
-        </class>
-        <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Bus">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Bus/BusCreator.php">
-        <class name="App\Command\Ddd\CreateDdd\Bus\BusCreator" namespace="App\Command\Ddd\CreateDdd\Bus">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="25" type="method" name="getDefBusDir" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <metrics loc="29" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Bus\Question">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Bus/Question/AskForBusQuest.php">
-        <class name="App\Command\Ddd\CreateDdd\Bus\Question\AskForBusQuest" namespace="App\Command\Ddd\CreateDdd\Bus\Question">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Bus\Service">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Bus/Service/CreateBus.php">
-        <class name="App\Command\Ddd\CreateDdd\Bus\Service\CreateBus" namespace="App\Command\Ddd\CreateDdd\Bus\Service">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
-        </class>
-        <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="32" type="stmt" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="40" type="method" name="execute" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="44" type="stmt" count="0"/>
-        <line num="46" type="stmt" count="0"/>
-        <line num="47" type="stmt" count="0"/>
-        <metrics loc="48" ncloc="26" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Controller">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Controller/ControllerCreator.php">
-        <class name="App\Command\Ddd\CreateDdd\Controller\ControllerCreator" namespace="App\Command\Ddd\CreateDdd\Controller">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="18" type="method" name="getConDir" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Controller\Question">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Controller/Question/AskForConQuest.php">
-        <class name="App\Command\Ddd\CreateDdd\Controller\Question\AskForConQuest" namespace="App\Command\Ddd\CreateDdd\Controller\Question">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Controller\Service">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Controller/Service/CreateController.php">
-        <class name="App\Command\Ddd\CreateDdd\Controller\Service\CreateController" namespace="App\Command\Ddd\CreateDdd\Controller\Service">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-        </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <line num="15" type="stmt" count="0"/>
-        <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/CreateDDDConsts.php">
-        <class name="App\Command\Ddd\CreateDdd\CreateDDDConsts" namespace="App\Command\Ddd\CreateDdd">
-          <metrics complexity="17" methods="17" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="51" coveredelements="0"/>
-        </class>
-        <line num="63" type="method" name="DESC" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="65" type="stmt" count="0"/>
-        <line num="66" type="stmt" count="0"/>
-        <line num="72" type="method" name="NAME_ERR" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="74" type="stmt" count="0"/>
-        <line num="75" type="stmt" count="0"/>
-        <line num="81" type="method" name="NAME_DESC" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="83" type="stmt" count="0"/>
-        <line num="84" type="stmt" count="0"/>
-        <line num="90" type="method" name="INFO" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="92" type="stmt" count="0"/>
-        <line num="93" type="stmt" count="0"/>
-        <line num="99" type="method" name="SUCC" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="101" type="stmt" count="0"/>
-        <line num="102" type="stmt" count="0"/>
-        <line num="108" type="method" name="DEF_BUS_DIR" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="110" type="stmt" count="0"/>
-        <line num="111" type="stmt" count="0"/>
-        <line num="117" type="method" name="DEF_REPO_DIR" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="119" type="stmt" count="0"/>
-        <line num="120" type="stmt" count="0"/>
-        <line num="126" type="method" name="DEF_SVC_DIR" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="128" type="stmt" count="0"/>
-        <line num="129" type="stmt" count="0"/>
-        <line num="135" type="method" name="DEF_ENT_DIR" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="137" type="stmt" count="0"/>
-        <line num="138" type="stmt" count="0"/>
-        <line num="144" type="method" name="DEF_CON_DIR" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="146" type="stmt" count="0"/>
-        <line num="147" type="stmt" count="0"/>
-        <line num="153" type="method" name="BUS_QUEST" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="155" type="stmt" count="0"/>
-        <line num="156" type="stmt" count="0"/>
-        <line num="162" type="method" name="REPO_QUEST" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="164" type="stmt" count="0"/>
-        <line num="165" type="stmt" count="0"/>
-        <line num="171" type="method" name="SVC_QUEST" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="173" type="stmt" count="0"/>
-        <line num="174" type="stmt" count="0"/>
-        <line num="180" type="method" name="ENT_QUEST" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="182" type="stmt" count="0"/>
-        <line num="183" type="stmt" count="0"/>
-        <line num="189" type="method" name="DEF_BUS_DIRS" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="191" type="stmt" count="0"/>
-        <line num="192" type="stmt" count="0"/>
-        <line num="198" type="method" name="DEF_REPO_DIRS" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="200" type="stmt" count="0"/>
-        <line num="201" type="stmt" count="0"/>
-        <line num="207" type="method" name="CON_QUEST" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="209" type="stmt" count="0"/>
-        <line num="210" type="stmt" count="0"/>
-        <metrics loc="212" ncloc="141" classes="1" methods="17" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="51" coveredelements="0"/>
-      </file>
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/CreateDddCommand.php">
-        <class name="App\Command\Ddd\CreateDdd\CreateDddCommand" namespace="App\Command\Ddd\CreateDdd">
-          <metrics complexity="12" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="38" elements="52" coveredelements="42"/>
-        </class>
-        <line num="98" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="107" type="stmt" count="1"/>
-        <line num="108" type="stmt" count="1"/>
-        <line num="109" type="stmt" count="1"/>
-        <line num="110" type="stmt" count="1"/>
-        <line num="111" type="stmt" count="1"/>
-        <line num="112" type="stmt" count="1"/>
-        <line num="113" type="stmt" count="1"/>
-        <line num="114" type="stmt" count="1"/>
-        <line num="115" type="stmt" count="1"/>
-        <line num="122" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="1"/>
-        <line num="124" type="stmt" count="1"/>
-        <line num="125" type="stmt" count="1"/>
-        <line num="126" type="stmt" count="1"/>
-        <line num="127" type="stmt" count="1"/>
-        <line num="128" type="stmt" count="1"/>
-        <line num="130" type="stmt" count="1"/>
-        <line num="139" type="method" name="execute" visibility="protected" complexity="3" crap="3.65" count="1"/>
-        <line num="141" type="stmt" count="1"/>
-        <line num="142" type="stmt" count="1"/>
-        <line num="143" type="stmt" count="1"/>
-        <line num="144" type="stmt" count="0"/>
-        <line num="145" type="stmt" count="0"/>
-        <line num="147" type="stmt" count="1"/>
-        <line num="149" type="stmt" count="1"/>
-        <line num="150" type="stmt" count="0"/>
-        <line num="151" type="stmt" count="0"/>
-        <line num="152" type="stmt" count="0"/>
-        <line num="154" type="stmt" count="1"/>
-        <line num="155" type="stmt" count="1"/>
-        <line num="167" type="method" name="validate" visibility="private" complexity="2" crap="2.02" count="1"/>
-        <line num="169" type="stmt" count="1"/>
-        <line num="170" type="stmt" count="1"/>
-        <line num="171" type="stmt" count="1"/>
-        <line num="174" type="stmt" count="1"/>
-        <line num="175" type="stmt" count="0"/>
-        <line num="178" type="stmt" count="1"/>
-        <line num="191" type="method" name="createDomain" visibility="private" complexity="3" crap="3.04" count="1"/>
-        <line num="196" type="stmt" count="1"/>
-        <line num="197" type="stmt" count="1"/>
-        <line num="198" type="stmt" count="1"/>
-        <line num="199" type="stmt" count="1"/>
-        <line num="200" type="stmt" count="0"/>
-        <line num="203" type="stmt" count="1"/>
-        <line num="214" type="method" name="getQuestsWithHandlers" visibility="private" complexity="1" crap="1" count="1"/>
-        <line num="219" type="stmt" count="1"/>
-        <line num="220" type="stmt" count="1"/>
-        <line num="221" type="stmt" count="1"/>
-        <line num="222" type="stmt" count="1"/>
-        <line num="223" type="stmt" count="1"/>
-        <line num="239" type="method" name="ask" visibility="private" complexity="1" crap="1" count="1"/>
-        <line num="241" type="stmt" count="1"/>
-        <metrics loc="243" ncloc="142" classes="1" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="38" elements="52" coveredelements="42"/>
-      </file>
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/DDDCreator.php">
-        <class name="App\Command\Ddd\CreateDdd\DDDCreator" namespace="App\Command\Ddd\CreateDdd">
-          <metrics complexity="8" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="18" coveredelements="0"/>
-        </class>
-        <line num="31" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="33" type="stmt" count="0"/>
-        <line num="34" type="stmt" count="0"/>
-        <line num="48" type="method" name="create" visibility="public" complexity="6" crap="42.00" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <line num="54" type="stmt" count="0"/>
-        <line num="55" type="stmt" count="0"/>
-        <line num="57" type="stmt" count="0"/>
-        <line num="58" type="stmt" count="0"/>
-        <line num="59" type="stmt" count="0"/>
-        <line num="60" type="stmt" count="0"/>
-        <line num="62" type="stmt" count="0"/>
-        <line num="66" type="stmt" count="0"/>
-        <line num="67" type="stmt" count="0"/>
-        <line num="69" type="stmt" count="0"/>
-        <line num="78" type="method" name="getDefDir" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="80" type="stmt" count="0"/>
-        <metrics loc="82" ncloc="45" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="18" coveredelements="0"/>
-      </file>
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/RecursionException.php">
-        <class name="App\Command\Ddd\CreateDdd\RecursionException" namespace="App\Command\Ddd\CreateDdd">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-        </class>
-        <line num="8" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="10" type="stmt" count="0"/>
-        <line num="11" type="stmt" count="0"/>
-        <metrics loc="12" ncloc="12" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-      </file>
-    </package>
+<coverage generated="1622018522">
+  <project timestamp="1622018522">
+    <file name="/var/www/html/src/Command/AbstractCommand.php">
+      <class name="App\Command\AbstractCommand" namespace="global">
+        <metrics complexity="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </class>
+      <metrics loc="11" ncloc="11" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Bus/BusCreator.php">
+      <class name="App\Command\Ddd\CreateDdd\Bus\BusCreator" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="25" type="method" name="getDefBusDir" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="27" type="stmt" count="0"/>
+      <metrics loc="29" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Bus/Question/AskForBusQuest.php">
+      <class name="App\Command\Ddd\CreateDdd\Bus\Question\AskForBusQuest" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Bus/Service/CreateBus.php">
+      <class name="App\Command\Ddd\CreateDdd\Bus\Service\CreateBus" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
+      </class>
+      <line num="30" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="32" type="stmt" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="40" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="42" type="stmt" count="0"/>
+      <line num="44" type="stmt" count="0"/>
+      <line num="46" type="stmt" count="0"/>
+      <line num="47" type="stmt" count="0"/>
+      <metrics loc="48" ncloc="26" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="8" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Controller/ControllerCreator.php">
+      <class name="App\Command\Ddd\CreateDdd\Controller\ControllerCreator" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="18" type="method" name="getConDir" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Controller/Question/AskForConQuest.php">
+      <class name="App\Command\Ddd\CreateDdd\Controller\Question\AskForConQuest" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Controller/Service/CreateController.php">
+      <class name="App\Command\Ddd\CreateDdd\Controller\Service\CreateController" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="19" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/CreateDDDConsts.php">
+      <class name="App\Command\Ddd\CreateDdd\CreateDDDConsts" namespace="global">
+        <metrics complexity="17" methods="17" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="51" coveredelements="0"/>
+      </class>
+      <line num="63" type="method" name="DESC" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="65" type="stmt" count="0"/>
+      <line num="66" type="stmt" count="0"/>
+      <line num="72" type="method" name="NAME_ERR" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="74" type="stmt" count="0"/>
+      <line num="75" type="stmt" count="0"/>
+      <line num="81" type="method" name="NAME_DESC" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="83" type="stmt" count="0"/>
+      <line num="84" type="stmt" count="0"/>
+      <line num="90" type="method" name="INFO" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="92" type="stmt" count="0"/>
+      <line num="93" type="stmt" count="0"/>
+      <line num="99" type="method" name="SUCC" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="101" type="stmt" count="0"/>
+      <line num="102" type="stmt" count="0"/>
+      <line num="108" type="method" name="DEF_BUS_DIR" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="110" type="stmt" count="0"/>
+      <line num="111" type="stmt" count="0"/>
+      <line num="117" type="method" name="DEF_REPO_DIR" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="119" type="stmt" count="0"/>
+      <line num="120" type="stmt" count="0"/>
+      <line num="126" type="method" name="DEF_SVC_DIR" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="128" type="stmt" count="0"/>
+      <line num="129" type="stmt" count="0"/>
+      <line num="135" type="method" name="DEF_ENT_DIR" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="137" type="stmt" count="0"/>
+      <line num="138" type="stmt" count="0"/>
+      <line num="144" type="method" name="DEF_CON_DIR" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="146" type="stmt" count="0"/>
+      <line num="147" type="stmt" count="0"/>
+      <line num="153" type="method" name="BUS_QUEST" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="155" type="stmt" count="0"/>
+      <line num="156" type="stmt" count="0"/>
+      <line num="162" type="method" name="REPO_QUEST" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="164" type="stmt" count="0"/>
+      <line num="165" type="stmt" count="0"/>
+      <line num="171" type="method" name="SVC_QUEST" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="173" type="stmt" count="0"/>
+      <line num="174" type="stmt" count="0"/>
+      <line num="180" type="method" name="ENT_QUEST" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="182" type="stmt" count="0"/>
+      <line num="183" type="stmt" count="0"/>
+      <line num="189" type="method" name="DEF_BUS_DIRS" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="191" type="stmt" count="0"/>
+      <line num="192" type="stmt" count="0"/>
+      <line num="198" type="method" name="DEF_REPO_DIRS" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="200" type="stmt" count="0"/>
+      <line num="201" type="stmt" count="0"/>
+      <line num="207" type="method" name="CON_QUEST" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="209" type="stmt" count="0"/>
+      <line num="210" type="stmt" count="0"/>
+      <metrics loc="212" ncloc="141" classes="1" methods="17" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="34" coveredstatements="0" elements="51" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/CreateDddCommand.php">
+      <class name="App\Command\Ddd\CreateDdd\CreateDddCommand" namespace="global">
+        <metrics complexity="12" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="38" elements="52" coveredelements="42"/>
+      </class>
+      <line num="98" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="107" type="stmt" count="1"/>
+      <line num="108" type="stmt" count="1"/>
+      <line num="109" type="stmt" count="1"/>
+      <line num="110" type="stmt" count="1"/>
+      <line num="111" type="stmt" count="1"/>
+      <line num="112" type="stmt" count="1"/>
+      <line num="113" type="stmt" count="1"/>
+      <line num="114" type="stmt" count="1"/>
+      <line num="115" type="stmt" count="1"/>
+      <line num="122" type="method" name="configure" visibility="protected" complexity="1" crap="1" count="1"/>
+      <line num="124" type="stmt" count="1"/>
+      <line num="125" type="stmt" count="1"/>
+      <line num="126" type="stmt" count="1"/>
+      <line num="127" type="stmt" count="1"/>
+      <line num="128" type="stmt" count="1"/>
+      <line num="130" type="stmt" count="1"/>
+      <line num="139" type="method" name="execute" visibility="protected" complexity="3" crap="3.65" count="1"/>
+      <line num="141" type="stmt" count="1"/>
+      <line num="142" type="stmt" count="1"/>
+      <line num="143" type="stmt" count="1"/>
+      <line num="144" type="stmt" count="0"/>
+      <line num="145" type="stmt" count="0"/>
+      <line num="147" type="stmt" count="1"/>
+      <line num="149" type="stmt" count="1"/>
+      <line num="150" type="stmt" count="0"/>
+      <line num="151" type="stmt" count="0"/>
+      <line num="152" type="stmt" count="0"/>
+      <line num="154" type="stmt" count="1"/>
+      <line num="155" type="stmt" count="1"/>
+      <line num="167" type="method" name="validate" visibility="private" complexity="2" crap="2.02" count="1"/>
+      <line num="169" type="stmt" count="1"/>
+      <line num="170" type="stmt" count="1"/>
+      <line num="171" type="stmt" count="1"/>
+      <line num="174" type="stmt" count="1"/>
+      <line num="175" type="stmt" count="0"/>
+      <line num="178" type="stmt" count="1"/>
+      <line num="191" type="method" name="createDomain" visibility="private" complexity="3" crap="3.04" count="1"/>
+      <line num="196" type="stmt" count="1"/>
+      <line num="197" type="stmt" count="1"/>
+      <line num="198" type="stmt" count="1"/>
+      <line num="199" type="stmt" count="1"/>
+      <line num="200" type="stmt" count="0"/>
+      <line num="203" type="stmt" count="1"/>
+      <line num="214" type="method" name="getQuestsWithHandlers" visibility="private" complexity="1" crap="1" count="1"/>
+      <line num="219" type="stmt" count="1"/>
+      <line num="220" type="stmt" count="1"/>
+      <line num="221" type="stmt" count="1"/>
+      <line num="222" type="stmt" count="1"/>
+      <line num="223" type="stmt" count="1"/>
+      <line num="239" type="method" name="ask" visibility="private" complexity="1" crap="1" count="1"/>
+      <line num="241" type="stmt" count="1"/>
+      <metrics loc="243" ncloc="142" classes="1" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="38" elements="52" coveredelements="42"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/DDDCreator.php">
+      <class name="App\Command\Ddd\CreateDdd\DDDCreator" namespace="global">
+        <metrics complexity="8" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="18" coveredelements="0"/>
+      </class>
+      <line num="31" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="33" type="stmt" count="0"/>
+      <line num="34" type="stmt" count="0"/>
+      <line num="48" type="method" name="create" visibility="public" complexity="6" crap="42" count="0"/>
+      <line num="50" type="stmt" count="0"/>
+      <line num="51" type="stmt" count="0"/>
+      <line num="54" type="stmt" count="0"/>
+      <line num="55" type="stmt" count="0"/>
+      <line num="57" type="stmt" count="0"/>
+      <line num="58" type="stmt" count="0"/>
+      <line num="59" type="stmt" count="0"/>
+      <line num="60" type="stmt" count="0"/>
+      <line num="62" type="stmt" count="0"/>
+      <line num="66" type="stmt" count="0"/>
+      <line num="67" type="stmt" count="0"/>
+      <line num="69" type="stmt" count="0"/>
+      <line num="78" type="method" name="getDefDir" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="80" type="stmt" count="0"/>
+      <metrics loc="82" ncloc="45" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="0" elements="18" coveredelements="0"/>
+    </file>
     <file name="/var/www/html/src/Command/Ddd/CreateDdd/DDDCreatorInterface.php">
       <metrics loc="19" ncloc="9" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <package name="App\Command\Ddd\CreateDdd\Entity">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Entity/EntityCreator.php">
-        <class name="App\Command\Ddd\CreateDdd\Entity\EntityCreator" namespace="App\Command\Ddd\CreateDdd\Entity">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="18" type="method" name="getEntDir" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Entity\Question">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Entity/Question/AskForEntQuest.php">
-        <class name="App\Command\Ddd\CreateDdd\Entity\Question\AskForEntQuest" namespace="App\Command\Ddd\CreateDdd\Entity\Question">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Entity\Service">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Entity/Service/CreateEntity.php">
-        <class name="App\Command\Ddd\CreateDdd\Entity\Service\CreateEntity" namespace="App\Command\Ddd\CreateDdd\Entity\Service">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-        </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <line num="15" type="stmt" count="0"/>
-        <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Repo\Question">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Repo/Question/AskForRepoQuest.php">
-        <class name="App\Command\Ddd\CreateDdd\Repo\Question\AskForRepoQuest" namespace="App\Command\Ddd\CreateDdd\Repo\Question">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Repo">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Repo/RepoCreator.php">
-        <class name="App\Command\Ddd\CreateDdd\Repo\RepoCreator" namespace="App\Command\Ddd\CreateDdd\Repo">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="18" type="method" name="getRepoDir" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Repo\Service">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Repo/Service/CreateRepo.php">
-        <class name="App\Command\Ddd\CreateDdd\Repo\Service\CreateRepo" namespace="App\Command\Ddd\CreateDdd\Repo\Service">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-        </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <line num="15" type="stmt" count="0"/>
-        <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Service\Question">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Service/Question/AskForSvcQuest.php">
-        <class name="App\Command\Ddd\CreateDdd\Service\Question\AskForSvcQuest" namespace="App\Command\Ddd\CreateDdd\Service\Question">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Service\Service">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Service/Service/CreateService.php">
-        <class name="App\Command\Ddd\CreateDdd\Service\Service\CreateService" namespace="App\Command\Ddd\CreateDdd\Service\Service">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-        </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <line num="15" type="stmt" count="0"/>
-        <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\CreateDdd\Service">
-      <file name="/var/www/html/src/Command/Ddd/CreateDdd/Service/ServiceCreator.php">
-        <class name="App\Command\Ddd\CreateDdd\Service\ServiceCreator" namespace="App\Command\Ddd\CreateDdd\Service">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="18" type="method" name="getSvcDir" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\DeleteDdd">
-      <file name="/var/www/html/src/Command/Ddd/DeleteDdd/DeleteDDDConsts.php">
-        <class name="App\Command\Ddd\DeleteDdd\DeleteDDDConsts" namespace="App\Command\Ddd\DeleteDdd">
-          <metrics complexity="6" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="18" coveredelements="0"/>
-        </class>
-        <line num="63" type="method" name="DEF_DIR" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="65" type="stmt" count="0"/>
-        <line num="66" type="stmt" count="0"/>
-        <line num="72" type="method" name="INFO" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="74" type="stmt" count="0"/>
-        <line num="75" type="stmt" count="0"/>
-        <line num="81" type="method" name="DEL_QUEST" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="83" type="stmt" count="0"/>
-        <line num="84" type="stmt" count="0"/>
-        <line num="90" type="method" name="DESC" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="92" type="stmt" count="0"/>
-        <line num="93" type="stmt" count="0"/>
-        <line num="99" type="method" name="NAME_DESC" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="101" type="stmt" count="0"/>
-        <line num="102" type="stmt" count="0"/>
-        <line num="108" type="method" name="SUCC" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="110" type="stmt" count="0"/>
-        <line num="111" type="stmt" count="0"/>
-        <metrics loc="113" ncloc="59" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="18" coveredelements="0"/>
-      </file>
-      <file name="/var/www/html/src/Command/Ddd/DeleteDdd/DeleteDddCommand.php">
-        <class name="App\Command\Ddd\DeleteDdd\DeleteDddCommand" namespace="App\Command\Ddd\DeleteDdd">
-          <metrics complexity="11" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="45" coveredelements="0"/>
-        </class>
-        <line num="67" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="72" type="stmt" count="0"/>
-        <line num="73" type="stmt" count="0"/>
-        <line num="74" type="stmt" count="0"/>
-        <line num="75" type="stmt" count="0"/>
-        <line num="76" type="stmt" count="0"/>
-        <line num="83" type="method" name="configure" visibility="protected" complexity="1" crap="2.00" count="0"/>
-        <line num="85" type="stmt" count="0"/>
-        <line num="86" type="stmt" count="0"/>
-        <line num="87" type="stmt" count="0"/>
-        <line num="88" type="stmt" count="0"/>
-        <line num="89" type="stmt" count="0"/>
-        <line num="91" type="stmt" count="0"/>
-        <line num="100" type="method" name="execute" visibility="protected" complexity="3" crap="12.00" count="0"/>
-        <line num="102" type="stmt" count="0"/>
-        <line num="103" type="stmt" count="0"/>
-        <line num="104" type="stmt" count="0"/>
-        <line num="105" type="stmt" count="0"/>
-        <line num="106" type="stmt" count="0"/>
-        <line num="108" type="stmt" count="0"/>
-        <line num="110" type="stmt" count="0"/>
-        <line num="111" type="stmt" count="0"/>
-        <line num="112" type="stmt" count="0"/>
-        <line num="113" type="stmt" count="0"/>
-        <line num="115" type="stmt" count="0"/>
-        <line num="116" type="stmt" count="0"/>
-        <line num="128" type="method" name="validate" visibility="private" complexity="2" crap="6.00" count="0"/>
-        <line num="130" type="stmt" count="0"/>
-        <line num="131" type="stmt" count="0"/>
-        <line num="132" type="stmt" count="0"/>
-        <line num="135" type="stmt" count="0"/>
-        <line num="136" type="stmt" count="0"/>
-        <line num="139" type="stmt" count="0"/>
-        <line num="154" type="method" name="deleteDomain" visibility="private" complexity="2" crap="6.00" count="0"/>
-        <line num="159" type="stmt" count="0"/>
-        <line num="161" type="stmt" count="0"/>
-        <line num="163" type="stmt" count="0"/>
-        <line num="164" type="stmt" count="0"/>
-        <line num="166" type="stmt" count="0"/>
-        <line num="168" type="stmt" count="0"/>
-        <line num="176" type="method" name="getQuestsWithHandlers" visibility="private" complexity="1" crap="2.00" count="0"/>
-        <line num="179" type="stmt" count="0"/>
-        <line num="180" type="stmt" count="0"/>
-        <line num="196" type="method" name="ask" visibility="private" complexity="1" crap="2.00" count="0"/>
-        <line num="198" type="stmt" count="0"/>
-        <metrics loc="200" ncloc="116" classes="1" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="45" coveredelements="0"/>
-      </file>
-      <file name="/var/www/html/src/Command/Ddd/DeleteDdd/DomainDeleter.php">
-        <class name="App\Command\Ddd\DeleteDdd\DomainDeleter" namespace="App\Command\Ddd\DeleteDdd">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-        </class>
-        <line num="24" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="27" type="stmt" count="0"/>
-        <line num="37" type="method" name="delete" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="40" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <metrics loc="43" ncloc="25" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
-      </file>
-      <file name="/var/www/html/src/Command/Ddd/DeleteDdd/UserCancelException.php">
-        <class name="App\Command\Ddd\DeleteDdd\UserCancelException" namespace="App\Command\Ddd\DeleteDdd">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-        </class>
-        <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="23" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\DeleteDdd\Question">
-      <file name="/var/www/html/src/Command/Ddd/DeleteDdd/Question/AskForDelQuest.php">
-        <class name="App\Command\Ddd\DeleteDdd\Question\AskForDelQuest" namespace="App\Command\Ddd\DeleteDdd\Question">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
-        </class>
-        <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="13" type="stmt" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <line num="16" type="stmt" count="0"/>
-        <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\DeleteDdd\Service">
-      <file name="/var/www/html/src/Command/Ddd/DeleteDdd/Service/DeleteDomain.php">
-        <class name="App\Command\Ddd\DeleteDdd\Service\DeleteDomain" namespace="App\Command\Ddd\DeleteDdd\Service">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
-        </class>
-        <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="14" type="stmt" count="0"/>
-        <line num="15" type="stmt" count="0"/>
-        <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="19" type="stmt" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <metrics loc="21" ncloc="21" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Command\Ddd\ValueObject">
-      <file name="/var/www/html/src/Command/Ddd/ValueObject/DirName.php">
-        <class name="App\Command\Ddd\ValueObject\DirName" namespace="App\Command\Ddd\ValueObject">
-          <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
-        </class>
-        <line num="48" type="method" name="getName" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="60" type="method" name="setName" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="62" type="stmt" count="0"/>
-        <line num="63" type="stmt" count="0"/>
-        <metrics loc="65" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\DataFixtures">
-      <file name="/var/www/html/src/DataFixtures/AppFixtures.php">
-        <class name="App\DataFixtures\AppFixtures" namespace="App\DataFixtures">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-        </class>
-        <line num="10" type="method" name="load" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="15" type="stmt" count="0"/>
-        <line num="16" type="stmt" count="0"/>
-        <metrics loc="17" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Infrastructure\Command">
-      <file name="/var/www/html/src/Infrastructure/Command/DirectoryManager.php">
-        <class name="App\Infrastructure\Command\DirectoryManager" namespace="App\Infrastructure\Command">
-          <metrics complexity="5" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
-        </class>
-        <line num="35" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="47" type="method" name="create" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <line num="52" type="stmt" count="0"/>
-        <line num="54" type="stmt" count="0"/>
-        <line num="63" type="method" name="remove" visibility="public" complexity="2" crap="6.00" count="0"/>
-        <line num="66" type="stmt" count="0"/>
-        <line num="67" type="stmt" count="0"/>
-        <line num="68" type="stmt" count="0"/>
-        <line num="70" type="stmt" count="0"/>
-        <metrics loc="71" ncloc="37" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Infrastructure\Controller">
-      <file name="/var/www/html/src/Infrastructure/Controller/BaseController.php">
-        <class name="App\Infrastructure\Controller\BaseController" namespace="App\Infrastructure\Controller">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
-        </class>
-        <line num="72" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="79" type="stmt" count="0"/>
-        <line num="80" type="stmt" count="0"/>
-        <line num="81" type="stmt" count="0"/>
-        <line num="82" type="stmt" count="0"/>
-        <line num="83" type="stmt" count="0"/>
-        <line num="84" type="stmt" count="0"/>
-        <metrics loc="85" ncloc="39" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Infrastructure\Exception">
-      <file name="/var/www/html/src/Infrastructure/Exception/UnimplementedException.php">
-        <class name="App\Infrastructure\Exception\UnimplementedException" namespace="App\Infrastructure\Exception">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-        </class>
-        <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="23" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Infrastructure\Redis">
-      <file name="/var/www/html/src/Infrastructure/Redis/Client.php">
-        <class name="App\Infrastructure\Redis\Client" namespace="App\Infrastructure\Redis">
-          <metrics complexity="10" methods="9" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="33" coveredelements="29"/>
-        </class>
-        <line num="33" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="5"/>
-        <line num="35" type="stmt" count="5"/>
-        <line num="37" type="stmt" count="5"/>
-        <line num="38" type="stmt" count="5"/>
-        <line num="41" type="stmt" count="5"/>
-        <line num="42" type="stmt" count="5"/>
-        <line num="50" type="method" name="connect" visibility="public" complexity="1" crap="1" count="5"/>
-        <line num="52" type="stmt" count="5"/>
-        <line num="53" type="stmt" count="5"/>
-        <line num="63" type="method" name="auth" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="65" type="stmt" count="1"/>
-        <line num="66" type="stmt" count="1"/>
-        <line num="68" type="stmt" count="1"/>
-        <line num="69" type="stmt" count="1"/>
-        <line num="76" type="method" name="disconnect" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="78" type="stmt" count="2"/>
-        <line num="79" type="stmt" count="2"/>
-        <line num="87" type="method" name="executeCommand" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="89" type="stmt" count="1"/>
-        <line num="90" type="stmt" count="1"/>
-        <line num="92" type="stmt" count="1"/>
-        <line num="94" type="stmt" count="1"/>
-        <line num="104" type="method" name="defineAndExecute" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="106" type="stmt" count="1"/>
-        <line num="107" type="stmt" count="1"/>
-        <line num="109" type="stmt" count="1"/>
-        <line num="111" type="stmt" count="1"/>
-        <line num="121" type="method" name="isConnected" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="123" type="stmt" count="2"/>
-        <line num="132" type="method" name="readResponse" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="134" type="stmt" count="0"/>
-        <line num="143" type="method" name="writeRequest" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="145" type="stmt" count="0"/>
-        <metrics loc="147" ncloc="79" classes="1" methods="9" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="33" coveredelements="29"/>
-      </file>
-    </package>
-    <package name="App\Infrastructure\Redis\Command">
-      <file name="/var/www/html/src/Infrastructure/Redis/Command/AUTH.php">
-        <class name="App\Infrastructure\Redis\Command\AUTH" namespace="App\Infrastructure\Redis\Command">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-        </class>
-        <line num="27" type="method" name="getId" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="29" type="stmt" count="0"/>
-        <metrics loc="31" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
-      </file>
-      <file name="/var/www/html/src/Infrastructure/Redis/Command/XADD.php">
-        <class name="App\Infrastructure\Redis\Command\XADD" namespace="App\Infrastructure\Redis\Command">
-          <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
-        </class>
-        <line num="27" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
-        <line num="29" type="stmt" count="1"/>
-        <metrics loc="31" ncloc="15" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
-      </file>
-    </package>
-    <package name="App\Infrastructure\Serializer">
-      <file name="/var/www/html/src/Infrastructure/Serializer/HateoasSerializer.php">
-        <class name="App\Infrastructure\Serializer\HateoasSerializer" namespace="App\Infrastructure\Serializer">
-          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
-        </class>
-        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="35" type="stmt" count="2"/>
-        <line num="36" type="stmt" count="2"/>
-        <line num="47" type="method" name="serialize" visibility="public" complexity="2" crap="2" count="2"/>
-        <line num="50" type="stmt" count="2"/>
-        <line num="51" type="stmt" count="1"/>
-        <line num="52" type="stmt" count="1"/>
-        <metrics loc="55" ncloc="32" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
-      </file>
-      <file name="/var/www/html/src/Infrastructure/Serializer/JmsSerializer.php">
-        <class name="App\Infrastructure\Serializer\JmsSerializer" namespace="App\Infrastructure\Serializer">
-          <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
-        </class>
-        <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
-        <line num="35" type="stmt" count="2"/>
-        <line num="36" type="stmt" count="2"/>
-        <line num="48" type="method" name="serialize" visibility="public" complexity="2" crap="2" count="2"/>
-        <line num="51" type="stmt" count="2"/>
-        <line num="52" type="stmt" count="1"/>
-        <line num="53" type="stmt" count="1"/>
-        <metrics loc="56" ncloc="30" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
-      </file>
-      <file name="/var/www/html/src/Infrastructure/Serializer/SerializerException.php">
-        <class name="App\Infrastructure\Serializer\SerializerException" namespace="App\Infrastructure\Serializer">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-        </class>
-        <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <metrics loc="23" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-      </file>
-    </package>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Entity/EntityCreator.php">
+      <class name="App\Command\Ddd\CreateDdd\Entity\EntityCreator" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="18" type="method" name="getEntDir" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Entity/Question/AskForEntQuest.php">
+      <class name="App\Command\Ddd\CreateDdd\Entity\Question\AskForEntQuest" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Entity/Service/CreateEntity.php">
+      <class name="App\Command\Ddd\CreateDdd\Entity\Service\CreateEntity" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="19" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/RecursionException.php">
+      <class name="App\Command\Ddd\CreateDdd\RecursionException" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </class>
+      <line num="8" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="10" type="stmt" count="0"/>
+      <line num="11" type="stmt" count="0"/>
+      <metrics loc="12" ncloc="12" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Repo/Question/AskForRepoQuest.php">
+      <class name="App\Command\Ddd\CreateDdd\Repo\Question\AskForRepoQuest" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Repo/RepoCreator.php">
+      <class name="App\Command\Ddd\CreateDdd\Repo\RepoCreator" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="18" type="method" name="getRepoDir" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Repo/Service/CreateRepo.php">
+      <class name="App\Command\Ddd\CreateDdd\Repo\Service\CreateRepo" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="19" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Service/Question/AskForSvcQuest.php">
+      <class name="App\Command\Ddd\CreateDdd\Service\Question\AskForSvcQuest" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <metrics loc="16" ncloc="16" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Service/Service/CreateService.php">
+      <class name="App\Command\Ddd\CreateDdd\Service\Service\CreateService" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="19" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/CreateDdd/Service/ServiceCreator.php">
+      <class name="App\Command\Ddd\CreateDdd\Service\ServiceCreator" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="18" type="method" name="getSvcDir" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <metrics loc="22" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/DeleteDdd/DeleteDDDConsts.php">
+      <class name="App\Command\Ddd\DeleteDdd\DeleteDDDConsts" namespace="global">
+        <metrics complexity="6" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="18" coveredelements="0"/>
+      </class>
+      <line num="63" type="method" name="DEF_DIR" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="65" type="stmt" count="0"/>
+      <line num="66" type="stmt" count="0"/>
+      <line num="72" type="method" name="INFO" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="74" type="stmt" count="0"/>
+      <line num="75" type="stmt" count="0"/>
+      <line num="81" type="method" name="DEL_QUEST" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="83" type="stmt" count="0"/>
+      <line num="84" type="stmt" count="0"/>
+      <line num="90" type="method" name="DESC" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="92" type="stmt" count="0"/>
+      <line num="93" type="stmt" count="0"/>
+      <line num="99" type="method" name="NAME_DESC" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="101" type="stmt" count="0"/>
+      <line num="102" type="stmt" count="0"/>
+      <line num="108" type="method" name="SUCC" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="110" type="stmt" count="0"/>
+      <line num="111" type="stmt" count="0"/>
+      <metrics loc="113" ncloc="59" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="12" coveredstatements="0" elements="18" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/DeleteDdd/DeleteDddCommand.php">
+      <class name="App\Command\Ddd\DeleteDdd\DeleteDddCommand" namespace="global">
+        <metrics complexity="11" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="45" coveredelements="0"/>
+      </class>
+      <line num="67" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="72" type="stmt" count="0"/>
+      <line num="73" type="stmt" count="0"/>
+      <line num="74" type="stmt" count="0"/>
+      <line num="75" type="stmt" count="0"/>
+      <line num="76" type="stmt" count="0"/>
+      <line num="83" type="method" name="configure" visibility="protected" complexity="1" crap="2" count="0"/>
+      <line num="85" type="stmt" count="0"/>
+      <line num="86" type="stmt" count="0"/>
+      <line num="87" type="stmt" count="0"/>
+      <line num="88" type="stmt" count="0"/>
+      <line num="89" type="stmt" count="0"/>
+      <line num="91" type="stmt" count="0"/>
+      <line num="100" type="method" name="execute" visibility="protected" complexity="3" crap="12" count="0"/>
+      <line num="102" type="stmt" count="0"/>
+      <line num="103" type="stmt" count="0"/>
+      <line num="104" type="stmt" count="0"/>
+      <line num="105" type="stmt" count="0"/>
+      <line num="106" type="stmt" count="0"/>
+      <line num="108" type="stmt" count="0"/>
+      <line num="110" type="stmt" count="0"/>
+      <line num="111" type="stmt" count="0"/>
+      <line num="112" type="stmt" count="0"/>
+      <line num="113" type="stmt" count="0"/>
+      <line num="115" type="stmt" count="0"/>
+      <line num="116" type="stmt" count="0"/>
+      <line num="128" type="method" name="validate" visibility="private" complexity="2" crap="6" count="0"/>
+      <line num="130" type="stmt" count="0"/>
+      <line num="131" type="stmt" count="0"/>
+      <line num="132" type="stmt" count="0"/>
+      <line num="135" type="stmt" count="0"/>
+      <line num="136" type="stmt" count="0"/>
+      <line num="139" type="stmt" count="0"/>
+      <line num="154" type="method" name="deleteDomain" visibility="private" complexity="2" crap="6" count="0"/>
+      <line num="159" type="stmt" count="0"/>
+      <line num="161" type="stmt" count="0"/>
+      <line num="163" type="stmt" count="0"/>
+      <line num="164" type="stmt" count="0"/>
+      <line num="166" type="stmt" count="0"/>
+      <line num="168" type="stmt" count="0"/>
+      <line num="176" type="method" name="getQuestsWithHandlers" visibility="private" complexity="1" crap="2" count="0"/>
+      <line num="179" type="stmt" count="0"/>
+      <line num="180" type="stmt" count="0"/>
+      <line num="196" type="method" name="ask" visibility="private" complexity="1" crap="2" count="0"/>
+      <line num="198" type="stmt" count="0"/>
+      <metrics loc="200" ncloc="116" classes="1" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="0" elements="45" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/DeleteDdd/DomainDeleter.php">
+      <class name="App\Command\Ddd\DeleteDdd\DomainDeleter" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+      </class>
+      <line num="24" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="26" type="stmt" count="0"/>
+      <line num="27" type="stmt" count="0"/>
+      <line num="37" type="method" name="delete" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="42" type="stmt" count="0"/>
+      <metrics loc="43" ncloc="25" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/DeleteDdd/Question/AskForDelQuest.php">
+      <class name="App\Command\Ddd\DeleteDdd\Question\AskForDelQuest" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+      </class>
+      <line num="11" type="method" name="ask" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="13" type="stmt" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="16" type="stmt" count="0"/>
+      <metrics loc="18" ncloc="18" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="4" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/DeleteDdd/Service/DeleteDomain.php">
+      <class name="App\Command\Ddd\DeleteDdd\Service\DeleteDomain" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+      </class>
+      <line num="12" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="14" type="stmt" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="17" type="method" name="execute" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="19" type="stmt" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <metrics loc="21" ncloc="21" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="4" coveredstatements="0" elements="6" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/DeleteDdd/UserCancelException.php">
+      <class name="App\Command\Ddd\DeleteDdd\UserCancelException" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="23" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Command/Ddd/ValueObject/DirName.php">
+      <class name="App\Command\Ddd\ValueObject\DirName" namespace="global">
+        <metrics complexity="2" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+      </class>
+      <line num="48" type="method" name="getName" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="50" type="stmt" count="0"/>
+      <line num="60" type="method" name="setName" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="62" type="stmt" count="0"/>
+      <line num="63" type="stmt" count="0"/>
+      <metrics loc="65" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="3" coveredstatements="0" elements="5" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/DataFixtures/AppFixtures.php">
+      <class name="App\DataFixtures\AppFixtures" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </class>
+      <line num="10" type="method" name="load" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="15" type="stmt" count="0"/>
+      <line num="16" type="stmt" count="0"/>
+      <metrics loc="17" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Command/DirectoryManager.php">
+      <class name="App\Infrastructure\Command\DirectoryManager" namespace="global">
+        <metrics complexity="5" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
+      </class>
+      <line num="35" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="47" type="method" name="create" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="50" type="stmt" count="0"/>
+      <line num="51" type="stmt" count="0"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="54" type="stmt" count="0"/>
+      <line num="63" type="method" name="remove" visibility="public" complexity="2" crap="6" count="0"/>
+      <line num="66" type="stmt" count="0"/>
+      <line num="67" type="stmt" count="0"/>
+      <line num="68" type="stmt" count="0"/>
+      <line num="70" type="stmt" count="0"/>
+      <metrics loc="71" ncloc="37" classes="1" methods="3" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="13" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Controller/BaseController.php">
+      <class name="App\Infrastructure\Controller\BaseController" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+      </class>
+      <line num="72" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="79" type="stmt" count="0"/>
+      <line num="80" type="stmt" count="0"/>
+      <line num="81" type="stmt" count="0"/>
+      <line num="82" type="stmt" count="0"/>
+      <line num="83" type="stmt" count="0"/>
+      <line num="84" type="stmt" count="0"/>
+      <metrics loc="85" ncloc="39" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="6" coveredstatements="0" elements="7" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Exception/UnimplementedException.php">
+      <class name="App\Infrastructure\Exception\UnimplementedException" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="23" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Redis/Client.php">
+      <class name="App\Infrastructure\Redis\Client" namespace="global">
+        <metrics complexity="10" methods="9" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="33" coveredelements="29"/>
+      </class>
+      <line num="33" type="method" name="__construct" visibility="public" complexity="2" crap="2" count="5"/>
+      <line num="35" type="stmt" count="5"/>
+      <line num="37" type="stmt" count="5"/>
+      <line num="38" type="stmt" count="5"/>
+      <line num="41" type="stmt" count="5"/>
+      <line num="42" type="stmt" count="5"/>
+      <line num="50" type="method" name="connect" visibility="public" complexity="1" crap="1" count="5"/>
+      <line num="52" type="stmt" count="5"/>
+      <line num="53" type="stmt" count="5"/>
+      <line num="63" type="method" name="auth" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="65" type="stmt" count="1"/>
+      <line num="66" type="stmt" count="1"/>
+      <line num="68" type="stmt" count="1"/>
+      <line num="69" type="stmt" count="1"/>
+      <line num="76" type="method" name="disconnect" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="78" type="stmt" count="2"/>
+      <line num="79" type="stmt" count="2"/>
+      <line num="87" type="method" name="executeCommand" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="89" type="stmt" count="1"/>
+      <line num="90" type="stmt" count="1"/>
+      <line num="92" type="stmt" count="1"/>
+      <line num="94" type="stmt" count="1"/>
+      <line num="104" type="method" name="defineAndExecute" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="106" type="stmt" count="1"/>
+      <line num="107" type="stmt" count="1"/>
+      <line num="109" type="stmt" count="1"/>
+      <line num="111" type="stmt" count="1"/>
+      <line num="121" type="method" name="isConnected" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="123" type="stmt" count="2"/>
+      <line num="132" type="method" name="readResponse" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="134" type="stmt" count="0"/>
+      <line num="143" type="method" name="writeRequest" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="145" type="stmt" count="0"/>
+      <metrics loc="147" ncloc="80" classes="1" methods="9" coveredmethods="7" conditionals="0" coveredconditionals="0" statements="24" coveredstatements="22" elements="33" coveredelements="29"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Redis/Command/AUTH.php">
+      <class name="App\Infrastructure\Redis\Command\AUTH" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+      </class>
+      <line num="27" type="method" name="getId" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="29" type="stmt" count="0"/>
+      <metrics loc="31" ncloc="15" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="0" elements="2" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Redis/Command/XADD.php">
+      <class name="App\Infrastructure\Redis\Command\XADD" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+      </class>
+      <line num="27" type="method" name="getId" visibility="public" complexity="1" crap="1" count="1"/>
+      <line num="29" type="stmt" count="1"/>
+      <metrics loc="31" ncloc="15" classes="1" methods="1" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="1" coveredstatements="1" elements="2" coveredelements="2"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Serializer/HateoasSerializer.php">
+      <class name="App\Infrastructure\Serializer\HateoasSerializer" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </class>
+      <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="35" type="stmt" count="2"/>
+      <line num="36" type="stmt" count="2"/>
+      <line num="47" type="method" name="serialize" visibility="public" complexity="2" crap="2" count="2"/>
+      <line num="50" type="stmt" count="2"/>
+      <line num="51" type="stmt" count="1"/>
+      <line num="52" type="stmt" count="1"/>
+      <metrics loc="55" ncloc="32" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Serializer/JmsSerializer.php">
+      <class name="App\Infrastructure\Serializer\JmsSerializer" namespace="global">
+        <metrics complexity="3" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+      </class>
+      <line num="33" type="method" name="__construct" visibility="public" complexity="1" crap="1" count="2"/>
+      <line num="35" type="stmt" count="2"/>
+      <line num="36" type="stmt" count="2"/>
+      <line num="48" type="method" name="serialize" visibility="public" complexity="2" crap="2" count="2"/>
+      <line num="51" type="stmt" count="2"/>
+      <line num="52" type="stmt" count="1"/>
+      <line num="53" type="stmt" count="1"/>
+      <metrics loc="56" ncloc="30" classes="1" methods="2" coveredmethods="2" conditionals="0" coveredconditionals="0" statements="5" coveredstatements="5" elements="7" coveredelements="7"/>
+    </file>
+    <file name="/var/www/html/src/Infrastructure/Serializer/SerializerException.php">
+      <class name="App\Infrastructure\Serializer\SerializerException" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </class>
+      <line num="19" type="method" name="__construct" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <metrics loc="23" ncloc="13" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+    </file>
     <file name="/var/www/html/src/Infrastructure/Serializer/SerializerInterface.php">
       <metrics loc="28" ncloc="10" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
     </file>
-    <package name="App">
-      <file name="/var/www/html/src/Kernel.php">
-        <class name="App\Kernel" namespace="App">
-          <metrics complexity="7" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="24" coveredelements="0"/>
-        </class>
-        <line num="18" type="method" name="registerBundles" visibility="public" complexity="3" crap="12.00" count="0"/>
-        <line num="20" type="stmt" count="0"/>
-        <line num="21" type="stmt" count="0"/>
-        <line num="22" type="stmt" count="0"/>
-        <line num="23" type="stmt" count="0"/>
-        <line num="26" type="stmt" count="0"/>
-        <line num="28" type="method" name="getProjectDir" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="33" type="method" name="configureContainer" visibility="protected" complexity="2" crap="6.00" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="40" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <line num="44" type="stmt" count="0"/>
-        <line num="46" type="method" name="configureRoutes" visibility="protected" complexity="1" crap="2.00" count="0"/>
-        <line num="48" type="stmt" count="0"/>
-        <line num="50" type="stmt" count="0"/>
-        <line num="51" type="stmt" count="0"/>
-        <line num="52" type="stmt" count="0"/>
-        <line num="53" type="stmt" count="0"/>
-        <metrics loc="54" ncloc="54" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="20" coveredstatements="0" elements="24" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\Shared">
-      <file name="/var/www/html/src/Shared/ExceptionToArray.php">
-        <class name="App\Shared\ExceptionToArray" namespace="App\Shared">
-          <metrics complexity="5" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
-        </class>
-        <line num="26" type="method" name="exec" visibility="public" complexity="5" crap="30.00" count="0"/>
-        <line num="28" type="stmt" count="0"/>
-        <line num="30" type="stmt" count="0"/>
-        <line num="31" type="stmt" count="0"/>
-        <line num="35" type="stmt" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <line num="38" type="stmt" count="0"/>
-        <line num="39" type="stmt" count="0"/>
-        <line num="41" type="stmt" count="0"/>
-        <line num="42" type="stmt" count="0"/>
-        <line num="43" type="stmt" count="0"/>
-        <metrics loc="47" ncloc="30" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
-      </file>
-    </package>
-    <package name="App\TestDomain\Controller">
-      <file name="/var/www/html/src/TestDomain/Controller/TestDomainController.php">
-        <class name="App\TestDomain\Controller\TestDomainController" namespace="App\TestDomain\Controller">
-          <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-        </class>
-        <line num="34" type="method" name="index" visibility="public" complexity="1" crap="2.00" count="0"/>
-        <line num="36" type="stmt" count="0"/>
-        <line num="37" type="stmt" count="0"/>
-        <metrics loc="40" ncloc="20" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
-      </file>
-    </package>
-    <metrics files="42" loc="2107" ncloc="1308" classes="39" methods="97" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="290" coveredstatements="71" elements="387" coveredelements="87"/>
+    <file name="/var/www/html/src/Kernel.php">
+      <class name="App\Kernel" namespace="global">
+        <metrics complexity="7" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="25" coveredelements="0"/>
+      </class>
+      <line num="18" type="method" name="registerBundles" visibility="public" complexity="3" crap="12" count="0"/>
+      <line num="20" type="stmt" count="0"/>
+      <line num="21" type="stmt" count="0"/>
+      <line num="22" type="stmt" count="0"/>
+      <line num="23" type="stmt" count="0"/>
+      <line num="26" type="stmt" count="0"/>
+      <line num="28" type="method" name="getProjectDir" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="33" type="method" name="configureContainer" visibility="protected" complexity="2" crap="6" count="0"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="40" type="stmt" count="0"/>
+      <line num="41" type="stmt" count="0"/>
+      <line num="42" type="stmt" count="0"/>
+      <line num="43" type="stmt" count="0"/>
+      <line num="44" type="stmt" count="0"/>
+      <line num="46" type="method" name="configureRoutes" visibility="protected" complexity="1" crap="2" count="0"/>
+      <line num="48" type="stmt" count="0"/>
+      <line num="50" type="stmt" count="0"/>
+      <line num="51" type="stmt" count="0"/>
+      <line num="52" type="stmt" count="0"/>
+      <line num="53" type="stmt" count="0"/>
+      <metrics loc="54" ncloc="54" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="0" elements="25" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/Shared/ExceptionToArray.php">
+      <class name="App\Shared\ExceptionToArray" namespace="global">
+        <metrics complexity="5" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
+      </class>
+      <line num="26" type="method" name="exec" visibility="public" complexity="5" crap="30" count="0"/>
+      <line num="28" type="stmt" count="0"/>
+      <line num="30" type="stmt" count="0"/>
+      <line num="31" type="stmt" count="0"/>
+      <line num="35" type="stmt" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <line num="38" type="stmt" count="0"/>
+      <line num="39" type="stmt" count="0"/>
+      <line num="41" type="stmt" count="0"/>
+      <line num="42" type="stmt" count="0"/>
+      <line num="43" type="stmt" count="0"/>
+      <metrics loc="47" ncloc="30" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="11" coveredstatements="0" elements="12" coveredelements="0"/>
+    </file>
+    <file name="/var/www/html/src/TestDomain/Controller/TestDomainController.php">
+      <class name="App\TestDomain\Controller\TestDomainController" namespace="global">
+        <metrics complexity="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+      </class>
+      <line num="34" type="method" name="index" visibility="public" complexity="1" crap="2" count="0"/>
+      <line num="36" type="stmt" count="0"/>
+      <line num="37" type="stmt" count="0"/>
+      <metrics loc="40" ncloc="20" classes="1" methods="1" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="2" coveredstatements="0" elements="3" coveredelements="0"/>
+    </file>
+    <metrics files="42" loc="2107" ncloc="1311" classes="39" methods="97" coveredmethods="16" conditionals="0" coveredconditionals="0" statements="291" coveredstatements="71" elements="388" coveredelements="87"/>
   </project>
 </coverage>
