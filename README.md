@@ -1,6 +1,8 @@
 # DDD Boilerplate in Symfony 5
 ________________________________________________________________________________
 
+[![manonworld](https://circleci.com/gh/manonworld/manon.svg?style=svg)](https://app.circleci.com/pipelines/github/manonworld/manon/47/workflows/f4c8b468-1c7e-4630-a0e7-2d673a731834/jobs/60)
+
 Yet another DDD & CQRS boiler plate for Symfony 5 applications
 
 
