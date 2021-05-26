@@ -23,7 +23,7 @@ jobs:
 
       - run:
           name: Copying Backend
-          command: docker exec -it onetool_php mkdir /var/www/html && docker cp ~/project/back-end/app/. onetool_php:/var/www/html
+          command: docker cp ~/project/back-end/app/. onetool_php:/var/www/html
 
       - run:
           name: Install App
