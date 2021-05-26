@@ -22,6 +22,10 @@ jobs:
           command: cd ~/project && make install
 
       - run:
+          name: Copying Backend
+          command: docker exec -it onetool_php mkdir /var/www/html && docker cp ~/project/back-end/app/. onetool_php:/var/www/html
+
+      - run:
           name: Install App
           command: cd ~/project && make appinstall
 
