@@ -1,6 +1,6 @@
 # Main Image
 
-FROM php:7.4-zts-alpine
+FROM php:8-zts-buster
 
 
 # Author(s) Please add your name if you modified anything in this file
@@ -15,28 +15,29 @@ ENV HOME /root
 
 # Update and Install Python
 
-RUN apk add --update python3 python3-dev py-pip build-base
+RUN apt-get update && apt-get install -y python3-minimal python3-dev python3-pip build-essential
 
 
-# ICU Dev
+# Dependencies
 
-RUN apk add --no-cache icu-dev
-
+RUN apt-get install -y icu-devtools git unzip
 
 
 # Install Composer for PHP applications
 
-RUN apk add composer
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php --install-dir=/usr/local/bin/ --filename=composer
+RUN php -r "unlink('composer-setup.php');"
 
 
-# XSLT Dev GCC and g++
+# Other Dependencies
 
-RUN apk add --update --no-cache g++ gcc libxslt-dev autoconf make automake libtool linux-headers
+RUN apt-get install -y g++ gcc libxslt-dev autoconf make automake libtool linux-headers-amd64 libz-dev wget
 
 
-# Install Protobuf
+# Install Protobuf and GRPC
 
-ARG PROTOBUF_VERSION=3.12.2
+ARG PROTOBUF_VERSION=3.17.1
 RUN pecl install protobuf-${PROTOBUF_VERSION}
 RUN pecl install grpc
 RUN docker-php-ext-enable grpc
@@ -50,30 +51,22 @@ RUN docker-php-ext-install \
 
 # Dev PHP Extensions (Remove in Prod)
 
-RUN pecl install xdebug parallel http
+RUN pecl install xdebug http
 
 
-RUN apk upgrade --update && apk add \
+RUN apt-get install \
     libmcrypt-dev git \
     && docker-php-ext-configure intl
 
 
 # Add Redis support
 
-ARG PHPREDIS_VERSION=5.2.2
+ARG PHPREDIS_VERSION=5.3.4
 ARG REDIS_URL=https://github.com/phpredis/phpredis/archive/${PHPREDIS_VERSION}.tar.gz
 RUN mkdir -p /usr/src/php/ext/redis \
     && curl -L ${REDIS_URL} | tar xvz -C /usr/src/php/ext/redis --strip 1 \
     && echo 'redis' >> /usr/src/php-available-exts \
     && docker-php-ext-install redis
-
-
-# User Management
-
-RUN sed -i "s/999/99/" /etc/group
-RUN adduser dev -g root --disabled-password /home/root
-RUN passwd -d root
-RUN echo "root ALL=(ALL) ALL" > /etc/sudoers
 
 
 # PHP Configuration
@@ -89,13 +82,11 @@ USER root
 
 # Supervisor
 
-RUN apk add --update supervisor && rm  -rf /tmp/* /var/cache/apk/*
-RUN apk add openrc --no-cache
+RUN apt-get install -y supervisor && rm  -rf /tmp/*
+RUN apt-get install -y openrc
 RUN mkdir -p /run/openrc/
 RUN touch /run/openrc/softlevel
 COPY ./back-end/.docker/php/supervisord /etc/init.d/supervisord
-RUN mkdir /etc/supervisor
-RUN echo_supervisord_conf >  /etc/supervisor/supervisord.conf
 
 
 # Expose PHP-FPM Port
@@ -125,15 +116,10 @@ EXPOSE 443
 
 # Starting the Supervisor
 
-RUN ["supervisord", "-c" ,"/etc/supervisord.conf"]
+RUN ["supervisord"]
 
 
-# Installing bash
-
-RUN apk add bash
-
-
-# Download and install Symfony CLI
+# Download and install Symfony CLI (dev only)
 
 RUN wget https://get.symfony.com/cli/installer -O - | bash; \
     mv /root/.symfony/bin/symfony /usr/local/bin/symfony;
@@ -141,14 +127,7 @@ RUN wget https://get.symfony.com/cli/installer -O - | bash; \
 
 # Grant executable permission (dev only)
 
-RUN chmod 777 /usr/local/bin/symfony
-
-
-# User Management
-
-RUN adduser _www -g root --disabled-password /home/root
-RUN passwd -d _www
-RUN echo "_www ALL=(ALL) ALL" > /etc/sudoers
+RUN chmod a+x /usr/local/bin/symfony
 
 
 # Install TLS Support for Symfony
