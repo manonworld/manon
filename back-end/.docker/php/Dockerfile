@@ -132,19 +132,12 @@ RUN chmod a+x /usr/local/bin/symfony
 
 # Install TLS Support for Symfony
 
-RUN /usr/local/bin/symfony server:ca:install
+RUN symfony server:ca:install
 
 
 # Start the test domain (Change testdomain to whatever name you want)
 
-RUN /usr/local/bin/symfony proxy:domain:attach testdomain
-
-
-# Start the application server 
-# Development Server
-# You may consider Apache or Nginx for Production
-
-RUN /usr/local/bin/symfony server:start -d
+RUN symfony proxy:domain:attach testdomain
 
 
 # Sets the default Work Directory
@@ -157,12 +150,17 @@ WORKDIR /var/www/html
 COPY ./back-end/app /var/www/html
 
 
+# Start the Server
+
+CMD ["symfony", "server:start", "-d"]
+
+
 # Start the Logger
 
-CMD ["symfony", "server:log"]
+CMD ["symfony", "local:server:log"]
 
 
 # Health Check
 
-HEALTHCHECK --interval=30s --timeout=3s \
-    CMD curl -f https://127.0.0.1:8000/TestDomain || exit 1
+HEALTHCHECK --interval=3s --timeout=6000s \
+    CMD symfony server:start -d && curl -f https://localhost:8000/TestDomain || exit 1
