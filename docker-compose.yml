@@ -45,7 +45,6 @@ services:
     build:
       context: ./
       dockerfile: ./back-end/.docker/php/Dockerfile
-    image: php:7.4-fpm
     volumes:
       - ./back-end/app:/var/www/html
     env_file:
@@ -67,7 +66,6 @@ services:
   # Front end Node
   front-end:
     container_name: onetool-frontend
-    image: node:13.12.0-alpine
     build:
       context: ./front-end/app
       dockerfile: 'Dockerfile'
