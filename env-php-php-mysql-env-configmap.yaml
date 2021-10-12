@@ -1,0 +1,10 @@
+apiVersion: v1
+data:
+  DB_DSN: mysql://manononetool:manononetool@mysql:3306/manononetool
+  DB_DSN_TEST: mysql://manononetool:manononetool@mysql:3306/manononetooltest
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: php-env-php-php-mysql-env
+  name: env-php-php-mysql-env

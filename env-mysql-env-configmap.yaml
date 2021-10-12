@@ -1,0 +1,12 @@
+apiVersion: v1
+data:
+  MYSQL_DATABASE: manononetool
+  MYSQL_PASSWORD: manononetool
+  MYSQL_ROOT_PASSWORD: manononetool
+  MYSQL_USER: manononetool
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: mysql-env-mysql-env
+  name: env-mysql-env

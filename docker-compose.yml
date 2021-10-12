@@ -10,8 +10,7 @@ services:
       dockerfile: Dockerfile
     ports:
       - '6379:6379'
-    volumes:
-      - '/redis'
+    tty: true
       
 
   # Grafana Node for Metrics Display
@@ -21,8 +20,7 @@ services:
     ports:
       - "4000:3000"
     user: "472"
-    volumes:
-      - "grafana-data:/var/lib/grafana"
+    tty: true
 
 
   # MySQL DB as the Main DB engine
@@ -35,8 +33,7 @@ services:
       - env/mysql.env
     command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
     restart: always
-    volumes:
-      - db-data:/var/lib/mysql
+    tty: true
 
 
   # PHP Backend App
@@ -45,8 +42,6 @@ services:
     build:
       context: ./
       dockerfile: ./back-end/.docker/php/Dockerfile
-    volumes:
-      - ./back-end/app:/var/www/html
     env_file:
       - env/php/php.redis.env
       - env/php/php.mysql.env
@@ -61,6 +56,7 @@ services:
       - grafana
       - redis-master
       - mysql
+    tty: true
 
 
   # Front end Node
@@ -69,16 +65,9 @@ services:
     build:
       context: ./front-end/app
       dockerfile: 'Dockerfile'
-    volumes:
-      - './front-end:/app'
-      - './front-end/app/node_modules:/app/node_modules'
     ports:
       - 3000:3000
     env_file:
       - env/front-end.env
+    tty: true
 
-
-volumes:
-  grafana-data:
-  redis-master:
-  db-data:

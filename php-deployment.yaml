@@ -1,0 +1,91 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+    kompose.version: 1.21.0 (992df58d8)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: php
+  name: php
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: php
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: /snap/kompose/19/kompose-linux-amd64 convert
+        kompose.version: 1.21.0 (992df58d8)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: php
+    spec:
+      containers:
+      - env:
+        - name: DB_DSN
+          valueFrom:
+            configMapKeyRef:
+              key: DB_DSN
+              name: env-php-php-mysql-env
+        - name: DB_DSN_TEST
+          valueFrom:
+            configMapKeyRef:
+              key: DB_DSN_TEST
+              name: env-php-php-mysql-env
+        - name: REDIS_DATABASE
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_DATABASE
+              name: env-php-php-redis-env
+        - name: REDIS_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_HOST
+              name: env-php-php-redis-env
+        - name: REDIS_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_PASSWORD
+              name: env-php-php-redis-env
+        - name: REDIS_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_PORT
+              name: env-php-php-redis-env
+        - name: REDIS_TIMEOUT
+          valueFrom:
+            configMapKeyRef:
+              key: REDIS_TIMEOUT
+              name: env-php-php-redis-env
+        - name: STREAM_HOST
+          valueFrom:
+            configMapKeyRef:
+              key: STREAM_HOST
+              name: env-php-php-stream-env
+        - name: STREAM_PASSWORD
+          valueFrom:
+            configMapKeyRef:
+              key: STREAM_PASSWORD
+              name: env-php-php-stream-env
+        - name: STREAM_PORT
+          valueFrom:
+            configMapKeyRef:
+              key: STREAM_PORT
+              name: env-php-php-stream-env
+        image: php
+        imagePullPolicy: ""
+        name: onetool-php
+        ports:
+        - containerPort: 8000
+        - containerPort: 9000
+        - containerPort: 8888
+        - containerPort: 443
+        resources: {}
+        tty: true
+      restartPolicy: Always
+      serviceAccountName: ""
+      volumes: null
+status: {}

@@ -1,5 +1,0 @@
-/home/mosta/cov-analysis-linux64-2020.09/bin/cov-security-da --dir /home/mosta/manon/cov-int --project-dirs back-end/app/src/ 
-cov-security-da version 2020.09 on Linux 5.8.0-50-generic x86_64
-Internal version numbers: 3412dc3383 p-upland-push-1502
-
-da: [WARNING] Failed to identify any likely projects. Aborting template-DA.

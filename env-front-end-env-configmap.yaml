@@ -1,0 +1,9 @@
+apiVersion: v1
+data:
+  CHOKIDAR_USEPOLLING: "true"
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: front-end-env-front-end-env
+  name: env-front-end-env

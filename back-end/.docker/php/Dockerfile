@@ -152,12 +152,7 @@ COPY ./back-end/app /var/www/html
 
 # Start the Server
 
-CMD ["symfony", "server:start", "-d"]
-
-
-# Start the Logger
-
-CMD ["symfony", "local:server:log"]
+CMD ["symfony", "server:start", "-d", "&&", "symfony", "server:log"]
 
 
 # Health Check
