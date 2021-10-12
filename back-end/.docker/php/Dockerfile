@@ -152,7 +152,7 @@ COPY ./back-end/app /var/www/html
 
 # Start the Server
 
-CMD ["symfony", "server:start", "-d", "&&", "symfony", "server:log"]
+RUN ["symfony", "server:start", "-d"]
 
 
 # Health Check
