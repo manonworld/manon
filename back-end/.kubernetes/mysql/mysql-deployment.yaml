@@ -30,24 +30,24 @@ spec:
         env:
         - name: MYSQL_DATABASE
           valueFrom:
-            configMapKeyRef:
+            configMapKeyRef: # or secretKeyRef
               key: MYSQL_DATABASE
-              name: env-mysql-env
+              name: env-mysql-env # or mysql-secret
         - name: MYSQL_PASSWORD
           valueFrom:
-            configMapKeyRef:
+            configMapKeyRef: # or secretKeyRef
               key: MYSQL_PASSWORD
-              name: env-mysql-env
+              name: env-mysql-env # or mysql-secret
         - name: MYSQL_ROOT_PASSWORD
           valueFrom:
-            configMapKeyRef:
+            configMapKeyRef: # or secretKeyRef
               key: MYSQL_ROOT_PASSWORD
-              name: env-mysql-env
+              name: env-mysql-env # or mysql-secret
         - name: MYSQL_USER
           valueFrom:
-            configMapKeyRef:
+            configMapKeyRef: # or secretKeyRef
               key: MYSQL_USER
-              name: env-mysql-env
+              name: env-mysql-env # or mysql-secret
         image: mysql
         imagePullPolicy: ""
         name: onetool-mysql-db
