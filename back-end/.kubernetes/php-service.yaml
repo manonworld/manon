@@ -22,7 +22,9 @@ spec:
   - name: "443"
     port: 443
     targetPort: 443
+    nodePort: 30000
   selector:
     io.kompose.service: php
+  type: LoadBalancer
 status:
   loadBalancer: {}
