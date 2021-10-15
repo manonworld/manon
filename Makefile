@@ -67,6 +67,20 @@ meinphp:
 	@echo "Entering PHP Container...";
 	@docker exec -it onetool_php sh;
 
+installkubernetes:
+	@echo "Please make sure that minikube and kubectl are installed on your machine...";
+	@echo "This will install Kubernetes cluster deployments, services, config maps, and secrets...";
+	@minikube start;
+	@kubectl apply -f ./back-end/.kubernetes/mysql/env-php-php-mysql-env-configmap.yaml;
+	@kubectl apply -f ./back-end/.kubernetes/mysql/env-mysql-deployment-secret.yaml;
+	@kubectl apply -f ./back-end/.kubernetes/redis/env-php-php-redis-env-configmap.yaml;
+	@kubectl apply -f ./back-end/.kubernetes/redis/env-php-php-stream-env-configmap.yaml;
+	@kubectl apply -f ./back-end/.kubernetes/php-deployment.yaml;
+	@kubectl apply -f ./back-end/.kubernetes/php-service.yaml;
+
+startkubernetes:
+	@minikube service php;
+
 default:
 	@echo ""
 	@echo ""
@@ -80,6 +94,8 @@ default:
 	@echo "3. make clean (stops the application containers that you installed using make install)"
 	@echo "4. make dockerclean (cleans the whole docker process from the system but please use with caution)"
 	@echo "5. make meinphp (logs you in the php container)"
+	@echo "6. make installkubernetes (Installs Kubernetes Cluster for PHP)"
+	@echo "7. make startkubernetes (Starts Kubernetes Service for PHP)"
 	@echo ""
 	@echo ""
 	@echo "Application Tier"

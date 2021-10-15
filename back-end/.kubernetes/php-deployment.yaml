@@ -75,7 +75,7 @@ spec:
             configMapKeyRef:
               key: STREAM_PORT
               name: env-php-php-stream-env
-        image: php # Create an image from the dockerfile and push it to dockerhub then reference it here.
+        image: manonniazi/manon:22 # Create an image from the dockerfile and push it to dockerhub then reference it here.
         imagePullPolicy: ""
         name: onetool-php
         ports:

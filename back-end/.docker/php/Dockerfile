@@ -80,15 +80,6 @@ COPY ./back-end/.docker/php/php-fpm-pool.conf 	/usr/local/etc/php/pool.d/www.con
 USER root
 
 
-# Supervisor
-
-RUN apt-get install -y supervisor && rm  -rf /tmp/*
-RUN apt-get install -y openrc
-RUN mkdir -p /run/openrc/
-RUN touch /run/openrc/softlevel
-COPY ./back-end/.docker/php/supervisord /etc/init.d/supervisord
-
-
 # Expose PHP-FPM Port
 
 EXPOSE 9000
@@ -112,11 +103,6 @@ EXPOSE 7080
 # Expose secure TLS
 
 EXPOSE 443
-
-
-# Starting the Supervisor
-
-RUN ["supervisord"]
 
 
 # Download and install Symfony CLI (dev only)
@@ -150,9 +136,14 @@ WORKDIR /var/www/html
 COPY ./back-end/app /var/www/html
 
 
-# Start the Server
+# Supervisor
 
-RUN ["symfony", "server:start", "-d"]
+RUN apt-get install curl -y
+RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+RUN python3 get-pip.py
+RUN pip3 install supervisor
+COPY ./back-end/.docker/php/processes.supervisor.conf /etc/supervisord.conf
+RUN echo "supervisord -c /etc/supervisord.conf" >> /root/.bashrc
 
 
 # Health Check

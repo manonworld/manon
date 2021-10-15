@@ -1,5 +1,4 @@
 # DDD Boilerplate in Symfony 5
-________________________________________________________________________________
 
 [![manonworld](https://circleci.com/gh/manonworld/manon.svg?style=svg)](https://app.circleci.com/pipelines/github/manonworld/manon/47/workflows/f4c8b468-1c7e-4630-a0e7-2d673a731834/jobs/60)
 
@@ -7,7 +6,7 @@ Yet another DDD & CQRS boiler plate for Symfony 5 applications
 
 
 ________________________________________________________________________________
-## Tech stack:
+Tech stack:
 ________________________________________________________________________________
 
 Redis 5
@@ -24,8 +23,10 @@ Grafana
 
 MySQL
 
+Kubernetes
+
 ________________________________________________________________________________
-## Installation using docker-compose:
+Installation using docker-compose:
 ________________________________________________________________________________
 
 ``` docker-compose up -d ```
@@ -106,6 +107,18 @@ To run the application successfully, just follow the steps:
 Or
 
 Simply run ``` make install && make appinstall && make start ``` in one command
+
+
+
+________________________________________________________________________________
+Kubernetes
+________________________________________________________________________________
+
+``` make installkubernetes ```
+
+And
+
+``` make startkubernetes ```
 
 
 Thanks
