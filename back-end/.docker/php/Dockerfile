@@ -150,3 +150,6 @@ RUN echo "supervisord -c /etc/supervisord.conf" >> /root/.bashrc
 
 HEALTHCHECK --interval=3s --timeout=6000s \
     CMD symfony server:start -d && curl -f https://localhost:8000/TestDomain || exit 1
+
+CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
+

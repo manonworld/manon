@@ -81,6 +81,14 @@ installkubernetes:
 startkubernetes:
 	@minikube service php;
 
+installhelm:
+	@echo "Installing helm chart";
+	@cd back-end/.helm && helm install php php && cd ../../;
+
+starthelm:
+	@echo "Starting the application from helm chart";
+	@minikube service php;
+
 default:
 	@echo ""
 	@echo ""

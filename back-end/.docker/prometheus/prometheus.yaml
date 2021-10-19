@@ -1,0 +1,17 @@
+global:
+
+  scrape_interval:     15s
+  evaluation_interval: 15s
+
+
+scrape_configs:
+
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['0.0.0.0:9090', '0.0.0.0:9100', '0.0.0.0:9323']
+        labels:
+          group: 'prometheus'
+
+  - job_name: 'docker'
+    static_configs:
+      - targets: ['localhost:9323']

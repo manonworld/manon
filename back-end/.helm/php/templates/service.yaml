@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "php.fullname" . }}
+  labels:
+    {{- include "php.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+  - name: "http"
+    port: {{ .Values.service.port }}
+    targetPort: {{ .Values.service.port }}
+    nodePort: {{ .Values.service.externalPort }}
+  - name: "phpport"
+    port: {{ .Values.service.phpPort }}
+    targetPort: {{ .Values.service.phpPort }}
+    nodePort: {{ .Values.service.externalPhpPort }}
+  - name: "socketport"
+    port: {{ .Values.service.socketPort }}
+    targetPort: {{ .Values.service.socketPort }}
+    nodePort: {{ .Values.service.externalSocketPort }}
+  - name: "httpsport"
+    port: {{ .Values.service.httpsPort }}
+    targetPort: {{ .Values.service.httpsPort }}
+    nodePort: {{ .Values.service.externalHttpsPort }}
+  selector:
+    {{- include "php.selectorLabels" . | nindent 4 }}

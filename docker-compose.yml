@@ -11,9 +11,20 @@ services:
     ports:
       - '6379:6379'
     tty: true
-      
 
-  # Grafana Node for Metrics Display
+  
+  # Prometheus for Metrics
+  prom:
+    container_name: onetool_prom
+    ports:
+      - "9090:9090"
+    build:
+      context: ./
+      dockerfile: ./back-end/.docker/prometheus/Dockerfile
+    tty: true
+
+
+  # Grafana Node for Metrics Visualization
   grafana:
     container_name: onetool_grafana
     image: "grafana/grafana:5.4.1"
