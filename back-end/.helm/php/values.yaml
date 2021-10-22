@@ -46,6 +46,8 @@ service:
   externalHttpsPort: 30001
   externalSocketPort: 30002
   externalPhpPort: 30003
+  dsn: mysql://manononetool:manononetool@mysql:3306/manononetool
+  dsnTest: mysql://manononetool:manononetool@mysql:3306/manononetooltest
 
 delay: 3600
 

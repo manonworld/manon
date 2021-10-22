@@ -1,6 +1,8 @@
 apiVersion: v1
 data:
+  # TODO: Convert to OS environment variables
   DB_DSN: mysql://manononetool:manononetool@mysql:3306/manononetool
+  # TODO: Convert to OS environment variables
   DB_DSN_TEST: mysql://manononetool:manononetool@mysql:3306/manononetooltest
 kind: ConfigMap
 metadata:
